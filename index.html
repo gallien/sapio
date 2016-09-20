@@ -21,12 +21,12 @@
   <body>
     <header>
         <nav class="navbar">
-            <div class="container" style="position:relative;">
+            <div class="container">
                 <div class="navbar-header navbar-default">
                     <a class="navbar-brand" href="./">
-                        <img src="assets/images/logo.gif" alt="Logo" style="height:72px; width:auto;" />
+                        <img src="assets/images/logo.gif" alt="Logo" />
                     </a>
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainnavlinks" aria-expanded="false" style="position: absolute; right: 0px; top: 25px;">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainnavlinks" aria-expanded="false">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -34,21 +34,21 @@
                 </div>
 
                 <div class="collapse navbar-collapse" id="mainnavlinks">
-                    <ul class="nav navbar-nav fg-cap" style="margin-top: 40px;">
+                    <ul class="nav navbar-nav fg-cap">
                         <li><a href="#" data-target="#Reiseziele">Reiseziele</a></li>
                         <li><a href="#" data-target="#Reisethemen">Reisethemen</a></li>
                         <li><a href="#" data-target="#Ueber-uns">Über uns</a></li>
                     </ul>
                 </div>
 
-                <div class="hidden-xs" style="position: absolute; top:20px;right:0;">
+                <div class="hidden-xs navbar-phone">
                     <table>
                         <tr>
-                            <td rowspan=2 style="font-size: 3rem; padding: 5px 10px 0 0; line-height: 3rem;color:#802629;"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span></td>
-                            <td style="font-size:120%;text-align:justify;">030 &nbsp;- &nbsp;255 629 35</td>
+                            <td rowspan=2 class="navbar-phone-icon red-text"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span></td>
+                            <td class="navbar-phone-number">030 &nbsp;- &nbsp;255 629 35</td>
                         </tr>
                         <tr>
-                            <td style="font-size:80%;">Montag - Freitag 9 - 19 Uhr</td>
+                            <td class="navbar-phone-opening">Montag - Freitag 9 - 19 Uhr</td>
                         </tr> 
                     </table>
                 </div>
@@ -81,7 +81,7 @@
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-2 markHeadingOfList">
                         <h6><a href="#" id="markFrankreich" title="" data-id="fr-0">Frankreich</a></h6>
-                        <ul style="margin:0;">
+                        <ul class="margin0">
                             <li><a href="#" title="" data-parent="#markFrankreich" data-id="fr-1">Burgund</a></li>
                             <li><a href="#" title="" data-parent="#markFrankreich" data-id="fr-2">Languedoc</a></li>
                             <li>&nbsp;</li>
@@ -94,7 +94,7 @@
                         </ul>
                     </div>
                     <div class="col-xs-0 col-sm-6 col-md-3">
-                        <h6 style="margin:0;">&nbsp;</h6>
+                        <h6 class="margin0">&nbsp;</h6>
                         <img src="assets/images/nav-france-demo0.png" alt="" class="img-full markImage" />
                     </div>
                     <div class="col-xs-0 col-sm-6 col-md-3">
@@ -107,7 +107,7 @@
                         <img src="assets/images/demopic1.jpg" alt="" class="img-full img-rounded markImage" />
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 markHeadingOfList">
-                        <ul style="padding:0;">
+                        <ul class="padding0">
                             <li><a href="#" class="fg-cap" title="" data-id="0">Weinreisen</a></li>
                             <li><a href="#" class="fg-cap" title="" data-id="1">Kochreisen</a></li>
                             <li><a href="#" class="fg-cap" title="" data-id="2">Genusswandern</a></li>
@@ -121,9 +121,9 @@
                         <p class="markTxt"><br/><br/>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
                     </div>
                 </div>
-                <div id="Ueber-uns" class="row extendedmenu" style="width: auto;left: 485px;">
+                <div id="Ueber-uns" class="row extendedmenu">
                     <div class="col-xs-12">
-                        <ul style="padding:0;margin:0;">
+                        <ul>
                             <li><a href="#" class="fg-cap" title="">Unser Team</a></li>
                             <li><a href="#" class="fg-cap" title="">Beratung</a></li>
                             <li><a href="#" class="fg-cap" title="">Nachhaltigkeit &amp; CSR</a></li>
@@ -139,22 +139,22 @@
         </nav>
     </header>
     
-    <main class="container-fluid" style="padding-bottom:70px;">
+    <main class="container-fluid">
         <section class="row red">
             <div class="container">
                 <aside id="headerslider" class="carousel slide">
                     <div class="carousel-inner">
-                        <div class="item active" style="background-image:url('https://dummyimage.com/1200x350/cccccc/000000.png&text=dummy'); background-size:cover;height:350px;width:100%;">
-                            <div class="carousel-caption img-rounded carousel-caption-bottom-right" style="background-color: rgba(255, 255, 255, 0.85); position: absolute; text-shadow: none; color: rgb(0, 0, 0); left: auto; bottom: 8%; right: 33%; padding: 7px 20px;">
+                        <div class="item active" style="background-image:url('https://dummyimage.com/1200x350/cccccc/000000.png&text=dummy');">
+                            <div class="carousel-caption img-rounded carousel-caption-bottom-right">
                                 CINQUE TERRE<br/>
-                                <span class="fg-cap">Wandern, Wein & Kochen</span><br/>
+                                <span class="fg-cap">Wandern, Wein &amp; Kochen</span><br/>
                                 <a href="#" class="readon"> Reise anschauen</a>
                             </div>
                         </div>
-                        <div class="item" style="background-image:url('https://dummyimage.com/1200x350/cccccc/000000.png&text=dummy'); background-size:cover;height:350px;width:100%;">
-                            <div class="carousel-caption img-rounded carousel-caption-top-left" style="background-color: rgba(255, 255, 255, 0.85); position: absolute; text-shadow: none; color: rgb(0, 0, 0); left: auto; top: 8%; left: 8%; padding: 7px 20px;right:auto;bottom:auto;">
+                        <div class="item" style="background-image:url('https://dummyimage.com/1200x350/cccccc/000000.png&text=dummy');">
+                            <div class="carousel-caption img-rounded carousel-caption-top-left">
                                 BERLIN TERRE<br/>
-                                <span class="fg-cap">Bier, Vodka & Spätis</span><br/>
+                                <span class="fg-cap">Bier, Vodka &amp; Spätis</span><br/>
                                 <a href="#" class="readon"> Reise anschauen</a>
                             </div>
                         </div>
@@ -171,12 +171,12 @@
             </div>
         </section>
 
-        <section class="row ochre" style="padding:10px 0;">
+        <section class="row ochre fintravelbox">
             <div class="container">
                 <form class="form-horizontal row">
                     <label for="reiseziel" class="col-xs-3 col-sm-1 control-label">Reiseziel: </label>
                     <div class="col-xs-9 col-sm-2">
-                        <select class="img-rounded" name="reiseziel" id="reiseziel" style="">
+                        <select class="img-rounded" name="reiseziel" id="reiseziel">
                             <option value="0" selected>alle</option>
                             <option value="1">Berlin</option>
                             <option value="2">Cinque Terre</option>
@@ -185,21 +185,14 @@
                     <label for="reisemonat" class="col-xs-3 col-sm-1 control-label">Reisemonat: </label>
                     <div class="col-xs-9 col-sm-2">
                         <select class="img-rounded" name="reisemonat" id="reisemonat">
-                            <?php
-                                for($i=0;$i<10;$i++){
-                                    $sele = "";
-                                    $tmp = mktime(0, 0, 0, date("m")+$i, date("d"), date("Y"));
-                                    if($i==2){ $sele = "selected"; };
-                                    echo '<option value="'.date('Y-m', $tmp).'" '.$sele.'>'.date('F Y', $tmp).'</option>';
-                                };
-                            ?>
+                            <option value="2016-09">September 2016</option><option value="2016-10">October 2016</option><option value="2016-11" selected>November 2016</option><option value="2016-12">December 2016</option><option value="2017-01">January 2017</option><option value="2017-02">February 2017</option><option value="2017-03">March 2017</option><option value="2017-04">April 2017</option><option value="2017-05">May 2017</option><option value="2017-06">June 2017</option>                        
                         </select>
                     </div>
-                    <div class="col-xs-6 col-sm-3" style="padding-left:30px;">
-                        <button type="submit" name="getVacation" class="btn btn-red text-center" style="padding:7px 40px;"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> &nbsp; Reise finden</button>
+                    <div class="col-xs-6 col-sm-3" class="paddingleft30">
+                        <button type="submit" name="getVacation" class="btn btn-red text-center"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> &nbsp; Reise finden</button>
                     </div>
                     <div class="col-xs-6 col-sm-3 text-right">
-                        <a href="#" class="fg-cap" style="font-size:16px;line-height: 34px;"><span class="glyphicon glyphicon-calendar img-rounded" aria-hidden="true" style="background-color:#fff;padding: 5px 7px;"></span> &nbsp; Terminübersicht</a>
+                        <a href="#" class="fg-cap"><span class="glyphicon glyphicon-calendar img-rounded" aria-hidden="true"></span> &nbsp; Terminübersicht</a>
                     </div>
                 </form>
             </div>
@@ -207,7 +200,7 @@
 
         <section class="row">
             <div class="container">
-                <div id="maincontent" class="col-xs-12 col-sm-9" style="padding:0 50px 0 0;">
+                <div id="maincontent" class="col-xs-12 col-sm-9">
                     <section class="row">
                         <h1 class="col-xs-12">Essen und Trinken - der schönste Weg, eine Region<br/> zu entdecken und ihre Menschen kennen zu lernen.</h1>
                         <p class="col-xs-12">
@@ -224,42 +217,40 @@
                     <section class="row">
                         <h2 class="col-xs-12">Aktuelle Angebote</h2>
                         <a href="#" class="col-xs-12 col-sm-4 paddinleftright5 hiddenlink">
-                            <figure class="inlinecaption" style="position:relative;">
+                            <figure class="inlinecaption">
                                 <img src="https://dummyimage.com/187x112/cccccc/000000.png&text=dummy" alt="" class="img-rounded img-full" />
-                                <figcaption class="text-center" style="width:100%;displax:block;background-color:rgba(255,255,255,.85);position:absolute;bottom:0;left:0;padding:10px 5px 5px;line-height:1.6rem;"><strong>Höchste Gästezufriedenheit</strong><br><small style="">Unsere kulinarische Reise in Berlin</small></figcaption>
+                                <figcaption class="text-center"><strong>Höchste Gästezufriedenheit</strong><br><small>Unsere kulinarische Reise in Berlin</small></figcaption>
                             </figure>
                         </a>
                         <a href="#" class="col-xs-12 col-sm-4 paddinleftright5 hiddenlink">
-                            <figure class="inlinecaption" style="position:relative;">
+                            <figure class="inlinecaption">
                                 <img src="https://dummyimage.com/187x112/cccccc/000000.png&text=dummy" alt="" class="img-rounded img-full" />
-                                <figcaption class="text-center" style="width:100%;displax:block;background-color:rgba(255,255,255,.85);position:absolute;bottom:0;left:0;padding:10px 5px 5px;line-height:1.6rem;"><strong>Freie Plätze über Ostern</strong><br><small style="">Clinque Terre 28.3. - 3.4.</small></figcaption>
+                                <figcaption class="text-center"><strong>Freie Plätze über Ostern</strong><br><small>Clinque Terre 28.3. - 3.4.</small></figcaption>
                             </figure>
                         </a>
                         <a href="#" class="col-xs-12 col-sm-4 paddinleftright5 hiddenlink">
-                            <figure class="inlinecaption" style="position:relative;">
+                            <figure class="inlinecaption">
                                 <img src="https://dummyimage.com/187x112/cccccc/000000.png&text=dummy" alt="" class="img-rounded img-full" />
-                                <figcaption class="text-center" style="width:100%;displax:block;background-color:rgba(255,255,255,.85);position:absolute;bottom:0;left:0;padding:10px 5px 5px;line-height:1.6rem;"><strong>Venedig Segelreise</strong><br><small style="">Freie Plätze über Pflingsten</small></figcaption>
+                                <figcaption class="text-center"><strong>Venedig Segelreise</strong><br><small>Freie Plätze über Pflingsten</small></figcaption>
                             </figure>
                         </a>
-                        <h2 class="col-xs-12 col-sm-4 paddinleftright5" style="margin-top:30px;">Unsere Reiseleiter</h2>
-                        <h2 class="col-xs-12 col-sm-8 paddinleftright5" style="margin-top:30px;">Neugigkeiten</h2>
+                        <h2 class="col-xs-12 col-sm-4 paddinleftright5 margintop30">Unsere Reiseleiter</h2>
+                        <h2 class="col-xs-12 col-sm-8 paddinleftright5 margintop30">Neugigkeiten</h2>
                         <div class="col-xs-12 col-sm-4 paddinleftright5">
-                            
-                            
                             <aside id="reiseleiterslider" class="minislider carousel slide">
                                 <div class="carousel-inner">
-                                    <a href="#" class="item active hiddenlink" style="">
-                                        <figure>
+                                    <a href="#" class="item active hiddenlink">
+                                        <figure class="inlinecaption">
                                             <img src="https://dummyimage.com/123x169/cccccc/000000.png&text=dummy" alt="" class="center-block img-rounded" />
-                                            <figcaption class="carousel-caption text-center" style="width:100%;displax:block;background-color:rgba(255,255,255,.85);position:absolute;bottom:15px;left:0;padding:5px 2px;line-height:1.6rem;text-shadow:none;color:#000;font-size:90%;">
+                                            <figcaption class="carousel-caption text-center cigarband">
                                                 Bert Van den Abeele
                                             </figcaption>
                                         </figure>
                                     </a>
-                                    <a href="#" class="item hiddenlink" style="">
-                                        <figure>
+                                    <a href="#" class="item hiddenlink">
+                                        <figure class="inlinecaption">
                                             <img src="https://dummyimage.com/123x169/cccccc/000000.png&text=dummy" alt="" class="center-block" />
-                                            <figcaption class="carousel-caption text-center" style="width:100%;displax:block;background-color:rgba(255,255,255,.85);position:absolute;bottom:15px;left:0;padding:5px 2px;line-height:1.6rem;text-shadow:none;color:#000;font-size:90%;">
+                                            <figcaption class="carousel-caption text-center cigarband">
                                                 Pät von der Behrendt
                                             </figcaption>
                                         </figure>
@@ -274,19 +265,17 @@
                                     <span class="sr-only">Next</span>
                                 </a>
                             </aside>
-
-
                         </div>
                         <a href="#" class="col-xs-12 col-sm-4 paddinleftright5 hiddenlink">
-                            <figure class="inlinecaption" style="position:relative;">
+                            <figure class="inlinecaption">
                                 <img src="https://dummyimage.com/187x112/cccccc/000000.png&text=dummy" alt="" class="img-rounded img-full" />
-                                <figcaption class="text-center" style="width:100%;displax:block;background-color:rgba(255,255,255,.85);position:absolute;bottom:0;left:0;padding:10px 5px 5px;line-height:1.6rem;"><strong>Fünfte goldene Palme<br/>für Sapio</strong></figcaption>
+                                <figcaption class="text-center"><strong>Fünfte goldene Palme<br/>für Sapio</strong></figcaption>
                             </figure>
                         </a>
                         <a href="#" class="col-xs-12 col-sm-4 paddinleftright5 hiddenlink">
-                            <figure class="inlinecaption" style="position:relative;">
+                            <figure class="inlinecaption">
                                 <img src="https://dummyimage.com/187x112/cccccc/000000.png&text=dummy" alt="" class="img-rounded img-full" />
-                                <figcaption class="text-center" style="width:100%;displax:block;background-color:rgba(255,255,255,.85);position:absolute;bottom:0;left:0;padding:10px 5px 5px;line-height:1.6rem;"><strong>Freie Plätze über die<br/>Maifeiertage</strong></figcaption>
+                                <figcaption class="text-center"><strong>Freie Plätze über die<br/>Maifeiertage</strong></figcaption>
                             </figure>
                         </a>
                     </section>
@@ -297,60 +286,60 @@
                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.<br/><br/>
                         </p>
                         <a href="#" class="col-xs-6 col-sm-2 paddinleftright5 hiddenlink">
-                            <figure class="inlinecaption" style="position:relative;">
+                            <figure class="inlinecaption">
                                 <img src="https://dummyimage.com/123x169/cccccc/000000.png&text=dummy" alt="" class="img-rounded img-full" />
-                                <figcaption class="text-center" style="width:100%;displax:block;background-color:rgba(255,255,255,.85);position:absolute;bottom:0;left:0;padding:17px 5px 14px;line-height:1.6rem;">Weinreisen</figcaption>
+                                <figcaption class="text-center singleline">Weinreisen</figcaption>
                             </figure>
                         </a>
                         <a href="#" class="col-xs-6 col-sm-2 paddinleftright5 hiddenlink">
-                            <figure class="inlinecaption" style="position:relative;">
+                            <figure class="inlinecaption">
                                 <img src="https://dummyimage.com/123x169/cccccc/000000.png&text=dummy" alt="" class="img-rounded img-full" />
-                                <figcaption class="text-center" style="width:100%;displax:block;background-color:rgba(255,255,255,.85);position:absolute;bottom:0;left:0;padding:17px 5px 14px;line-height:1.6rem;">Kochreisen</figcaption>
+                                <figcaption class="text-center singleline">Kochreisen</figcaption>
                             </figure>
                         </a>
                         <a href="#" class="col-xs-6 col-sm-2 paddinleftright5 hiddenlink">
-                            <figure class="inlinecaption" style="position:relative;">
+                            <figure class="inlinecaption">
                                 <img src="https://dummyimage.com/123x169/cccccc/000000.png&text=dummy" alt="" class="img-rounded img-full" />
-                                <figcaption class="text-center" style="width:100%;displax:block;background-color:rgba(255,255,255,.85);position:absolute;bottom:0;left:0;padding:17px 5px 14px;line-height:1.6rem;">Genusswandern</figcaption>
+                                <figcaption class="text-center singleline">Genusswandern</figcaption>
                             </figure>
                         </a>
                         <a href="#" class="col-xs-6 col-sm-2 paddinleftright5 hiddenlink">
-                            <figure class="inlinecaption" style="position:relative;">
+                            <figure class="inlinecaption">
                                 <img src="https://dummyimage.com/123x169/cccccc/000000.png&text=dummy" alt="" class="img-rounded img-full" />
-                                <figcaption class="text-center" style="width:100%;displax:block;background-color:rgba(255,255,255,.85);position:absolute;bottom:0;left:0;padding:17px 5px 14px;line-height:1.6rem;">Trüffelreise</figcaption>
+                                <figcaption class="text-center singleline">Trüffelreise</figcaption>
                             </figure>
                         </a>
                         <a href="#" class="col-xs-6 col-sm-2 paddinleftright5 hiddenlink">
-                            <figure class="inlinecaption" style="position:relative;">
+                            <figure class="inlinecaption">
                                 <img src="https://dummyimage.com/123x169/cccccc/000000.png&text=dummy" alt="" class="img-rounded img-full" />
-                                <figcaption class="text-center" style="width:100%;displax:block;background-color:rgba(255,255,255,.85);position:absolute;bottom:0;left:0;padding:10px 5px 5px;line-height:1.6rem;">Kulinarische Städtereisen</figcaption>
+                                <figcaption class="text-center">Kulinarische Städtereisen</figcaption>
                             </figure>
                         </a>
                         <a href="#" class="col-xs-6 col-sm-2 paddinleftright5 hiddenlink">
-                            <figure class="inlinecaption" style="position:relative;">
+                            <figure class="inlinecaption">
                                 <img src="https://dummyimage.com/123x169/cccccc/000000.png&text=dummy" alt="" class="img-rounded img-full" />
-                                <figcaption class="text-center" style="width:100%;displax:block;background-color:rgba(255,255,255,.85);position:absolute;bottom:0;left:0;padding:17px 5px 14px;line-height:1.6rem;">Kulinarik &amp; Kunst</figcaption>
+                                <figcaption class="text-center singleline">Kulinarik &amp; Kunst</figcaption>
                             </figure>
                         </a>
                     </section>
                 </div>
                 <aside id="sidecontent" class="hidden-xs col-sm-3 hidden-print">
-                    <section class="clearfix" style="margin-bottom:30px;">
-                        <img src="https://dummyimage.com/123x169/cccccc/000000.png&text=dummy" alt="" class="pull-left img-rounded" style="width:50%;height:auto;margin:20px 15px 0 0;" />
-                        <p style="margin-top:40px;">Wir beraten Sie gerne persönlich<br/><br/><strong>Johanna Franz<br/>030 - 255 629 35</strong></p>
-                        <a href="#" class="btn btn-red" style="margin-left:-45px;"><span class="glyphicon glyphicon-send" aria-hidden="true"></span>   Anfrage senden</a>
+                    <section class="clearfix contactbox">
+                        <img src="https://dummyimage.com/123x169/cccccc/000000.png&text=dummy" alt="" class="pull-left img-rounded" />
+                        <p>Wir beraten Sie gerne persönlich<br/><br/><strong>Johanna Franz<br/>030 - 255 629 35</strong></p>
+                        <a href="#" class="btn btn-red"><span class="glyphicon glyphicon-send" aria-hidden="true"></span> &nbsp; Anfrage senden</a>
                     </section>
-                    <section style="margin-bottom:30px;">
+                    <section>
                         <img src="assets/images/cite-demo.png" alt="" class="img-responsive" />
                     </section>
-                    <section style="margin-bottom:30px;">
+                    <section>
                         <h4 class="red-text">Reiseberichte</h4>
                         <p>
                             Andrea Maaßen, Krefend<br/>
                             <a href="" class="fg-hightlight fg-cap red-text">Languedoc</a> | Oktober 2015
                         </p>
                         <p>
-                            <img src="https://dummyimage.com/123x169/cccccc/000000.png&text=dummy" alt="" class="pull-left img-rounded" style="width:65px;height:auto;margin:0 15px 0 0;" />
+                            <img src="https://dummyimage.com/123x169/cccccc/000000.png&text=dummy" alt="" class="pull-left img-rounded" />
                             &bdquo;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis [...]&rdquo;
                         </p>
                         <a href="#" class="readon"> Languedoc lesen</a>
@@ -360,12 +349,12 @@
                             <a href="" class="fg-hightlight fg-cap red-text">Burgund</a> | Oktober 2015
                         </p>
                         <p>
-                            <img src="https://dummyimage.com/123x169/cccccc/000000.png&text=dummy" alt="" class="pull-left img-rounded" style="width:65px;height:auto;margin:0 15px 0 0;" />
+                            <img src="https://dummyimage.com/123x169/cccccc/000000.png&text=dummy" alt="" class="pull-left img-rounded" />
                             &bdquo;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis [...]&rdquo;
                         </p>
                         <a href="#" class="readon"> Burgund lesen</a>
                     </section>
-                    <section class="ochre-light highlight-box img-rounded" style="margin-bottom:30px;">
+                    <section class="ochre-light highlight-box img-rounded">
                         <div>
                             <h4>Newsletter</h4>
                             <p>
@@ -382,7 +371,7 @@
                             </form>
                         </div>
                     </section>
-                    <section class="clearfix" style="margin-bottom:30px;">
+                    <section class="clearfix">
                         <h4 class="red-text">Überschrift</h4>
                         <p>
                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
@@ -396,7 +385,7 @@
 
     <footer class="container-fluid">
         <section class="container">
-            <span class="fg-cap" style="font-size: 2.2rem;">SAPIO [lat. Ich schmecke | Ich verstehe | Ich habe Geschmack]</span>
+            <span class="fg-cap footertitle">SAPIO [lat. Ich schmecke | Ich verstehe | Ich habe Geschmack]</span>
         </section>
         <section class="row red">
             <div class="container">
@@ -408,11 +397,11 @@
                             Reichenberger Str. 109<br/>
                             10999 Berlin
                         </address>
-                        <p style="line-height:2.4rem;">
-                            <span class="glyphicon glyphicon-earphone" aria-hidden="true" style="margin-right:10px;"></span> 030 255 629 35<br/>
-                            <span class="glyphicon glyphicon-print" aria-hidden="true" style="margin-right:10px;"></span> 030 255 629 36<br/>
-                            <span class="glyphicon glyphicon-send" aria-hidden="true" style="margin-right:10px;"></span> <a href="mailto:info@sapio.de">info@sapio.de</a><br/>
-                            <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true" style="margin-right:10px;"></span> <a href="https://www.facebook.com/sapio.de">Facebook</a>
+                        <p class="lh24">
+                            <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> 030 255 629 35<br/>
+                            <span class="glyphicon glyphicon-print" aria-hidden="true"></span> 030 255 629 36<br/>
+                            <span class="glyphicon glyphicon-send" aria-hidden="true"></span> <a href="mailto:info@sapio.de">info@sapio.de</a><br/>
+                            <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> <a href="https://www.facebook.com/sapio.de">Facebook</a>
                         </p>
                     </aside>
                     <aside class="col-xs-12 col-sm-6 col-md-3">
@@ -420,20 +409,20 @@
                         <p>
                             SAPIO bietet Beratung, Reiseorganisation, Reisebegleitung, Unterstützung bei Produkt-Scouting und Einkaufsverhandlungen sowie Messe-Services für Firmen.<br/>Wir unterstützen Sie gerne.
                         </p>
-                        <p style="line-height:2.4rem;">
+                        <p class="lh24">
                             <a href="#">Erfahren Sie mehr über unsere kulinarischen Incentive Reisen</a>
                         </p>
                     </aside>
                     <aside class="col-xs-12 col-sm-6 col-md-3">
                         <h6>Zufriedenheit 2016</h6>
-                        <p style="line-height:2.4rem;">
+                        <p class="lh24">
                             <a href="#">Ergebnisse der Gästebefragung</a>
                         </p>
                         <a href="#"><img src="assets/images/footer-programmuebersicht.png" alt="" class="img-responsive" /></a>
                     </aside>
                     <aside class="col-xs-12 col-sm-6 col-md-3">
                         <h6>Informatives</h6>
-                        <nav style="line-height:2.4rem;">
+                        <nav class="lh24">
                             <a href="#">Reiseberichte</a><br/>
                             <a href="#">Team</a><br/>
                             <a href="#">Presse</a><br/>
@@ -449,12 +438,12 @@
             <div class="container">
                 <div class="row">
                     <h6 class="col-xs-12">Ausgezeichnete Reisen</h6>
-                    <aside class="col-xs-12 col-sm-12 col-md-7">
-                        <a href="#"><img src="https://dummyimage.com/117x71/cccccc/000000.png&text=dummy" alt="" style="width:18%;margin-right:1%;" /></a>
-                        <a href="#"><img src="https://dummyimage.com/117x71/cccccc/000000.png&text=dummy" alt="" style="width:18%;margin-right:1%;" /></a>
-                        <a href="#"><img src="https://dummyimage.com/117x71/cccccc/000000.png&text=dummy" alt="" style="width:18%;margin-right:1%;" /></a>
-                        <a href="#"><img src="https://dummyimage.com/117x71/cccccc/000000.png&text=dummy" alt="" style="width:18%;margin-right:1%;" /></a>
-                        <a href="#"><img src="https://dummyimage.com/117x71/cccccc/000000.png&text=dummy" alt="" style="width:18%;margin-right:1%;" /></a>
+                    <aside class="col-xs-12 col-sm-12 col-md-7 nominatetravelbox">
+                        <a href="#"><img src="https://dummyimage.com/117x71/cccccc/000000.png&text=dummy" alt="" /></a>
+                        <a href="#"><img src="https://dummyimage.com/117x71/cccccc/000000.png&text=dummy" alt="" /></a>
+                        <a href="#"><img src="https://dummyimage.com/117x71/cccccc/000000.png&text=dummy" alt="" /></a>
+                        <a href="#"><img src="https://dummyimage.com/117x71/cccccc/000000.png&text=dummy" alt="" /></a>
+                        <a href="#"><img src="https://dummyimage.com/117x71/cccccc/000000.png&text=dummy" alt="" /></a>
                         <br/>
                         <br/>
                         <em>Bei Klick auf die Logos finden Sie jeweils die ausgezeichnete Reise.</em>
@@ -469,21 +458,21 @@
                 </div>
             </div>
         </section>
-        <section class="row" style="background-color:#C9C29C;">
+        <section class="row ochre">
             <div class="container">
                 <div class="row">
-                    <aside class="col-xs-12 col-sm-12 col-md-6">
+                    <aside class="col-xs-12 col-sm-12 col-md-6 sapiomediabox">
                         <h6>Sapio in den Medien</h6>
-                        <a href="#"><img src="https://dummyimage.com/117x71/cccccc/000000.png&text=dummy" alt="" style="margin:1%;" /></a>
-                        <a href="#"><img src="https://dummyimage.com/117x71/cccccc/000000.png&text=dummy" alt="" style="margin:1%;" /></a>
-                        <a href="#"><img src="https://dummyimage.com/117x71/cccccc/000000.png&text=dummy" alt="" style="margin:1%;" /></a>
-                        <a href="#"><img src="https://dummyimage.com/117x71/cccccc/000000.png&text=dummy" alt="" style="margin:1%;" /></a>
-                        <a href="#"><img src="https://dummyimage.com/117x71/cccccc/000000.png&text=dummy" alt="" style="margin:1%;" /></a>
-                        <a href="#"><img src="https://dummyimage.com/117x71/cccccc/000000.png&text=dummy" alt="" style="margin:1%;" /></a>
+                        <a href="#"><img src="https://dummyimage.com/117x71/cccccc/000000.png&text=dummy" alt="" /></a>
+                        <a href="#"><img src="https://dummyimage.com/117x71/cccccc/000000.png&text=dummy" alt="" /></a>
+                        <a href="#"><img src="https://dummyimage.com/117x71/cccccc/000000.png&text=dummy" alt="" /></a>
+                        <a href="#"><img src="https://dummyimage.com/117x71/cccccc/000000.png&text=dummy" alt="" /></a>
+                        <a href="#"><img src="https://dummyimage.com/117x71/cccccc/000000.png&text=dummy" alt="" /></a>
+                        <a href="#"><img src="https://dummyimage.com/117x71/cccccc/000000.png&text=dummy" alt="" /></a>
                     </aside>
                     <aside class="col-xs-12 col-sm-12 col-md-6">
                         <h6>Partner / Mitgliedschaften</h6>
-                        <img src="assets/images/footer-partners-demo.png" alt="" class="img-responsive" style="" />
+                        <img src="assets/images/footer-partners-demo.png" alt="" class="img-responsive" />
                     </aside>
                 </div>
             </div>
@@ -498,34 +487,43 @@
 
     <script type="text/javascript">
         var extendedmenuReisezieleItems = {  "fr": [
-                                        {"image":"nav-france-demo0.png","txt":"Frankreich is voll nice und so"},
-                                        {"image":"nav-france-demo1.png","txt":"Burgund in Frankreich is voll nice und so"},
-                                        {"image":"nav-france-demo2.png","txt":"Languedoc in Frankreich is voll nice und so"}
+                                        {"image":"assets/images/nav-france-demo0.png","txt":"Frankreich is voll nice und so"},
+                                        {"image":"assets/images/nav-france-demo1.png","txt":"Burgund in Frankreich is voll nice und so"},
+                                        {"image":"assets/images/nav-france-demo2.png","txt":"Languedoc in Frankreich is voll nice und so"}
                                     ],
                                    "de": [
-                                        {"image":"nav-france-demo0.png","txt":"Deutschland is voll nice und so"},
-                                        {"image":"nav-france-demo1.png","txt":"Berlin in Deutschland is voll nice und so"},
-                                        {"image":"nav-france-demo2.png","txt":"Baden-Württemberg in Deutschland is voll nice und so"},
-                                        {"image":"nav-france-demo2.png","txt":"Schleswig-Holstein in Deutschland is voll nice und so"}
+                                        {"image":"assets/images/nav-france-demo0.png","txt":"Deutschland is voll nice und so"},
+                                        {"image":"assets/images/nav-france-demo1.png","txt":"Berlin in Deutschland is voll nice und so"},
+                                        {"image":"assets/images/nav-france-demo2.png","txt":"Baden-Württemberg in Deutschland is voll nice und so"},
+                                        {"image":"assets/images/nav-france-demo2.png","txt":"Schleswig-Holstein in Deutschland is voll nice und so"}
                                     ]
                                 };
         var extendedmenuReisethemenItems = [
                                         {"image":"https://dummyimage.com/285x188/cccccc/000000.png&text=dummy","txt":"Weinreisen sind toll"},
                                         {"image":"https://dummyimage.com/285x188/cccccc/000000.png&text=dummy","txt":"Kochreisen sind soll"},
                                         {"image":"https://dummyimage.com/285x188/cccccc/000000.png&text=dummy","txt":"Genusswandern ist auch toll"},
-                                        {"image":"https://dummyimage.com/285x188/cccccc/000000.png&text=dummy","txt":"Trüffelreisen sind trüffeltastisch"}
+                                        {"image":"https://dummyimage.com/285x188/cccccc/000000.png&text=dummy","txt":"Trüffelreisen sind trüffeltastisch"},
+                                        {"image":"https://dummyimage.com/285x188/cccccc/000000.png&text=dummy","txt":"Kulinarische Städtereisen"},
+                                        {"image":"https://dummyimage.com/285x188/cccccc/000000.png&text=dummy","txt":"Kulinarik & Kunst"},
+                                        {"image":"https://dummyimage.com/285x188/cccccc/000000.png&text=dummy","txt":"Vegetarische Reisen"}
                                     ];
         
         $(document).ready(function(){
             $('#mainnavlinks a').click(function(){
-                if($(this).hasClass("active")){
-                    $(this).removeClass("active");
-                    $($(this).attr("data-target")).slideUp();
+                var el = $(this), target = $(this).attr("data-target");
+                if(el.hasClass("active")){
+                    el.removeClass("active");
+                    $(target).slideUp();
                 }else{
                     $(".extendedmenu").slideUp();
                     $('#mainnavlinks a').removeClass("active");
-                    $(this).addClass("active");
-                    $($(this).attr("data-target")).slideDown();
+                    el.addClass("active");
+                    $(target).slideDown();
+                    $("main").click(function(){
+                        $(".extendedmenu").slideUp();
+                        el.removeClass("active");
+                        $(target).slideUp();
+                    });
                 };
             });
 
@@ -541,7 +539,7 @@
             });
 
             $("#Reisethemen .markHeadingOfList a").hover(function(){
-                $('#Reisethemen .markImage').attr("src","assets/images/"+extendedmenuReisethemenItems[$(this).attr("data-id")].image);
+                $('#Reisethemen .markImage').attr("src",extendedmenuReisethemenItems[$(this).attr("data-id")].image);
                 $('#Reisethemen .markTxt').html(extendedmenuReisethemenItems[$(this).attr("data-id")].txt);
             });
 

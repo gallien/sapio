@@ -13,7 +13,7 @@ a:hover{
 hr{
     border-bottom:1px dashed #802629;
 }
-h1, h2{
+h1, h2, .footertitle{
     font-size: 2.2rem;
     margin-bottom: 20px;
 }
@@ -57,7 +57,36 @@ select {
 }
 
 
-
+/* HEADER */
+body>header .navbar-brand>img{
+    height:72px;
+    width:auto;
+}
+body>header .navbar-toggle{
+    position: absolute;
+    right: 0px;
+    top: 25px;
+}
+body>header .navbar-collapse .navbar-nav{
+    margin-top: 40px;
+}
+body>header .navbar-phone{
+    position: absolute;
+    top:20px;
+    right:0;
+}
+body>header .navbar-phone .navbar-phone-icon{
+    font-size: 3rem;
+    padding: 5px 10px 0 0;
+    line-height: 3rem;
+}
+body>header .navbar-phone .navbar-phone-number{
+    font-size:120%;
+    text-align:justify;
+}
+body>header .navbar-phone .navbar-phone-opening{
+    font-size:80%;
+}
 body>header a{
     color:#000;
 }
@@ -106,10 +135,24 @@ body>header a:hover{
     z-index:16;
     display:none;
 }
+.extendedmenu#Ueber-uns{
+    width: auto;
+    left: 485px;
+}
+.extendedmenu#Ueber-uns ul{
+    padding:0;
+    margin:0;
+}
 
 
 
-
+/* MAIN */
+body>main{
+    padding-bottom:70px;    
+}
+#maincontent{
+    padding:0 50px 0 0;
+}
 #maincontent a{
     border-bottom:1px dashed #802629;
 }
@@ -125,15 +168,39 @@ body>header a:hover{
 }
 
 
+
+/* SIDECOL */
 #sidecontent h4{
     line-height:3rem;
+}
+#sidecontent>section{
+    margin-bottom:30px;
+}
+#sidecontent img.pull-left{
+    width:65px;
+    height:auto;
+    margin:0 15px 0 0;
+}
+#sidecontent .contactbox img.pull-left{
+    width:50%;
+    margin:20px 15px 0 0;
+}
+#sidecontent .contactbox p{
+    margin-top:40px;
+}
+#sidecontent .contactbox .btn-red{
+    margin-left:-45px;
 }
 
 
 
-
+/* FOOTER */
 footer section{
     padding:15px 0;
+}
+footer aside .glyphicon, footer .nominatetravelbox img, footer .sapiomediabox img{
+    /*margin-right:10px;*/
+    margin:1%;
 }
 footer a{
     color:#FFFFFF;
@@ -143,14 +210,20 @@ footer>section.red{
     border-top:10px solid #C9C29C;
     color:#FFFFFF;
 }
+footer .nominatetravelbox img{
+    width:17%;
+}
 
 
 
 
-
+/* HELPER + FIXER */
 .img-full{
     width:100%;
     height:auto;
+}
+.container{
+    position:relative;
 }
 .ochre{
     background-color:#C9C29C;
@@ -197,9 +270,25 @@ a.readon::before{
 .highlight-box input.btn{
     margin-top: 5px;
 }
+.margin0{
+    margin:0;
+}
+margintop30{
+    margin-top:30px;
+}
+.padding0{
+    padding:0;
+}
 .paddinleftright5{
     padding:0 5px;
 }
+paddingleft30{
+    padding-left:30px;
+}
+.lh24{
+    line-height:2.4rem;
+}
+
 .hiddenlink{
     border:none!important;
     color:inherit;
@@ -213,6 +302,33 @@ a.readon::before{
 .noshadow{
     text-shadow: none;
 }
+.inlinecaption{
+    position:relative;
+}
+.inlinecaption figcaption{
+    width:100%;
+    display:block;
+    background-color:rgba(255,255,255,.85);
+    position:absolute;
+    bottom:0;
+    left:0;
+    padding:10px 5px 5px;
+    line-height:1.6rem;
+    text-shadow:none;
+    color:#000000;
+}
+.inlinecaption figcaption.cigarband{
+    font-size:90%;
+    bottom:15px;
+    padding:5px 2px;
+}
+.inlinecaption figcaption.singleline{
+    padding:17px 5px 14px;
+    line-height:1.6rem;
+}
+
+
+
 
 
 /* MAINSLIDER */
@@ -221,6 +337,38 @@ a.readon::before{
 }
 .carousel-control:hover{
   background: none;
+}
+#headerslider .item{
+    background-size:cover;
+    height:350px;
+    width:100%;
+}
+#headerslider .item .carousel-caption{
+    background-color: rgba(255, 255, 255, 0.85);
+    position: absolute;
+    text-shadow: none;
+    color: rgb(0, 0, 0);
+    left: auto;
+    bottom: auto;
+    right: auto;
+    top: auto;
+    padding: 7px 20px;
+}
+#headerslider .item .carousel-caption.carousel-caption-top-left{
+    top: 8%;
+    left: 8%;
+}
+#headerslider .item .carousel-caption.carousel-caption-top-right{
+    top: 8%;
+    right: 33%;
+}
+#headerslider .item .carousel-caption.carousel-caption-bottom-right{
+    bottom: 8%;
+    right: 33%;
+}
+#headerslider .item .carousel-caption.carousel-caption-bottom-left{
+    bottom: 8%;
+    left: 8%;
 }
 #headerslider .carousel-control {
   width: 50px;
@@ -234,4 +382,17 @@ a.readon::before{
 #headerslider .carousel-caption-bottom-right{
     text-align:left;
 }
-
+.fintravelbox{
+    padding:10px 0;
+}
+.fintravelbox .btn-red{
+    padding:7px 40px;
+}
+.fintravelbox .text-right>a{
+    font-size:16px;
+    line-height: 34px;
+}
+.fintravelbox .text-right>a .glyphicon{
+    background-color:#ffffff;
+    padding: 5px 7px;
+}
