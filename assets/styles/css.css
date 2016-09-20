@@ -25,6 +25,36 @@ h1, h2, h6, .fg-cap, #sidecontent h4, .inlinecaption figcaption>strong{
     text-transform: capitalize uppercase;
     font-variant:small-caps !important;
 }
+select {
+  background-color: white;
+  border: none;
+  display: inline-block;
+  font: inherit;
+  line-height: 1.5em;
+  padding: 0.5em 3.5em 0.5em 1em;
+  margin: 0;      
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+select:-moz-focusring {
+  color: #802629;
+  text-shadow: 0 0 0 #000;
+}
+select {
+  background-image:
+    linear-gradient(45deg, transparent 50%, #802629 50%),
+    linear-gradient(135deg, #802629 50%, transparent 50%);
+  background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px);
+  background-size:
+    5px 5px,
+    5px 5px;
+  background-repeat: no-repeat;
+}
 
 
 
@@ -76,14 +106,7 @@ body>header a:hover{
     z-index:16;
     display:none;
 }
-section.red{
-    background-color:#802629;
-    border-top:10px solid #C9C29C;
-    color:#FFFFFF;
-}
-section.red a:hover{
-    color:#C9C29C;
-}
+
 
 
 
@@ -115,6 +138,10 @@ footer section{
 footer a{
     color:#FFFFFF;
     text-decoration: underline;
+}
+footer>section.red{
+    border-top:10px solid #C9C29C;
+    color:#FFFFFF;
 }
 
 
@@ -180,6 +207,12 @@ a.readon::before{
 .hiddenlink:hover{
     color:inherit;
 }
+.form-control{
+    background-image: inherit;
+}
+.noshadow{
+    text-shadow: none;
+}
 
 
 /* MAINSLIDER */
@@ -189,15 +222,16 @@ a.readon::before{
 .carousel-control:hover{
   background: none;
 }
-.carousel-control {
+#headerslider .carousel-control {
   width: 50px;
 }
-.carousel-control.right {
+#headerslider .carousel-control.right {
   right: -50px;
 }
-.carousel-control.left {
+#headerslider .carousel-control.left {
   left: -50px;
 }
-.carousel-caption-bottom-right{
+#headerslider .carousel-caption-bottom-right{
     text-align:left;
 }
+
