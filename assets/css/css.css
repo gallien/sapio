@@ -1,6 +1,9 @@
 *{
     font-family: 'Lora', Georgia, serif;
 }
+body{
+    overflow-x:hidden;
+}
 a{
     color:#802629;
 }
@@ -131,6 +134,9 @@ footer a{
 .ochre-light{
     background-color:#E8E5DF;
 }
+.red{
+    background-color:#802629;
+}
 .red-text{
     color:#802629;
 }
@@ -173,4 +179,25 @@ a.readon::before{
 }
 .hiddenlink:hover{
     color:inherit;
+}
+
+
+/* MAINSLIDER */
+.carousel-control, .carousel-control.right, .carousel-control.left{
+  background: none;
+}
+.carousel-control:hover{
+  background: none;
+}
+.carousel-control {
+  width: 50px;
+}
+.carousel-control.right {
+  right: -50px;
+}
+.carousel-control.left {
+  left: -50px;
+}
+.carousel-caption-bottom-right{
+    text-align:left;
 }
