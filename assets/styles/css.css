@@ -176,19 +176,20 @@ body>main{
 #sidecontent>section{
     margin-bottom:30px;
 }
-#sidecontent img.pull-left{
+img.pull-left{
     width:65px;
     height:auto;
     margin:0 15px 0 0;
 }
-#sidecontent .contactbox img.pull-left{
+.contactbox img.pull-left{
     width:50%;
     margin:20px 15px 0 0;
 }
-#sidecontent .contactbox p{
+.contactbox p{
     margin-top:40px;
+    margin-bottom: 0;
 }
-#sidecontent .contactbox .btn-red{
+.contactbox .btn-red{
     margin-left:-45px;
 }
 
@@ -199,7 +200,6 @@ footer section{
     padding:15px 0;
 }
 footer aside .glyphicon, footer .nominatetravelbox img, footer .sapiomediabox img{
-    /*margin-right:10px;*/
     margin:1%;
 }
 footer a{
@@ -279,9 +279,14 @@ margintop30{
 .padding0{
     padding:0;
 }
-.paddinleftright5{
+.paddingsmallercols{
+    padding-left: 10px!important;
+    padding-right: 10px!important;
+}
+.paddingsmallercols>*{
     padding:0 5px;
 }
+
 paddingleft30{
     padding-left:30px;
 }
@@ -340,6 +345,7 @@ paddingleft30{
 }
 #headerslider .item{
     background-size:cover;
+    background-position: center center;
     height:350px;
     width:100%;
 }
@@ -395,4 +401,95 @@ paddingleft30{
 .fintravelbox .text-right>a .glyphicon{
     background-color:#ffffff;
     padding: 5px 7px;
+}
+
+
+/* RESPONSIVE */
+@media (min-width: 995px) and (max-width: 1170px){
+    .fintravelbox .row>div.paddingleft30{
+        text-align:right;
+    }
+}
+@media (max-width: 995px){
+    .fintravelbox .row>div.paddingleft30{
+        text-align:center;
+        margin-top: 10px;
+    }
+    .container {
+        width: 100%;
+    }
+    #headerslider .carousel-control.right{
+        right:0;
+    }
+    #headerslider .carousel-control.left{
+        left:0;
+    }
+    body > header .navbar-phone {
+        right: 20px;
+    }
+    #sidecontent .btn-red, #sidecontent .contactbox .btn-red {
+        margin-left: 0;
+        width: 100%;
+    }
+    #sidecontent .highlight-box>div{
+        padding:5px;
+    }
+    #sidecontent .contactbox strong {
+        clear: left;
+        display: block;
+        padding: 10px 0;
+        text-align: center;
+        width: 100%;
+    }
+    #headerslider .item .carousel-caption.carousel-caption-top-right{
+        right: 8%;
+    }
+    #headerslider .item .carousel-caption.carousel-caption-bottom-right{
+        right: 8%;
+    }
+    .headersliderbox{
+        padding:0;
+    }
+    .col-sm-4 {
+        margin-bottom: 10px;
+    }
+    .paddingsmallercols{
+        padding-bottom: 0!important;
+    }
+    .highlight-box > div {
+        padding: 5px;
+    }
+    .footertitle{
+        text-align:center;
+    }
+}
+@media (max-width: 768px){
+    #headerslider .item {
+        height: 200px;
+    }
+    .fintravelbox .container, body > header .navbar-collapse .navbar-nav>*{
+        text-align: center;
+    }
+    p {
+        text-align: justify;
+    }
+    #maincontent {
+        padding: 0;
+    }
+    #maincontent > section.highlight-box {
+        padding: 5px 8px;
+    }
+    .highlight-box > div {
+        padding: 15px;
+    }
+    body > main {
+        padding-bottom: 15px;
+    }
+    .contactbox .btn-red {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+    body > header .navbar-collapse .navbar-nav {
+        margin-top: 60px;
+    }
 }
