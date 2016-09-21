@@ -21,31 +21,12 @@ var extendedmenuReisethemenItems = [
                             ];
 
 $(document).ready(function(){
-    $(".header-include").load("inc/header.inc.html");
+    $(".header-include").load("inc/header.inc.html", function(){
+        getExtendedmenu();
+    });
     $(".footer-include").load("inc/footer.inc.html");
     $(".aside-contact-include").load("inc/aside-contact.inc.html");
     $(".aside-newsletter-include").load("inc/aside-newsletter.inc.html");
-    
-    if($(window).width()>768){
-        $("#mainnavlinks a").click(function(){
-            var el = $(this), target = $(this).attr("data-target");
-            if(el.hasClass("active")){
-                el.removeClass("active");
-                $(target).slideUp();
-            }else{
-                $(".extendedmenu").slideUp();
-                $("#mainnavlinks a").removeClass("active");
-                el.addClass("active");
-                $(target).slideDown();
-                $("main").click(function(){
-                    $(".extendedmenu").slideUp();
-                    el.removeClass("active");
-                    $(target).slideUp();
-                });
-            };
-            return false;
-        });
-    };
 
     $("#Reiseziele .markHeadingOfList a").hover(function(){
         $($(this).attr("data-parent")).css('color','#802629');
@@ -67,3 +48,26 @@ $(document).ready(function(){
     $('#headerslider').carousel({interval:6000});
     $('#reiseleiterslider').carousel({interval:4000});
 });
+
+function getExtendedmenu(){
+    if($(window).width()>768){
+        $("#mainnavlinks a").click(function(){
+            var el = $(this), target = $(this).attr("data-target");
+            if(el.hasClass("active")){
+                el.removeClass("active");
+                $(target).slideUp();
+            }else{
+                $(".extendedmenu").slideUp();
+                $("#mainnavlinks a").removeClass("active");
+                el.addClass("active");
+                $(target).slideDown();
+                $("main").click(function(){
+                    $(".extendedmenu").slideUp();
+                    el.removeClass("active");
+                    $(target).slideUp();
+                });
+            };
+            return false;
+        });
+    };
+}
