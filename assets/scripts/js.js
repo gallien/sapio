@@ -21,8 +21,10 @@ var extendedmenuReisethemenItems = [
                             ];
 
 $(document).ready(function(){
-    $("#header-include").load("inc/header.inc.html");
-    $("#footer-include").load("inc/footer.inc.html");
+    $(".header-include").load("inc/header.inc.html");
+    $(".footer-include").load("inc/footer.inc.html");
+    $(".aside-contact-include").load("inc/aside-contact.inc.html");
+    $(".aside-newsletter-include").load("inc/aside-newsletter.inc.html");
     
     if($(window).width()>768){
         $("#mainnavlinks a").click(function(){
