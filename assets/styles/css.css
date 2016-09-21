@@ -93,7 +93,7 @@ body>header a{
 body>header a:hover{
     color:#802629;
 }
-.extendedmenu li>a>h6:hover, .active, .navbar-default, .navbar li>a:hover, .navbar-default, .navbar li>a:active, .navbar-default, .navbar li>a:focus{
+.extendedmenu li>a>h6:hover, .extendedmenu .active, .navbar-default, .navbar li>a:hover, .navbar-default, .navbar li>a:active, .navbar-default, .navbar li>a:focus{
     color:#802629!important;
     text-decoration: underline!important;
 }
@@ -166,6 +166,34 @@ body>main{
 #maincontent>section:first-child, #sidecontent h4{
     border-bottom:1px dashed #802629;
 }
+.reiselandboxes>.row{
+    margin-bottom:30px;
+    padding-bottom:30px;
+    border-bottom:1px dashed #C9C29C;
+}
+.reiselandboxes>.row>*{
+    position:relative;
+    display:table;
+    width:100%;
+    overflow:hidden;
+    margin-left:15px;
+}
+.reiselandboxes>.row>*>*{
+    display:table-cell;
+    float:inherit;
+}
+.reiselandboxes>.row>*>figure{
+    height:100%;
+    background-size:cover;
+    background-position:center center;
+}
+.reiselandboxes>.row>*>div{
+    padding: 30px 15px 15px 30px;
+}
+.reiselandboxes>.row>*>div .btn{
+    padding: 7px 25px;
+}
+
 
 
 
@@ -191,6 +219,9 @@ img.pull-left{
 }
 .contactbox .btn-red{
     margin-left:-45px;
+}
+.highlight-box.red{
+    color:#FFFFFF;
 }
 
 
@@ -228,7 +259,7 @@ footer .nominatetravelbox img{
 .ochre{
     background-color:#C9C29C;
 }
-.ochre-text, .btn-red.btn.focus, .btn-red.btn:focus, .btn-red.btn:hover{
+.ochre-text, .btn-red.btn.focus, .btn-red.btn:focus, .btn-red.btn:hover, .red label.customcheck.btn.focus, .red label.customcheck.btn:focus, .red label.customcheck.btn:hover{
     color:#C9C29C;
 }
 .ochre-light{
@@ -237,7 +268,7 @@ footer .nominatetravelbox img{
 .red{
     background-color:#802629;
 }
-.red-text{
+.red-text, .list-sapiostyled li:before{
     color:#802629;
 }
 .btn-red{
@@ -249,8 +280,9 @@ footer .nominatetravelbox img{
     line-height:2.4rem;
     font-size:2rem;
 }
-a.readon::before{
-    content: "> ";
+a.readon::before, .list-sapiostyled li:before{
+    content: ">  ";
+    font-weight:bold;
 }
 .highlight-box{
     padding:5px 8px;
@@ -286,9 +318,11 @@ margintop30{
 .paddingsmallercols>*{
     padding:0 5px;
 }
-
 paddingleft30{
     padding-left:30px;
+}
+paddingtop15{
+  padding-top: 15px;
 }
 .lh24{
     line-height:2.4rem;
@@ -331,6 +365,48 @@ paddingleft30{
     padding:17px 5px 14px;
     line-height:1.6rem;
 }
+label.customcheck {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    text-align: left!important;
+}
+label.customcheck span{
+    white-space: normal;
+}
+label.customcheck input[type="checkbox"] ~ div.checkbg{
+    background-color: rgba(0,0,0,.4);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+}
+label.customcheck input[type="checkbox"] ~ div.checkbg>i.glyphicon.glyphicon-ok, label.customcheck input[type="checkbox"]{
+    display: none;
+}
+label.customcheck input[type="checkbox"]:checked ~ div.checkbg>i.glyphicon.glyphicon-ok{
+    color: #FFFFFF;
+    display: inline;
+    font-size: 10px;
+    top:0;
+    left: 4px;
+}
+label.customcheck input[type="checkbox"]:disabled ~ span{
+    color: rgba(0,0,0,.4);
+    cursor: not-allowed;
+}
+.imagemapbox{
+    width:100%;
+    height:auto;
+    position:relative;
+}
+.imagemapbox>.output{
+    position:absolute;
+    top:0;
+    left:0;
+    display: none;
+}
+
 
 
 
@@ -404,6 +480,8 @@ paddingleft30{
 }
 
 
+
+
 /* RESPONSIVE */
 @media (min-width: 995px) and (max-width: 1170px){
     .fintravelbox .row>div.paddingleft30{
@@ -463,6 +541,14 @@ paddingleft30{
         text-align:center;
     }
 }
+@media (min-width: 768px){
+    .p0axs{
+        padding-bottom:0!important;
+    }
+    .p0axs>*{
+        margin-bottom:0!important;
+    }
+}
 @media (max-width: 768px){
     #headerslider .item {
         height: 200px;
@@ -491,5 +577,11 @@ paddingleft30{
     }
     body > header .navbar-collapse .navbar-nav {
         margin-top: 60px;
+    }
+    .reiselandboxes .row > * > figure{
+        height: 200px;
+    }
+    .reiselandboxes .row > * > * {
+        display: inherit;
     }
 }
