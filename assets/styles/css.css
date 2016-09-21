@@ -198,6 +198,9 @@ body>main{
 
 
 /* SIDECOL */
+#sidecontent{
+    padding-top:35px;
+}
 #sidecontent h4{
     line-height:3rem;
 }
