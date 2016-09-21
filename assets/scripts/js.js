@@ -27,24 +27,6 @@ $(document).ready(function(){
     $(".footer-include").load("inc/footer.inc.html");
     $(".aside-contact-include").load("inc/aside-contact.inc.html");
     $(".aside-newsletter-include").load("inc/aside-newsletter.inc.html");
-
-    $("#Reiseziele .markHeadingOfList a").hover(function(){
-        $($(this).attr("data-parent")).css('color','#802629');
-        if($(this).attr("data-id")!=undefined){
-            var tmp = $(this).attr("data-id").split("-");
-            $('#Reiseziele .markImage').attr("src",extendedmenuReisezieleItems[tmp[0]][tmp[1]].image);
-            $('#Reiseziele .markTxt').html(extendedmenuReisezieleItems[tmp[0]][tmp[1]].txt);
-        };
-    }, function(){
-        $($(this).attr("data-parent")).css('color','inherit');
-    });
-
-    $("#Reisethemen .markHeadingOfList a").hover(function(){
-        $('#Reisethemen .markImage').attr("src",extendedmenuReisethemenItems[$(this).attr("data-id")].image);
-        $('#Reisethemen .markTxt').html(extendedmenuReisethemenItems[$(this).attr("data-id")].txt);
-    });
-
-
     $('#headerslider').carousel({interval:6000});
     $('#reiseleiterslider').carousel({interval:4000});
 });
@@ -70,4 +52,20 @@ function getExtendedmenu(){
             return false;
         });
     };
+
+    $("#Reiseziele .markHeadingOfList a").hover(function(){
+        $($(this).attr("data-parent")).css('color','#802629');
+        if($(this).attr("data-id")!=undefined){
+            var tmp = $(this).attr("data-id").split("-");
+            $('#Reiseziele .markImage').attr("src",extendedmenuReisezieleItems[tmp[0]][tmp[1]].image);
+            $('#Reiseziele .markTxt').html(extendedmenuReisezieleItems[tmp[0]][tmp[1]].txt);
+        };
+    }, function(){
+        $($(this).attr("data-parent")).css('color','inherit');
+    });
+
+    $("#Reisethemen .markHeadingOfList a").hover(function(){
+        $('#Reisethemen .markImage').attr("src",extendedmenuReisethemenItems[$(this).attr("data-id")].image);
+        $('#Reisethemen .markTxt').html(extendedmenuReisethemenItems[$(this).attr("data-id")].txt);
+    });
 }
