@@ -54,7 +54,9 @@ select {
     5px 5px,
     5px 5px;
   background-repeat: no-repeat;
+  max-width: 100%;
 }
+
 
 
 /* HEADER */

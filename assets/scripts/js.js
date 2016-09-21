@@ -24,6 +24,7 @@ $(document).ready(function(){
     $(".header-include").load("inc/header.inc.html", function(){
         getExtendedmenu();
     });
+    $(".fintravelbox").load("inc/fintravelbox.inc.html");
     $(".footer-include").load("inc/footer.inc.html");
     $(".aside-contact-include").load("inc/aside-contact.inc.html", function(){
         $("#sidecontent>section").first().clone().appendTo("#aside-include");
