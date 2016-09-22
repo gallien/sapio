@@ -158,7 +158,7 @@ body>main{
 #maincontent a{
     border-bottom:1px dashed #802629;
 }
-#maincontent a:hover{
+#maincontent a:hover, .highlight-box.red a:hover{
     text-decoration: unset;
     border-bottom:1px dashed #C9C29C;
 }
@@ -228,6 +228,9 @@ img.pull-left{
 .highlight-box.red{
     color:#FFFFFF;
 }
+.highlight-box.red ul.btn-group-vertical>li>strong{
+    padding-left:15px;
+}
 
 
 
@@ -264,7 +267,7 @@ footer .nominatetravelbox img{
 .ochre{
     background-color:#C9C29C;
 }
-.ochre-text, .btn-red.btn.focus, .btn-red.btn:focus, .btn-red.btn:hover, .red label.customcheck.btn.focus, .red label.customcheck.btn:focus, .red label.customcheck.btn:hover{
+.ochre-text, .btn-red.btn.focus, .btn-red.btn:focus, .btn-red.btn:hover, .red label.customcheck.btn.focus, .red label.customcheck.btn:focus, .red label.customcheck.btn:hover, .highlight-box.red a{
     color:#C9C29C;
 }
 .ochre-light{
@@ -285,9 +288,25 @@ footer .nominatetravelbox img{
     line-height:2.4rem;
     font-size:2rem;
 }
+a.readon{
+    text-decoration: none;
+    border: none!important;
+}
 a.readon::before, .list-sapiostyled li:before{
     content: ">  ";
     font-weight:bold;
+}
+blockquote {
+  border-left: none;
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+}
+blockquote p>span:before{
+    content: "„";
+}
+blockquote p<span:after{
+    content: "”";
 }
 .highlight-box{
     padding:5px 8px;
@@ -325,6 +344,9 @@ margintop30{
 }
 paddingleft30{
     padding-left:30px;
+}
+.padding15{
+    padding:15px;
 }
 paddingtop15{
   padding-top: 15px;
