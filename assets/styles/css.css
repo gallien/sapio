@@ -335,8 +335,11 @@ blockquote p:after{
 .margin0{
     margin:0;
 }
-margintop30{
+.margintop30{
     margin-top:30px;
+}
+.margintop15{
+    margin-top:15px;
 }
 .padding0{
     padding:0;
@@ -351,7 +354,7 @@ margintop30{
 paddingleft30{
     padding-left:30px;
 }
-.padding15{
+.padding15, #maincontent>section.padding15{
     padding:15px;
 }
 paddingtop15{
@@ -456,9 +459,50 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
 .reiseberichtboxes>.btn-red{
     margin-top:15px
 }
-.list-group-item {
-  padding: 10px 0;
+.terminuebersichtboxes .list-group-item:first-child{
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
 }
+.terminuebersichtboxes .list-group-item:last-child{
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+.terminuebersichtboxes .list-group-item{
+    border-radius: 0px;
+    padding-bottom: 0px;
+    border: none;
+    box-shadow: none;
+    padding: 10px 0;
+    margin-bottom: 1px;
+}
+.terminuebersichtboxes .list-group-item time{
+    margin-top:15px;
+    font-size:90%;
+    display: block;
+}
+.terminuebersichtboxes .list-group-item h4, .terminuebersichtboxes .list-group-item .btn{
+    margin-bottom: 0;
+    margin-top:15px;
+}
+.statusbull{
+    height: 10px; 
+    border-radius: 50%; 
+    margin-right: 7px; 
+    display: inline-block; 
+    width: 10px; 
+    line-height: 85%;
+}
+.statusbull.statusbull-orange{
+    background-color: orange;
+}
+.statusbull.statusbull-red{
+    background-color: #802629;
+}
+.statusbull.statusbull-green{
+    background-color: green;
+}
+
+
 
 
 
