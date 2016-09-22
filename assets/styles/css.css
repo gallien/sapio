@@ -446,12 +446,18 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
 .reiseberichtboxes article img{
     margin-bottom:10px;
 }
+.reiseberichtboxes article h2{
+    line-height:1.8rem;
+}
 .reiseberichtboxes article img.pull-left{
     width:30%;
     height:auto;
 }
 .reiseberichtboxes>.btn-red{
     margin-top:15px
+}
+.list-group-item {
+  padding: 10px 0;
 }
 
 
