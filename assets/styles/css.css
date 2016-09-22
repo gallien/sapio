@@ -273,6 +273,12 @@ footer .nominatetravelbox img{
 .ochre-light{
     background-color:#E8E5DF;
 }
+.black{
+    background-color:#000000;
+}
+.black-text{
+    color:#000000;
+}
 .red{
     background-color:#802629;
 }
@@ -302,10 +308,10 @@ blockquote {
   margin: 0;
   padding: 0;
 }
-blockquote p>span:before{
+blockquote p:before{
     content: "„";
 }
-blockquote p<span:after{
+blockquote p:after{
     content: "”";
 }
 .highlight-box{
@@ -433,6 +439,21 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
     left:0;
     display: none;
 }
+.reiseberichtboxes article{
+    border-bottom:1px dashed #C9C29C;
+    padding-bottom:15px;
+}
+.reiseberichtboxes article img{
+    margin-bottom:10px;
+}
+.reiseberichtboxes article img.pull-left{
+    width:30%;
+    height:auto;
+}
+.reiseberichtboxes>.btn-red{
+    margin-top:15px
+}
+
 
 
 
