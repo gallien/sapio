@@ -13,6 +13,9 @@ a:hover{
 hr{
     border-bottom:1px dashed #802629;
 }
+h1{
+    line-height: 3.4rem;
+}
 h1, h2, .footertitle{
     font-size: 2.2rem;
     margin-bottom: 20px;
@@ -24,6 +27,9 @@ h6{
 h1, h2, h6, .fg-cap, #sidecontent h4, .inlinecaption figcaption>strong{
     text-transform: capitalize uppercase;
     font-variant:small-caps !important;
+}
+ol{
+    padding-inline-start:15px;
 }
 select {
   background-color: white;
@@ -294,6 +300,9 @@ footer .nominatetravelbox img{
     line-height:2.4rem;
     font-size:2rem;
 }
+.fg-bold{
+    font-weight: bold;
+}
 a.readon{
     text-decoration: none;
     border: none!important;
@@ -446,6 +455,13 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
     border-bottom:1px dashed #C9C29C;
     padding-bottom:15px;
 }
+.reiseberichtboxes.ueberunsboxes article{
+    border-bottom:1px dashed #802629;
+    margin-bottom:30px;
+}
+.reiseberichtboxes.ueberunsboxes article .btn{
+    margin:15px 0;
+}
 .reiseberichtboxes article img{
     margin-bottom:10px;
 }
@@ -500,6 +516,10 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
 }
 .statusbull.statusbull-green{
     background-color: green;
+}
+.img-half{
+    width:50%!important;
+    height:auto!important;
 }
 
 
