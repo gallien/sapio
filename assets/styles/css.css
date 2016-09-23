@@ -164,7 +164,7 @@ body>main{
 #maincontent a{
     border-bottom:1px dashed #802629;
 }
-#maincontent a:hover, .highlight-box.red a:hover{
+#maincontent a:hover, .highlight-box.red a:hover, #maincontent .panel-title>a{
     text-decoration: unset;
     border-bottom:1px dashed #C9C29C;
 }
@@ -288,7 +288,7 @@ footer .nominatetravelbox img{
 .red{
     background-color:#802629;
 }
-.red-text, .list-sapiostyled li:before{
+.red-text, .list-sapiostyled li:before, .panel-title > a.red-text{
     color:#802629;
 }
 .btn-red{
@@ -521,6 +521,56 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
     width:50%!important;
     height:auto!important;
 }
+.panel {
+    background-color: initial;
+    border: none;
+    border-radius: none;
+    box-shadow: 0;
+}
+.panel.panel-default{
+    box-shadow: 0;
+    border-bottom:1px dashed #C9C29C;
+}
+.panel-default > .panel-heading {
+    background-color: transparent;
+    border-color: inherit;
+    color: inherit;
+}
+.panel-default > .panel-heading + .panel-collapsed > .panel-body {
+    border-top-color: none;
+}
+#maincontent .panel-default a.fg-cap.collapsed .pull-right{
+    transform: rotate(-90deg);
+}
+#maincontent .panel-default a.fg-cap{
+    border:0!important;
+    /*padding-bottom:0; */
+}
+.pressebox .panel-default > .panel-heading + .panel-collapse > .panel-body.padding0{
+  border-top: none;
+}
+.pressebox .panel-heading{
+    padding:0;
+}
+.pressebox .panel-title{
+    padding-bottom:0;
+}
+.pressebox .panel-title>*{
+    display: block;
+    padding:15px 0;
+}
+.pressebox .panel-body>h6{
+    margin-top:-20px;
+}
+.pressebox .panel-body>article{
+    margin-bottom:30px;
+    padding:15px 0;
+}
+.pressebox .panel-body>article time{
+    display:block;
+    margin-bottom:15px;
+}
+
 
 
 
