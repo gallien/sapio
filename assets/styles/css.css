@@ -10,9 +10,6 @@ a{
 a:hover{
     color:#C9C29C;
 }
-hr{
-    border-bottom:1px dashed #802629;
-}
 h1{
     line-height: 3.4rem;
 }
@@ -161,9 +158,6 @@ body>main{
 #maincontent{
     padding:0 50px 0 0;
 }
-#maincontent a{
-    border-bottom:1px dashed #802629;
-}
 #maincontent a:hover, .highlight-box.red a:hover, #maincontent .panel-title>a{
     text-decoration: unset;
     border-bottom:1px dashed #C9C29C;
@@ -171,7 +165,7 @@ body>main{
 #maincontent>section{
     padding:15px 0;
 }
-#maincontent>section:first-child, #sidecontent h4{
+#maincontent a, #maincontent>section:first-child, #sidecontent h4, hr, .strippedborderbottom, .reiseangebot.reiseberichtboxes article{
     border-bottom:1px dashed #802629;
 }
 .reiselandboxes>.row{
@@ -201,7 +195,17 @@ body>main{
 .reiselandboxes>.row>*>div .btn{
     padding: 7px 25px;
 }
-
+.reiseangebot.reiseberichtboxes article{
+    margin-bottom:15px;
+}
+.reiseangebotboxes>div{
+    padding-bottom:0;
+    overflow: hidden;
+}
+.reiseangebotboxes>div article h2{
+    margin: 0px 0px 7.5px;
+    font-size: 1.8rem;
+}
 
 
 
@@ -285,7 +289,7 @@ footer .nominatetravelbox img{
 .black-text{
     color:#000000;
 }
-.red{
+.red, .bulletlistsapio li>a.active>span{
     background-color:#802629;
 }
 .red-text, .list-sapiostyled li:before, .panel-title > a.red-text{
@@ -350,6 +354,9 @@ blockquote p:after{
 .margintop15{
     margin-top:15px;
 }
+.marginbottom15{
+    margin-bottom:15px;
+}
 .padding0{
     padding:0;
 }
@@ -366,8 +373,14 @@ paddingleft30{
 .padding15, #maincontent>section.padding15{
     padding:15px;
 }
+.padding30{
+    padding:30px;
+}
 paddingtop15{
   padding-top: 15px;
+}
+.paddingleft15{
+  padding-left: 15px;
 }
 .lh24{
     line-height:2.4rem;
@@ -472,6 +485,10 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
     width:30%;
     height:auto;
 }
+.reiseberichtboxes.reiseangebot article img.pull-left{
+    width:auto;
+    height:160px;
+}
 .reiseberichtboxes>.btn-red{
     margin-top:15px
 }
@@ -570,7 +587,50 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
     display:block;
     margin-bottom:15px;
 }
-
+.multiplepicslider .carousel-control {
+  opacity: 1;
+  width: 5%;
+  z-index: 5;
+}
+.multiplepicslider .row>*{
+  padding:0 5px;
+}
+.multiplepicslider .row>*:first-child{
+  padding-left:0;
+}
+.multiplepicslider .row>*:last-child{
+  padding-right:0;
+}
+.noborder{
+    border: none!important;
+}
+.bulletlistsapio{
+    line-height:4rem;
+}
+.bulletlistsapio li>a{
+    font-size:2.2rem;
+}
+.bulletlistsapio li>a.active{
+    color:#000;
+}
+.bulletlistsapio li>a>span{
+    background-color: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    height: 20px;
+    position: relative;
+    width: 20px;
+    color:#fff;
+    line-height:2.2rem;
+    margin-right: 5px;
+}
+.bulletlistsapio li>a>span>.glyphicon{
+    font-size: 1rem;
+    font-weight: bold;
+    left: 5px;
+    line-height: 1rem;
+    top: -4px;
+}
 
 
 

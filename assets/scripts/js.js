@@ -32,6 +32,7 @@ $(document).ready(function(){
     $(".aside-newsletter-include").load("inc/aside-newsletter.inc.html");
     $("#headerslider").carousel({interval:6000});
     $("#reiseleiterslider").carousel({interval:4000});
+    $("#reisedetailbilderslider").carousel({interval:8000});
     $("img[usemap]").rwdImageMaps();
     getImagemapListener();
 });
