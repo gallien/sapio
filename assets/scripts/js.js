@@ -25,6 +25,16 @@ $(document).ready(function(){
         getExtendedmenu();
     });
     $(".fintravelbox").load("inc/fintravelbox.inc.html");
+    $("#buchungsanfragemodal").load("inc/buchungsanfragemodal.inc.html", function(){
+        $("#buchungsanfragemodal_mytravel select").change(function(){
+            updateSelectOutputBoxes($(this));
+        });
+        updateSelectOutputBoxes($("#buchungsanfragemodal_mytravel select"));
+        $("#buchungsanfragemodal_mydata select, #buchungsanfragemodal_mydata input, #buchungsanfragemodal_mydata textarea").blur(function(){
+            updateInputOutputBoxes($(this));
+        });
+        updateInputOutputBoxes($("#buchungsanfragemodal_mydata select, #buchungsanfragemodal_mydata input, #buchungsanfragemodal_mydata textarea"));
+    });
     $(".footer-include").load("inc/footer.inc.html");
     $(".aside-contact-include").load("inc/aside-contact.inc.html", function(){
         $("#sidecontent>section").first().clone().appendTo("#aside-include");
@@ -36,6 +46,35 @@ $(document).ready(function(){
     $("img[usemap]").rwdImageMaps();
     getImagemapListener();
 });
+
+function updateSelectOutputBoxes(element){
+    element.each(function(index, el){
+        el = $(el);
+        if(el.val()!="" && el.val()!=undefined){
+            var tmp = el.find("option:selected").text();
+            if(el.attr("id").search("add_option")>0){ tmp = tmp+"x "+el.parent().parent().find("p").html(); };
+            tmp = tmp.split(" - ")[0];
+            $("."+el.attr("id")+"-output").html(tmp);
+            if(el.find("option:selected").attr('data-price')){
+                $("."+el.attr("id")+"-price").html(parseInt(el.find("option:selected").attr("data-price")).toLocaleString()+" &euro;");
+            };
+        };
+    });
+    var price = 0;
+    $("#buchungsanfragemodal_mytravel select option:selected[data-price]").each(function(index, el){
+        price += parseInt($(el).attr("data-price"));
+    });
+    $(".travel-price").html(price.toLocaleString()+" &euro;");
+};
+
+function updateInputOutputBoxes(element){
+    element.each(function(index, el){
+        el = $(el);
+        if(el.val()!="" && el.val()!=undefined){
+            $("."+el.attr("id")+"-output").html(el.val());
+        };
+    });
+};
 
 function getImagemapListener(){
     $("map>area").mouseenter(function(){

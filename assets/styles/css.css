@@ -28,19 +28,22 @@ h1, h2, h6, .fg-cap, #sidecontent h4, .inlinecaption figcaption>strong{
 ol{
     padding-inline-start:15px;
 }
-select {
+select, input, textarea {
   background-color: white;
   border: none;
   display: inline-block;
   font: inherit;
   line-height: 1.5em;
-  padding: 0.5em 3.5em 0.5em 1em;
+  padding: 0.5em 1em 0.5em 1em;
   margin: 0;      
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-appearance: none;
   -moz-appearance: none;
+}
+select{
+  padding: 0.5em 2em 0.5em 1em;
 }
 select:-moz-focusring {
   color: #802629;
@@ -277,6 +280,11 @@ footer .nominatetravelbox img{
 .ochre{
     background-color:#C9C29C;
 }
+.btn-ochre{
+    background-color:#C9C29C;
+    color:#000000;
+    border:none;
+}
 .ochre-text, .btn-red.btn.focus, .btn-red.btn:focus, .btn-red.btn:hover, .red label.customcheck.btn.focus, .red label.customcheck.btn:focus, .red label.customcheck.btn:hover, .highlight-box.red a{
     color:#C9C29C;
 }
@@ -348,6 +356,9 @@ blockquote p:after{
 .margin0{
     margin:0;
 }
+.margintop0{
+    margin-top:0;
+}
 .margintop30{
     margin-top:30px;
 }
@@ -363,6 +374,9 @@ blockquote p:after{
 .padding0{
     padding:0;
 }
+.paddingtop0{
+    padding-top:0!important;
+}
 .paddingsmallercols{
     padding-left: 10px!important;
     padding-right: 10px!important;
@@ -370,7 +384,7 @@ blockquote p:after{
 .paddingsmallercols>*{
     padding:0 5px;
 }
-paddingleft30{
+.paddingleft30{
     padding-left:30px;
 }
 .padding15, #maincontent>section.padding15{
@@ -379,7 +393,10 @@ paddingleft30{
 .padding30{
     padding:30px;
 }
-paddingtop15{
+.paddingtop30{
+  padding-top: 30px;
+}
+.paddingtop15{
   padding-top: 15px;
 }
 .paddingleft15{
@@ -495,11 +512,11 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
 .reiseberichtboxes>.btn-red{
     margin-top:15px
 }
-.terminuebersichtboxes .list-group-item:first-child{
+.terminuebersichtboxes .list-group-item:first-child, ul.nav-tabs.ochre{
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
 }
-.terminuebersichtboxes .list-group-item:last-child{
+.terminuebersichtboxes .list-group-item:last-child, .tab-content.ochre-light{
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
 }
@@ -634,7 +651,28 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
     line-height: 1rem;
     top: -4px;
 }
-
+.nav-tabs > li > a, .nav-tabs > li > a:focus, .nav-tabs > li > a:hover {
+    background-color: none;
+    color:#000000;
+    border:none;
+    padding: 10px 30px;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+    background-color: #802629;
+    color:#FFFFFF;
+    border:none;
+}
+.tab-content .row{
+    position: relative;
+}
+.tab-pane .row>h2 ~ a{
+    position: absolute;
+    top: 0;
+    right: 15px;
+}
+.tab-pane .row>h2 ~ a>span{
+    font-size:2rem;
+}
 
 
 
@@ -654,9 +692,24 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
 #buchungsanfragemodal .inputline p{
   padding-top: 7px;
 }
-#buchungsanfragemodal .inputline input, #buchungsanfragemodal .inputline select{
+#buchungsanfragemodal .inputline input, #buchungsanfragemodal .inputline select, #buchungsanfragemodal .inputline textarea{
   width: 100%;
   border-radius: 4px;
+  padding: 0.5em 1.5em 0.5em 1em;
+}
+#buchungsanfragemodal .close{
+  font-size: 3rem;
+  margin-right: 15px;
+  margin-top: -15px;
+}
+#buchungsanfragemodal .tab-pane footer a{
+    text-decoration: none;
+}
+#buchungsanfragemodal .tab-pane footer .right{
+    padding-right: 45px;
+}
+#buchungsanfragemodal .tab-pane footer .left{
+    padding-left: 45px;
 }
 
 
