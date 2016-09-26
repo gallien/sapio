@@ -354,6 +354,9 @@ blockquote p:after{
 .margintop15{
     margin-top:15px;
 }
+.margin15{
+    margin:15px;
+}
 .marginbottom15{
     margin-bottom:15px;
 }
@@ -631,6 +634,31 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
     line-height: 1rem;
     top: -4px;
 }
+
+
+
+
+
+
+
+
+
+
+/* BOOKING-MODAL */
+#buchungsanfragemodal .text-left {
+  text-align: left!important;
+}
+#buchungsanfragemodal .inputline {
+  margin-bottom:15px;
+}
+#buchungsanfragemodal .inputline p{
+  padding-top: 7px;
+}
+#buchungsanfragemodal .inputline input, #buchungsanfragemodal .inputline select{
+  width: 100%;
+  border-radius: 4px;
+}
+
 
 
 

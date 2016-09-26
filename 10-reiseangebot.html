@@ -170,7 +170,7 @@
                     <section>
                         <a href="#" class="btn ochre text-center img-full" style="margin-bottom:15px;">PDF-Download der Reise</a>
                         <a href="#" class="btn ochre text-center img-full" style="margin-bottom:15px;">Informationen anfordern</a>
-                        <a href="#" class="btn btn-red text-center img-full" style="margin-bottom:15px;">Buchungsanfrage</a>
+                        <button type="button" class="btn btn-red text-center img-full" style="margin-bottom:15px;" data-toggle="modal" data-target="#buchungsanfragemodal">Buchungsanfrage</a>
                     </section>
                     <section>
                         <ul class="list-unstyled bulletlistsapio">
@@ -247,6 +247,212 @@
     </main>
 
     <footer class="container-fluid footer-include"></footer>
+
+
+    <div class="modal fade" id="buchungsanfragemodal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Buchungsanfrage für Amalfiküste</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div>
+
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#buchungsanfragemodal_mytravel" aria-controls="buchungsanfragemodal_mytravel" role="tab" data-toggle="tab">Meine Reise</a></li>
+                            <li role="presentation"><a href="#buchungsanfragemodal_mydata" aria-controls="buchungsanfragemodal_mydata" role="tab" data-toggle="tab">Meine Daten</a></li>
+                            <li role="presentation"><a href="#buchungsanfragemodal_summary" aria-controls="buchungsanfragemodal_summary" role="tab" data-toggle="tab">Zusammenfassung</a></li>
+                            <li role="presentation"><a href="#buchungsanfragemodal_confirm" aria-controls="buchungsanfragemodal_confirm" role="tab" data-toggle="tab">Bestätigung</a></li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content ochre-light">
+                            <div role="tabpanel" class="tab-pane active row" id="buchungsanfragemodal_mytravel">
+                                
+                                <div class="col-sm-1 hidden-xs">&nbsp;</div>
+                                <div class="col-xs-12 col-sm-10">
+                                    
+                                    <form class="form-horizontal">
+                                        <div class="row margintop30 inputline">
+                                            <label for="travel_date" class="col-xs-12 col-sm-3 control-label text-left">Reisetermin:</label>
+                                            <div class="col-xs-12 col-sm-3">
+                                                <select id="travel_date" required>
+                                                    <option value="">Bitte wählen</option>
+                                                    <option value="1" selected>11.06. - 18.06.2016</option>
+                                                    <option value="2">18.07. - 24.07.2016</option>
+                                                    <option value="3">11.08. - 18.08.2016</option>
+                                                    <option value="4">18.09. - 24.09.2016</option>
+                                                </select>
+                                            </div>
+                                            <label for="travel_num_of_person" class="col-xs-12 col-sm-4 control-label">Anzahl der Reisenden:</label>
+                                            <div class="col-xs-12 col-sm-2">
+                                                <select id="travel_num_of_person" required>
+                                                    <option value="">Bitte wählen</option>
+                                                    <option>1</option>
+                                                    <option selected>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                    <option>6</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row inputline">
+                                            <label for="travel_roomkind_1" class="col-xs-12 col-sm-3 control-label text-left">Zimmer:</label>
+                                            <div class="col-xs-12 col-sm-9">
+                                                <select id="travel_roomkind_1" required>
+                                                    <option value="" selected>Bitte wählen</option>
+                                                    <option value="EZ" data-price="1898">Einzelzimmer - Reisepreis 1.898 € pro Person</option>
+                                                    <option value="DZ" data-price="1489" selected>Doppelzimmer - Reisepreis 1.489 € pro Person</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row inputline">
+                                            <label for="travel_roomkind_add" class="col-xs-12 col-sm-3 control-label text-left">weitere Zimmer:</label>
+                                            <div class="col-xs-12 col-sm-9">
+                                                <a href="#" class="btn btn-red text-center" id="travel_roomkind_add" onClick="$('#travel_roomkind_2_box').removeClass('hidden');$(this).addClass('disabled');">+</a>
+                                            </div>
+                                        </div>
+                                        <div class="row inputline hidden" id="travel_roomkind_2_box">
+                                            <div class="col-xs-12 col-sm-9 col-sm-offset-3">
+                                                <select id="travel_roomkind_2">
+                                                    <option value="">Bitte wählen</option>
+                                                    <option value="EZ" data-price="1898">Einzelzimmer - Reisepreis 1.898 € pro Person</option>
+                                                    <option value="DZ" data-price="1489">Doppelzimmer - Reisepreis 1.489 € pro Person</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row inputline">
+                                            <label for="travel_arrival_before_days" class="col-xs-12 col-sm-3 control-label text-left">Verlängerung:</label>
+                                            <div class="col-xs-12 col-sm-4">
+                                                <select id="travel_arrival_before_days">
+                                                    <option value="0" selected>Frühere Anreise</option>
+                                                    <option value="1">einen Tag früher</option>
+                                                    <option value="2">zwei Tage früher</option>
+                                                    <option value="3">drei Tage früher</option>
+                                                    <option value="4">vier Tage früher</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-4 col-sm-offset-1">
+                                                <select id="travel_checkout_after_days">
+                                                    <option value="0" selected>Spätere Abreise</option>
+                                                    <option value="1">einen Tag später</option>
+                                                    <option value="2">zwei Tage später</option>
+                                                    <option value="3">drei Tage später</option>
+                                                    <option value="4">vier Tage später</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row inputline">
+                                            <label for="travel_transfer" class="col-xs-12 col-sm-3 control-label text-left">Transfer:</label>
+                                            <div class="col-xs-12 col-sm-9">
+                                                <select id="travel_transfer">
+                                                    <option value="0" selected>nicht gewünscht</option>
+                                                    <option value="1">gewünscht</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row inputline">
+                                            <label for="travel_add_option_1" class="col-xs-12 col-sm-3 control-label text-left">Zuatzoptionen:</label>
+                                            <div class="col-xs-3 col-sm-2">
+                                                <select id="travel_add_option_1">
+                                                    <option value="" selected>-</option>
+                                                    <option data-price="65">1</option>
+                                                    <option data-price="130">2</option>
+                                                    <option data-price="195">3</option>
+                                                    <option data-price="260">4</option>
+                                                    <option data-price="325">5</option>
+                                                    <option data-price="390">6</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-xs-9 col-sm-7">
+                                                <p>Ausflug mit Fischer Peter Bomfelder - 65 &euro; p.P.</p>
+                                            </div>
+                                        </div>
+                                        <div class="row inputline">
+                                            <div class="col-xs-3 col-sm-2 col-sm-offset-3">
+                                                <select id="travel_add_option_2">
+                                                    <option value="" selected>-</option>
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                    <option>6</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-xs-9 col-sm-7">
+                                                <p>Rotweinverkostung auf Gut Hoffenhausen</p>
+                                            </div>
+                                        </div>
+                                        <div class="row inputline">
+                                            <div class="col-xs-3 col-sm-2 col-sm-offset-3">
+                                                <select id="travel_add_option_3">
+                                                    <option value="" selected>-</option>
+                                                    <option value="1">Ja</option>
+                                                    <option value="2">Nein</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-xs-9 col-sm-7">
+                                                <p>+ 15 kg Gepäckzuschlag beim Flug</p>
+                                            </div>
+                                        </div>
+                                        <hr/>
+                                        <div class="row">
+                                            <div class="fg-bold col-xs-3">Reisetermin:</div>
+                                            <div class="col-xs-7 travel_date-output">11.06. - 18.06.2016</div>
+                                            <div class="col-xs-2 text-right"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="fg-bold col-xs-3">Zimmer:</div>
+                                            <div class="col-xs-7 travel_roomkind_1-output">Einzelzimmer</div>
+                                            <div class="col-xs-2 travel_roomkind_1-price text-right">1.898 &euro;</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="fg-bold col-xs-3">weitere Zimmer:</div>
+                                            <div class="col-xs-7 travel_roomkind_2-output">Einzelzimmer</div>
+                                            <div class="col-xs-2 travel_roomkind_2-price text-right">1.898 &euro;</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="fg-bold col-xs-3">Transfer:</div>
+                                            <div class="col-xs-7 travel_transfer-output">nicht gewünscht</div>
+                                            <div class="col-xs-2 travel_transfer-price text-right"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="fg-bold col-xs-3">Zusatzoptionen:</div>
+                                            <div class="col-xs-7 travel_add_option_1-output">2x Ausflug mit Fischer Peter Bornfelder</div>
+                                            <div class="col-xs-2 travel_add_option_1-price text-right">130 &euro;</div>
+                                        </div>
+                                        <div class="row margintop30">
+                                            <div class="fg-bold col-xs-3">Gesamtsumme</div>
+                                            <div class="col-xs-9 travel-price text-right">3.926 &euro;</div>
+                                        </div>
+                                    </form>
+
+                                </div>
+                                <div class="col-sm-1 hidden-xs">&nbsp;</div>
+                                <div class="col-xs-6 col-sm-3 col-sm-offset-9 margintop15 marginbottom15" style="padding-right: 45px;">
+                                    <a href="#" class="btn btn-red img-full">weiter</a>
+                                </div>
+                            
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="buchungsanfragemodal_mydata">...</div>
+                            <div role="tabpanel" class="tab-pane" id="buchungsanfragemodal_summary">...</div>
+                            <div role="tabpanel" class="tab-pane" id="buchungsanfragemodal_confirm">...</div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
 
     <script src="vendor/jquery/dist/jquery.min.js"></script>
     <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
