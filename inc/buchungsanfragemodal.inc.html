@@ -8,10 +8,10 @@
             <div>
 
                 <ul class="nav nav-tabs ochre" role="tablist">
-                    <li role="presentation" class="active"><a href="#buchungsanfragemodal_mytravel" aria-controls="buchungsanfragemodal_mytravel" class="fg-cap" data-toggle="tab">Meine Reise</a></li>
-                    <li role="presentation" class=""><a href="#buchungsanfragemodal_mydata" aria-controls="buchungsanfragemodal_mydata" class="fg-cap" data-toggle="tab">Meine Daten</a></li>
-                    <li role="presentation"><a href="#buchungsanfragemodal_summary" aria-controls="buchungsanfragemodal_summary" class="fg-cap" data-toggle="tab">Zusammenfassung</a></li>
-                    <li role="presentation"><a href="#buchungsanfragemodal_confirm" aria-controls="buchungsanfragemodal_confirm" class="fg-cap" data-toggle="tab">Bestätigung</a></li>
+                    <li role="presentation" class="active"><a href="#buchungsanfragemodal_mytravel" aria-controls="buchungsanfragemodal_mytravel" class="fg-cap">Meine Reise</a></li>
+                    <li role="presentation" class="disabled"><a href="#buchungsanfragemodal_mydata" aria-controls="buchungsanfragemodal_mydata" class="fg-cap">Meine Daten</a></li>
+                    <li role="presentation" class="disabled"><a href="#buchungsanfragemodal_summary" aria-controls="buchungsanfragemodal_summary" class="fg-cap">Zusammenfassung</a></li>
+                    <li role="presentation" class="disabled"><a href="#buchungsanfragemodal_confirm" aria-controls="buchungsanfragemodal_confirm" class="fg-cap">Bestätigung</a></li>
                 </ul>
 
                 <form class="form-horizontal">
@@ -20,128 +20,153 @@
                         <div class="col-sm-1 hidden-xs">&nbsp;</div>
                         <div class="col-xs-12 col-sm-10">
                             <div class="row margintop30 inputline">
-                                <label for="travel_date" class="col-xs-12 col-sm-3 control-label text-left">Reisetermin*:</label>
-                                <div class="col-xs-12 col-sm-3">
-                                    <select id="travel_date" required>
-                                        <option value="">Bitte wählen</option>
-                                        <option value="1" selected>11.06. - 18.06.2016</option>
-                                        <option value="2">18.07. - 24.07.2016</option>
-                                        <option value="3">11.08. - 18.08.2016</option>
-                                        <option value="4">18.09. - 24.09.2016</option>
-                                    </select>
+                                <div class="col-xs-12 btn-red padding15 img-rounded marginbottom15 errorbox" style="display:none;">
+                                    <p>Es wurden fehlerhafte Angaben gefunden. Bitte geben Sie <span></span> korrekt an, bevor Sie zur nächsten Seite wechseln.</p>
                                 </div>
-                                <label for="travel_num_of_person" class="col-xs-12 col-sm-4 control-label">Anzahl der Reisenden*:</label>
-                                <div class="col-xs-12 col-sm-2">
-                                    <select id="travel_num_of_person" required>
-                                        <option value="">Bitte wählen</option>
-                                        <option>1</option>
-                                        <option selected>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                        <option>6</option>
-                                    </select>
-                                </div>
+                                <span class="form-group">
+                                    <label for="travel_date" class="col-xs-12 col-sm-3 control-label text-left">Reisetermin*:</label>
+                                    <div class="col-xs-12 col-sm-3">
+                                        <select id="travel_date" required>
+                                            <option value="" selected>Bitte wählen</option>
+                                            <option value="1">11.06. - 18.06.2016</option>
+                                            <option value="2">18.07. - 24.07.2016</option>
+                                            <option value="3">11.08. - 18.08.2016</option>
+                                            <option value="4">18.09. - 24.09.2016</option>
+                                        </select>
+                                    </div>
+                                </span>
+                                <span class="form-group">
+                                    <label for="travel_num_of_person" class="col-xs-12 col-sm-4 control-label">Anzahl der Reisenden*:</label>
+                                    <div class="col-xs-12 col-sm-2">
+                                        <select id="travel_num_of_person" required>
+                                            <option value="" selected>Bitte wählen</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                        </select>
+                                    </div>
+                                </span>
                             </div>
                             <div class="row inputline">
-                                <label for="travel_roomkind_1" class="col-xs-12 col-sm-3 control-label text-left">Zimmer*:</label>
-                                <div class="col-xs-12 col-sm-9">
-                                    <select id="travel_roomkind_1" required>
-                                        <option value="" selected>Bitte wählen</option>
-                                        <option value="EZ" data-price="1898">Einzelzimmer - Reisepreis 1.898 € pro Person</option>
-                                        <option value="DZ" data-price="1489" selected>Doppelzimmer - Reisepreis 1.489 € pro Person</option>
-                                    </select>
-                                </div>
+                                <span class="form-group">
+                                    <label for="travel_roomkind_1" class="col-xs-12 col-sm-3 control-label text-left">Zimmer*:</label>
+                                    <div class="col-xs-12 col-sm-9">
+                                        <select id="travel_roomkind_1" required>
+                                            <option value="" selected>Bitte wählen</option>
+                                            <option value="EZ" data-price="1898">Einzelzimmer - Reisepreis 1.898 € pro Person</option>
+                                            <option value="DZ" data-price="1489">Doppelzimmer - Reisepreis 1.489 € pro Person</option>
+                                        </select>
+                                    </div>
+                                </span>
                             </div>
                             <div class="row inputline">
-                                <label for="travel_roomkind_add" class="col-xs-12 col-sm-3 control-label text-left">weitere Zimmer:</label>
-                                <div class="col-xs-12 col-sm-9">
-                                    <a class="btn btn-red text-center" id="travel_roomkind_add" onClick="$('#travel_roomkind_2_box').removeClass('hidden');$(this).addClass('disabled');">+</a>
-                                </div>
+                                <span class="form-group">
+                                    <label for="travel_roomkind_add" class="col-xs-12 col-sm-3 control-label text-left">weitere Zimmer:</label>
+                                    <div class="col-xs-12 col-sm-9">
+                                        <a class="btn btn-red text-center" id="travel_roomkind_add" onClick="$('#travel_roomkind_2_box').removeClass('hidden');$(this).addClass('disabled');">+</a>
+                                    </div>
+                                </span>
                             </div>
                             <div class="row inputline hidden" id="travel_roomkind_2_box">
-                                <div class="col-xs-12 col-sm-9 col-sm-offset-3">
-                                    <select id="travel_roomkind_2">
-                                        <option value="" selected>Bitte wählen</option>
-                                        <option value="EZ" data-price="1898">Einzelzimmer - Reisepreis 1.898 € pro Person</option>
-                                        <option value="DZ" data-price="1489">Doppelzimmer - Reisepreis 1.489 € pro Person</option>
-                                    </select>
-                                </div>
+                                <span class="form-group">
+                                    <div class="col-xs-12 col-sm-9 col-sm-offset-3">
+                                        <select id="travel_roomkind_2">
+                                            <option value="" selected>Bitte wählen</option>
+                                            <option value="EZ" data-price="1898">Einzelzimmer - Reisepreis 1.898 € pro Person</option>
+                                            <option value="DZ" data-price="1489">Doppelzimmer - Reisepreis 1.489 € pro Person</option>
+                                        </select>
+                                    </div>
+                                </span>
                             </div>
                             <div class="row inputline">
-                                <label for="travel_arrival_before_days" class="col-xs-12 col-sm-3 control-label text-left">Verlängerung:</label>
-                                <div class="col-xs-12 col-sm-4">
-                                    <select id="travel_arrival_before_days">
-                                        <option value="0" selected>Frühere Anreise</option>
-                                        <option value="1">einen Tag früher</option>
-                                        <option value="2">zwei Tage früher</option>
-                                        <option value="3">drei Tage früher</option>
-                                        <option value="4">vier Tage früher</option>
-                                    </select>
-                                </div>
-                                <div class="col-xs-12 col-sm-4 col-sm-offset-1">
-                                    <select id="travel_checkout_after_days">
-                                        <option value="0" selected>Spätere Abreise</option>
-                                        <option value="1">einen Tag später</option>
-                                        <option value="2">zwei Tage später</option>
-                                        <option value="3">drei Tage später</option>
-                                        <option value="4">vier Tage später</option>
-                                    </select>
-                                </div>
+                                <span class="form-group">
+                                    <label for="travel_arrival_before_days" class="col-xs-12 col-sm-3 control-label text-left">Verlängerung:</label>
+                                    <div class="col-xs-12 col-sm-4">
+                                        <select id="travel_arrival_before_days">
+                                            <option value="0" selected>Frühere Anreise</option>
+                                            <option value="1">einen Tag früher</option>
+                                            <option value="2">zwei Tage früher</option>
+                                            <option value="3">drei Tage früher</option>
+                                            <option value="4">vier Tage früher</option>
+                                        </select>
+                                    </div>
+                                </span>
+                                <span class="form-group">
+                                    <div class="col-xs-12 col-sm-4 col-sm-offset-1">
+                                        <select id="travel_checkout_after_days">
+                                            <option value="0" selected>Spätere Abreise</option>
+                                            <option value="1">einen Tag später</option>
+                                            <option value="2">zwei Tage später</option>
+                                            <option value="3">drei Tage später</option>
+                                            <option value="4">vier Tage später</option>
+                                        </select>
+                                    </div>
+                                </span>
                             </div>
                             <div class="row inputline">
-                                <label for="travel_transfer" class="col-xs-12 col-sm-3 control-label text-left">Transfer:</label>
-                                <div class="col-xs-12 col-sm-9">
-                                    <select id="travel_transfer">
-                                        <option value="0" selected>nicht gewünscht</option>
-                                        <option value="1">gewünscht</option>
-                                    </select>
-                                </div>
+                                <span class="form-group">
+                                    <label for="travel_transfer" class="col-xs-12 col-sm-3 control-label text-left">Transfer:</label>
+                                    <div class="col-xs-12 col-sm-9">
+                                        <select id="travel_transfer">
+                                            <option value="0" selected>nicht gewünscht</option>
+                                            <option value="1">gewünscht</option>
+                                        </select>
+                                    </div>
+                                </span>
                             </div>
                             <div class="row inputline">
-                                <label for="travel_add_option_1" class="col-xs-12 col-sm-3 control-label text-left">Zuatzoptionen:</label>
-                                <div class="col-xs-3 col-sm-2">
-                                    <select id="travel_add_option_1">
-                                        <option value="" selected>-</option>
-                                        <option data-price="65">1</option>
-                                        <option data-price="130">2</option>
-                                        <option data-price="195">3</option>
-                                        <option data-price="260">4</option>
-                                        <option data-price="325">5</option>
-                                        <option data-price="390">6</option>
-                                    </select>
-                                </div>
-                                <div class="col-xs-9 col-sm-7">
-                                    <p>Ausflug mit Fischer Peter Bomfelder - 65 &euro; p.P.</p>
-                                </div>
+                                <span class="form-group">
+                                    <label for="travel_add_option_1" class="col-xs-12 col-sm-3 control-label text-left">Zuatzoptionen:</label>
+                                    <div class="col-xs-3 col-sm-2">
+                                        <select id="travel_add_option_1">
+                                            <option value="" selected>-</option>
+                                            <option data-price="65">1</option>
+                                            <option data-price="130">2</option>
+                                            <option data-price="195">3</option>
+                                            <option data-price="260">4</option>
+                                            <option data-price="325">5</option>
+                                            <option data-price="390">6</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-xs-9 col-sm-7">
+                                        <p>Ausflug mit Fischer Peter Bomfelder - 65 &euro; p.P.</p>
+                                    </div>
+                                </span>
                             </div>
                             <div class="row inputline">
-                                <div class="col-xs-3 col-sm-2 col-sm-offset-3">
-                                    <select id="travel_add_option_2">
-                                        <option value="" selected>-</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                        <option>6</option>
-                                    </select>
-                                </div>
-                                <div class="col-xs-9 col-sm-7">
-                                    <p>Rotweinverkostung auf Gut Hoffenhausen</p>
-                                </div>
+                                <span class="form-group">
+                                    <div class="col-xs-3 col-sm-2 col-sm-offset-3">
+                                        <select id="travel_add_option_2">
+                                            <option value="" selected>-</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-xs-9 col-sm-7">
+                                        <p>Rotweinverkostung auf Gut Hoffenhausen</p>
+                                    </div>
+                                </span>
                             </div>
                             <div class="row inputline">
-                                <div class="col-xs-3 col-sm-2 col-sm-offset-3">
-                                    <select id="travel_add_option_3">
-                                        <option value="" selected>-</option>
-                                        <option value="1">Ja</option>
-                                        <option value="2">Nein</option>
-                                    </select>
-                                </div>
-                                <div class="col-xs-9 col-sm-7">
-                                    <p>+ 15 kg Gepäckzuschlag beim Flug</p>
-                                </div>
+                                <span class="form-group">
+                                    <div class="col-xs-3 col-sm-2 col-sm-offset-3">
+                                        <select id="travel_add_option_3">
+                                            <option value="" selected>-</option>
+                                            <option value="1">Ja</option>
+                                            <option value="2">Nein</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-xs-9 col-sm-7">
+                                        <p>+ 15 kg Gepäckzuschlag beim Flug</p>
+                                    </div>
+                                </span>
                             </div>
                             <hr/>
                             <div class="row">
@@ -181,7 +206,7 @@
                         <div class="col-sm-1 hidden-xs">&nbsp;</div>
                         <footer>
                             <div class="col-xs-6 col-sm-3 col-sm-offset-9 margintop15 marginbottom15 right">
-                                <a href="#" class="btn btn-red img-full" onClick="$('.nav-tabs a:eq(1)').tab('show');">weiter</a>
+                                <a href="#" class="btn btn-red img-full" onClick="checkSection('buchungsanfragemodal_mytravel',1);">weiter</a>
                             </div>
                         </footer>
                     </div>
@@ -190,190 +215,243 @@
                         <div class="col-sm-1 hidden-xs">&nbsp;</div>
                         <div class="col-xs-12 col-sm-10">
                             <div class="row margintop30 inputline">
+                                <div class="col-xs-12 btn-red padding15 img-rounded marginbottom15 errorbox" style="display:none;">
+                                    <p>Es wurden fehlerhafte Angaben gefunden. Bitte geben Sie <span></span> korrekt an, bevor Sie zur nächsten Seite wechseln.</p>
+                                </div>
                                 <h2 class="col-xs-12">Ihre persönlichen Daten</h2>
-                                <label for="travel_salutaion" class="col-xs-12 col-sm-3 control-label text-left">Anrede*:</label>
-                                <div class="col-xs-12 col-sm-3">
-                                    <select id="travel_salutaion" required>
-                                        <option value="">Bitte wählen</option>
-                                        <option value="Fr." selected>Frau</option>
-                                        <option value="Hr.">Herr</option>
-                                    </select>
-                                </div>
-                                <label for="travel_title" class="col-xs-12 col-sm-3 control-label">Titel:</label>
-                                <div class="col-xs-12 col-sm-3">
-                                    <select id="travel_title">
-                                        <option value="" selected>-</option>
-                                        <option>Dr.</option>
-                                        <option>Prof.</option>
-                                        <option>B.Sc.</option>
-                                        <option>M.Sc.</option>
-                                        <option>Dipl.</option>
-                                        <option>Med.</option>
-                                        <option>Nat.</option>
-                                        <option>Rer.</option>
-                                    </select>
-                                </div>
+                                <span class="form-group">
+                                    <label for="travel_salutaion" class="col-xs-12 col-sm-3 control-label text-left">Anrede*:</label>
+                                    <div class="col-xs-12 col-sm-3">
+                                        <select id="travel_salutaion" required>
+                                            <option value="" selected>Bitte wählen</option>
+                                            <option value="Fr.">Frau</option>
+                                            <option value="Hr.">Herr</option>
+                                        </select>
+                                    </div>
+                                </span>
+                                <span class="form-group">
+                                    <label for="travel_title" class="col-xs-12 col-sm-3 control-label">Titel:</label>
+                                    <div class="col-xs-12 col-sm-3">
+                                        <select id="travel_title">
+                                            <option value="" selected>-</option>
+                                            <option>Dr.</option>
+                                            <option>Prof.</option>
+                                            <option>B.Sc.</option>
+                                            <option>M.Sc.</option>
+                                            <option>Dipl.</option>
+                                            <option>Med.</option>
+                                            <option>Nat.</option>
+                                            <option>Rer.</option>
+                                        </select>
+                                    </div>
+                                </span>
                             </div>
                             <div class="row inputline">
-                                <label for="travel_forename" class="col-xs-12 col-sm-3 control-label text-left">Vorname*:</label>
-                                <div class="col-xs-12 col-sm-3">
-                                    <input type="text" id="travel_forename" maxlength="36" required />
-                                </div>
-                                <label for="travel_surname" class="col-xs-12 col-sm-3 control-label">Nachname*:</label>
-                                <div class="col-xs-12 col-sm-3">
-                                    <input type="text" id="travel_surname" maxlength="36" required />
-                                </div>
+                                <span class="form-group">
+                                    <label for="travel_forename" class="col-xs-12 col-sm-3 control-label text-left">Vorname*:</label>
+                                    <div class="col-xs-12 col-sm-3">
+                                        <input type="text" id="travel_forename" maxlength="36" required />
+                                    </div>
+                                </span>
+                                <span class="form-group">
+                                    <label for="travel_surname" class="col-xs-12 col-sm-3 control-label">Nachname*:</label>
+                                    <div class="col-xs-12 col-sm-3">
+                                        <input type="text" id="travel_surname" maxlength="36" required />
+                                    </div>
+                                </span>
                             </div>
                             <div class="row inputline">
-                                <label for="travel_bday_day" class="col-xs-12 col-sm-3 control-label text-left">Geburtsdatum*:</label>
-                                <div class="col-xs-4 col-sm-2">
-                                    <select id="travel_bday_day" required>
-                                        <option value="" selected>Tag</option>
-                                        <option value="1">1.</option>
-                                        <option value="2">2.</option>
-                                    </select>
-                                </div>
-                                <div class="col-xs-4 col-sm-2">
-                                    <select id="travel_bday_month" required>
-                                        <option value="" selected>Monat</option>
-                                        <option value="1">Jan.</option>
-                                        <option value="2">Feb.</option>
-                                    </select>
-                                </div>
-                                <div class="col-xs-4 col-sm-2">
-                                    <select id="travel_bday_year" required>
-                                        <option value="" selected>Jahr</option>
-                                        <option value="1910">1910</option>
-                                        <option value="1911">1911</option>
-                                    </select>
-                                </div>
+                                <span class="form-group">
+                                    <label for="travel_bday_day" class="col-xs-12 col-sm-3 control-label text-left">Geburtsdatum*:</label>
+                                    <div class="col-xs-4 col-sm-2">
+                                        <select id="travel_bday_day" required>
+                                            <option value="" selected>Tag</option>
+                                            <option value="1">1.</option>
+                                            <option value="2">2.</option>
+                                        </select>
+                                    </div>
+                                </span>
+                                <span class="form-group">
+                                    <div class="col-xs-4 col-sm-2">
+                                        <select id="travel_bday_month" required>
+                                            <option value="" selected>Monat</option>
+                                            <option value="1">Jan.</option>
+                                            <option value="2">Feb.</option>
+                                        </select>
+                                    </div>
+                                </span>
+                                <span class="form-group">
+                                    <div class="col-xs-4 col-sm-2">
+                                        <select id="travel_bday_year" required>
+                                            <option value="" selected>Jahr</option>
+                                            <option value="1910">1910</option>
+                                            <option value="1911">1911</option>
+                                        </select>
+                                    </div>
+                                </span>
                             </div>
                             <div class="row inputline">
-                                <label for="travel_street" class="col-xs-12 col-sm-3 control-label text-left">Straße*:</label>
-                                <div class="col-xs-12 col-sm-6">
-                                    <input type="text" id="travel_street" maxlength="36" required />
-                                </div>
-                                <label for="travel_street_num" class="col-xs-12 col-sm-1 control-label">Nr.*:</label>
-                                <div class="col-xs-12 col-sm-2">
-                                    <input type="text" id="travel_street_num" maxlength="5" required />
-                                </div>
+                                <span class="form-group">
+                                    <label for="travel_street" class="col-xs-12 col-sm-3 control-label text-left">Straße*:</label>
+                                    <div class="col-xs-12 col-sm-6">
+                                        <input type="text" id="travel_street" maxlength="36" required />
+                                    </div>
+                                </span>
+                                <span class="form-group">
+                                    <label for="travel_street_num" class="col-xs-12 col-sm-1 control-label">Nr.*:</label>
+                                    <div class="col-xs-12 col-sm-2">
+                                        <input type="text" id="travel_street_num" maxlength="5" required />
+                                    </div>
+                                </span>
                             </div>
                             <div class="row inputline">
-                                <label for="travel_zipcode" class="col-xs-12 col-sm-3 control-label text-left">PLZ*:</label>
-                                <div class="col-xs-12 col-sm-2">
-                                    <input type="number" id="travel_zipcode" min="1000" max="99999" required />
-                                </div>
-                                <label for="travel_city" class="col-xs-12 col-sm-1 control-label">Ort*:</label>
-                                <div class="col-xs-12 col-sm-6">
-                                    <input type="text" id="travel_city" maxlength="60" required />
-                                </div>
+                                <span class="form-group">
+                                    <label for="travel_zipcode" class="col-xs-12 col-sm-3 control-label text-left">PLZ*:</label>
+                                    <div class="col-xs-12 col-sm-2">
+                                        <input type="number" id="travel_zipcode" min="1000" max="99999" required />
+                                    </div>
+                                </span>
+                                <span class="form-group">
+                                    <label for="travel_city" class="col-xs-12 col-sm-1 control-label">Ort*:</label>
+                                    <div class="col-xs-12 col-sm-6">
+                                        <input type="text" id="travel_city" maxlength="60" required />
+                                    </div>
+                                </span>
                             </div>
                             <div class="row inputline">
-                                <label for="travel_country" class="col-xs-12 col-sm-3 control-label text-left">Land*:</label>
-                                <div class="col-xs-9 col-sm-3">
-                                    <select id="travel_country" required>
-                                        <option value="" selected>Bitte wählen</option>
-                                        <option value="de">Deutschland</option>
-                                        <option value="dk">Dänemark</option>
-                                        <option value="nl">Niederlande</option>
-                                        <option value="at">Österreich</option>
-                                        <option value="ch">Schweiz</option>
-                                    </select>
-                                </div>
+                                <span class="form-group">
+                                    <label for="travel_country" class="col-xs-12 col-sm-3 control-label text-left">Land*:</label>
+                                    <div class="col-xs-9 col-sm-3">
+                                        <select id="travel_country" required>
+                                            <option value="" selected>Bitte wählen</option>
+                                            <option value="de">Deutschland</option>
+                                            <option value="dk">Dänemark</option>
+                                            <option value="nl">Niederlande</option>
+                                            <option value="at">Österreich</option>
+                                            <option value="ch">Schweiz</option>
+                                        </select>
+                                    </div>
+                                </span>
                             </div>
                             <div class="row inputline">
-                                <label for="travel_email" class="col-xs-12 col-sm-3 control-label text-left">E-Mail*:</label>
-                                <div class="col-xs-12 col-sm-9">
-                                    <input type="email" id="travel_email" required />
-                                </div>
+                                <span class="form-group">
+                                    <label for="travel_email" class="col-xs-12 col-sm-3 control-label text-left">E-Mail*:</label>
+                                    <div class="col-xs-12 col-sm-9">
+                                        <input type="email" id="travel_email" required />
+                                    </div>
+                                </span>
                             </div>
                             <div class="row inputline">
-                                <label for="travel_phone" class="col-xs-12 col-sm-3 control-label text-left">Telefon*:</label>
-                                <div class="col-xs-12 col-sm-3">
-                                    <input type="tel" id="travel_phone" maxlength="36" required />
-                                </div>
-                                <label for="travel_mobile" class="col-xs-12 col-sm-3 control-label">Mobil:</label>
-                                <div class="col-xs-12 col-sm-3">
-                                    <input type="tel" id="travel_mobile" maxlength="36" />
-                                </div>
+                                <span class="form-group">
+                                    <label for="travel_phone" class="col-xs-12 col-sm-3 control-label text-left">Telefon*:</label>
+                                    <div class="col-xs-12 col-sm-3">
+                                        <input type="tel" id="travel_phone" maxlength="36" required />
+                                    </div>
+                                </span>
+                                <span class="form-group">
+                                    <label for="travel_mobile" class="col-xs-12 col-sm-3 control-label">Mobil:</label>
+                                    <div class="col-xs-12 col-sm-3">
+                                        <input type="tel" id="travel_mobile" maxlength="36" />
+                                    </div>
+                                </span>
                             </div>
                             <div class="row inputline marginbottom15">
-                                <label for="travel_comment" class="col-xs-12 col-sm-3 control-label text-left">Weitere Angaben:</label>
-                                <div class="col-xs-12 col-sm-9">
-                                    <textarea id="travel_comment" rows="3" maxlength="600" placeholder="Besonderheiten z.B. Allergien, Behinderungen etc."></textarea>
-                                </div>
+                                <span class="form-group">
+                                    <label for="travel_comment" class="col-xs-12 col-sm-3 control-label text-left">Weitere Angaben:</label>
+                                    <div class="col-xs-12 col-sm-9">
+                                        <textarea id="travel_comment" rows="3" maxlength="600" placeholder="Besonderheiten z.B. Allergien, Behinderungen etc."></textarea>
+                                    </div>
+                                </span>
                             </div>
                             <hr/>
                             <div class="row inputline">
                                 <h2 class="col-xs-12 margintop0">Persönliche Daten der mitreisenden Person</h2>
-                                <label for="travel_accopaniment_salutaion" class="col-xs-12 col-sm-3 control-label text-left">Anrede*:</label>
-                                <div class="col-xs-12 col-sm-3">
-                                    <select id="travel_accopaniment_salutaion" required>
-                                        <option value="">Bitte wählen</option>
-                                        <option value="Fr." selected>Frau</option>
-                                        <option value="Hr.">Herr</option>
-                                    </select>
-                                </div>
-                                <label for="travel_accopaniment_title" class="col-xs-12 col-sm-3 control-label">Titel:</label>
-                                <div class="col-xs-12 col-sm-3">
-                                    <select id="travel_accopaniment_title">
-                                        <option value="" selected>-</option>
-                                        <option>Dr.</option>
-                                        <option>Prof.</option>
-                                        <option>B.Sc.</option>
-                                        <option>M.Sc.</option>
-                                        <option>Dipl.</option>
-                                        <option>Med.</option>
-                                        <option>Nat.</option>
-                                        <option>Rer.</option>
-                                    </select>
-                                </div>
+                                <span class="form-group">
+                                    <label for="travel_accopaniment_salutaion" class="col-xs-12 col-sm-3 control-label text-left">Anrede*:</label>
+                                    <div class="col-xs-12 col-sm-3">
+                                        <select id="travel_accopaniment_salutaion" required>
+                                            <option value="">Bitte wählen</option>
+                                            <option value="Fr." selected>Frau</option>
+                                            <option value="Hr.">Herr</option>
+                                        </select>
+                                    </div>
+                                </span>
+                                <span class="form-group">
+                                    <label for="travel_accopaniment_title" class="col-xs-12 col-sm-3 control-label">Titel:</label>
+                                    <div class="col-xs-12 col-sm-3">
+                                        <select id="travel_accopaniment_title">
+                                            <option value="" selected>-</option>
+                                            <option>Dr.</option>
+                                            <option>Prof.</option>
+                                            <option>B.Sc.</option>
+                                            <option>M.Sc.</option>
+                                            <option>Dipl.</option>
+                                            <option>Med.</option>
+                                            <option>Nat.</option>
+                                            <option>Rer.</option>
+                                        </select>
+                                    </div>
+                                </span>
                             </div>
                             <div class="row inputline">
+                                <span class="form-group">
                                 <label for="travel_accopaniment_forename" class="col-xs-12 col-sm-3 control-label text-left">Vorname*:</label>
                                 <div class="col-xs-12 col-sm-3">
                                     <input type="text" id="travel_accopaniment_forename" maxlength="36" required />
                                 </div>
+                                </span>
+                                <span class="form-group">
                                 <label for="travel_accopaniment_surname" class="col-xs-12 col-sm-3 control-label">Nachname*:</label>
                                 <div class="col-xs-12 col-sm-3">
                                     <input type="text" id="travel_accopaniment_surname" maxlength="36" required />
                                 </div>
+                                </span>
                             </div>
                             <div class="row inputline">
-                                <label for="travel_accopaniment_bday_day" class="col-xs-12 col-sm-3 control-label text-left">Geburtsdatum*:</label>
-                                <div class="col-xs-4 col-sm-2">
-                                    <select id="travel_accopaniment_bday_day" required>
-                                        <option value="" selected>Tag</option>
-                                        <option value="1">1.</option>
-                                        <option value="2">2.</option>
-                                    </select>
-                                </div>
-                                <div class="col-xs-4 col-sm-2">
-                                    <select id="travel_accopaniment_bday_month" required>
-                                        <option value="" selected>Monat</option>
-                                        <option value="1">Jan.</option>
-                                        <option value="2">Feb.</option>
-                                    </select>
-                                </div>
-                                <div class="col-xs-4 col-sm-2">
-                                    <select id="travel_bday_accopaniment_year" required>
-                                        <option value="" selected>Jahr</option>
-                                        <option value="1910">1910</option>
-                                        <option value="1911">1911</option>
-                                    </select>
-                                </div>
+                                <span class="form-group">
+                                    <label for="travel_accopaniment_bday_day" class="col-xs-12 col-sm-3 control-label text-left">Geburtsdatum*:</label>
+                                    <div class="col-xs-4 col-sm-2">
+                                        <select id="travel_accopaniment_bday_day" required>
+                                            <option value="" selected>Tag</option>
+                                            <option value="1">1.</option>
+                                            <option value="2">2.</option>
+                                        </select>
+                                    </div>
+                                </span>
+                                <span class="form-group">
+                                    <div class="col-xs-4 col-sm-2">
+                                        <select id="travel_accopaniment_bday_month" required>
+                                            <option value="" selected>Monat</option>
+                                            <option value="1">Jan.</option>
+                                            <option value="2">Feb.</option>
+                                        </select>
+                                    </div>
+                                </span>
+                                <span class="form-group">
+                                    <div class="col-xs-4 col-sm-2">
+                                        <select id="travel_bday_accopaniment_year" required>
+                                            <option value="" selected>Jahr</option>
+                                            <option value="1910">1910</option>
+                                            <option value="1911">1911</option>
+                                        </select>
+                                    </div>
+                                </span>
                             </div>
                             <div class="row inputline">
-                                <label for="travel_accopaniment_email" class="col-xs-12 col-sm-3 control-label text-left">E-Mail*:</label>
-                                <div class="col-xs-12 col-sm-9">
-                                    <input type="email" id="travel_accopaniment_email" required />
-                                </div>
+                                <span class="form-group">
+                                    <label for="travel_accopaniment_email" class="col-xs-12 col-sm-3 control-label text-left">E-Mail*:</label>
+                                    <div class="col-xs-12 col-sm-9">
+                                        <input type="email" id="travel_accopaniment_email" required />
+                                    </div>
+                                </span>
                             </div>
                             <div class="row inputline">
-                                <label for="travel_accopaniment_comment" class="col-xs-12 col-sm-3 control-label text-left">Weitere Angaben:</label>
-                                <div class="col-xs-12 col-sm-9">
-                                    <textarea id="travel_accopaniment_comment" rows="3" maxlength="600" placeholder="Besonderheiten z.B. Allergien, Behinderungen etc."></textarea>
-                                </div>
+                                <span class="form-group">
+                                    <label for="travel_accopaniment_comment" class="col-xs-12 col-sm-3 control-label text-left">Weitere Angaben:</label>
+                                    <div class="col-xs-12 col-sm-9">
+                                        <textarea id="travel_accopaniment_comment" rows="3" maxlength="600" placeholder="Besonderheiten z.B. Allergien, Behinderungen etc."></textarea>
+                                    </div>
+                                </span>
                             </div>
                         </div>
                         <div class="col-sm-1 hidden-xs">&nbsp;</div>
@@ -382,7 +460,7 @@
                                 <a href="#" class="btn btn-ochre img-full" onClick="$('.nav-tabs a:eq(0)').tab('show');">zurück</a>
                             </div>
                             <div class="col-xs-6 col-sm-3 col-sm-offset-6 margintop15 marginbottom15 right">
-                                <a href="#" class="btn btn-red img-full" onClick="$('.nav-tabs a:eq(2)').tab('show');">weiter</a>
+                                <a href="#" class="btn btn-red img-full" onClick="checkSection('buchungsanfragemodal_mydata',2);">weiter</a>
                             </div>
                         </footer>
                     </div>

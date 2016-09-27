@@ -303,6 +303,9 @@ footer .nominatetravelbox img{
 .red-text, .list-sapiostyled li:before, .panel-title > a.red-text{
     color:#802629;
 }
+.white-text{
+    color:#FFFFFF;
+}
 .btn-red{
     background-color:#802629;
     color:#FFFFFF;
@@ -690,6 +693,7 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
 
 
 
+
 /* BOOKING-MODAL */
 #buchungsanfragemodal .text-left {
   text-align: left!important;
@@ -719,7 +723,12 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
 #buchungsanfragemodal .tab-pane footer .left{
     padding-left: 45px;
 }
-
+#buchungsanfragemodal .form-horizontal .form-group {
+    margin:initial;
+}
+#buchungsanfragemodal .form-horizontal .form-group::after, #buchungsanfragemodal .form-horizontal .form-group::before{
+    display:inherit;
+}
 
 
 

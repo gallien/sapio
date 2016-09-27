@@ -120,7 +120,31 @@ function getExtendedmenu(){
     });
 
     $("#Reisethemen .markHeadingOfList a").hover(function(){
-        $('#Reisethemen .markImage').attr("src",extendedmenuReisethemenItems[$(this).attr("data-id")].image);
-        $('#Reisethemen .markTxt').html(extendedmenuReisethemenItems[$(this).attr("data-id")].txt);
+        $("#Reisethemen .markImage").attr("src",extendedmenuReisethemenItems[$(this).attr("data-id")].image);
+        $("#Reisethemen .markTxt").html(extendedmenuReisethemenItems[$(this).attr("data-id")].txt);
     });
-}
+};
+
+function checkSection(section_id,next_tab_num){
+    $("#"+section_id).validator("validate");
+    var num_of_err = $("#"+section_id+" .has-error").not("#"+section_id+" .iactv .has-error").length;
+    if(num_of_err==0){
+        $(".nav-tabs a:eq("+next_tab_num+")").tab("show").parent().removeClass("disabled");
+        $("#"+section_id+" .errorbox").hide();
+    }else{
+        $(".nav-tabs a:eq("+next_tab_num+")").parent().addClass("disabled");
+        $("#"+section_id+" .errorbox").show();
+        var tmp = "";
+        $("#"+section_id+" .has-error").not("#"+section_id+" .iactv .has-error").each(function(){
+            if($(this).find("label")){
+                tmp += '"'+$(this).find("label").text().replace("*","").replace(":","")+'", ';
+            };
+        });
+        $("#"+section_id+" .errorbox span").html(tmp.slice(0,tmp.length-2));
+    };
+    $(".nav-tabs>li:not(.disabled)").click(function(e){
+        e.preventDefault();
+        //checkSection($(this).find("a").attr("aria-controls"),next_tab_num);
+        $(this).find("a").tab("show");
+    });
+};
