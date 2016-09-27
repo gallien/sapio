@@ -78,12 +78,24 @@ function updateInputOutputBoxes(element){
 
 function getImagemapListener(){
     $("map>area").mouseenter(function(){
-        $("img[usemap='#"+$(this).parent().attr("name")+"']").attr("src", $(this).attr("data-src-target"));
+        $(this).parent().parent().find("img[usemap='#"+$(this).parent().attr("name")+"']").attr("src", $(this).attr("data-src-target"));
         $(this).parent().siblings(".output").css({"top":$(this).attr("data-title-cord-y")+"%", "left": $(this).attr("data-title-cord-x")+"%"}).text($(this).attr("alt")).show(260);
     }).mouseleave(function(){
-        $("img[usemap='#"+$(this).parent().attr("name")+"']").attr("src", $(this).parent().attr("data-src-default"));
-        $(this).parent().siblings(".output").text("").hide(260);
+        getImagemapDefault($(this));
     });
+    $("map>area").each(function(){
+        getImagemapDefault($(this));
+    });
+};
+
+function getImagemapDefault(el){
+    el.parent().parent().find("img[usemap='#"+el.parent().attr("name")+"']").attr("src", el.parent().attr("data-src-default"));
+    if(el.parent().attr("data-area-default")){
+        var area = el.parent().find("area[alt='"+el.parent().attr("data-area-default")+"']");
+        el.parent().siblings(".output").css({"top": area.attr("data-title-cord-y")+"%", "left": area.attr("data-title-cord-x")+"%"}).text(area.attr("alt")).show(260);
+    }else{
+        el.parent().siblings(".output").text("").hide(260);
+    };
 };
 
 function getExtendedmenu(){
