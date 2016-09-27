@@ -703,7 +703,7 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
 #buchungsanfragemodal .inputline input, #buchungsanfragemodal .inputline select, #buchungsanfragemodal .inputline textarea{
   width: 100%;
   border-radius: 4px;
-  padding: 0.5em 1.5em 0.5em 1em;
+  padding: 0.5em 2em 0.5em 1em;
 }
 #buchungsanfragemodal .close{
   font-size: 3rem;

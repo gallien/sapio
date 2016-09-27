@@ -102,9 +102,9 @@
                 </div>
                 <aside id="sidecontent" class="hidden-xs col-sm-3 hidden-print">
                     <section>
-                        <a href="#" class="btn ochre text-center img-full" style="margin-bottom:15px;">PDF-Download der Reise</a>
-                        <a href="#" class="btn ochre text-center img-full" style="margin-bottom:15px;">Informationen anfordern</a>
-                        <a href="#" class="btn btn-red text-center img-full" style="margin-bottom:15px;">Buchungsanfrage</a>
+                        <a href="#" class="btn ochre text-center img-full marginbottom15">PDF-Download der Reise</a>
+                        <a href="#" class="btn ochre text-center img-full marginbottom15">Informationen anfordern</a>
+                        <button type="button" class="btn btn-red text-center img-full marginbottom15" data-toggle="modal" data-target="#buchungsanfragemodal">Buchungsanfrage</button>
                     </section>
                     <section>
                         <ul class="list-unstyled bulletlistsapio">
@@ -181,6 +181,8 @@
     </main>
 
     <footer class="container-fluid footer-include"></footer>
+
+    <div class="modal fade" id="buchungsanfragemodal" tabindex="-1" role="dialog"></div>
 
     <script src="vendor/jquery/dist/jquery.min.js"></script>
     <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
