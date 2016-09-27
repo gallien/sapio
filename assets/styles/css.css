@@ -156,7 +156,11 @@ body>header a:hover{
 
 /* MAIN */
 body>main{
-    padding-bottom:70px;    
+    padding-bottom:70px;
+    background-image:url('../images/sapio-flower-bg.jpg');
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-position: top left;
 }
 #maincontent{
     padding:0 50px 0 0;
@@ -251,7 +255,7 @@ img.pull-left{
 footer section{
     padding:15px 0;
 }
-footer aside .glyphicon, footer .nominatetravelbox img, footer .sapiomediabox img{
+footer aside .glyphicon, footer .nominatetravelbox img{
     margin:1%;
 }
 footer a{
@@ -371,8 +375,14 @@ blockquote p:after{
 .margin15{
     margin:15px;
 }
+.marginright15{
+    margin-right:15px;
+}
 .marginbottom15{
     margin-bottom:15px;
+}
+.marginbottom30{
+    margin-bottom:30px;
 }
 .padding0{
     padding:0;
@@ -684,7 +694,10 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
 .tab-pane .row>h2 ~ a>span{
     font-size:2rem;
 }
-
+.teamboxes>.row{
+    margin:0 0 30px;
+    padding:15px 0;
+}
 
 
 
