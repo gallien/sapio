@@ -484,9 +484,17 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
     left:0;
     display: none;
 }
-.reiseberichtboxes article{
+.reiseberichtboxes article, .incentiveboxes article{
     border-bottom:1px dashed #C9C29C;
     padding-bottom:15px;
+}
+.incentiveboxes article{
+    padding-bottom:30px;
+    margin-bottom:30px;
+}
+.incentiveboxes article>.ochre-light{
+    margin:0 15px 30px 15px;
+    padding:15px 0;
 }
 .reiseberichtboxes.ueberunsboxes article{
     border-bottom:1px dashed #802629;
