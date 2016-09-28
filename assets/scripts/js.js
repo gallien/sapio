@@ -1,13 +1,34 @@
 var extendedmenuReisezieleItems = {  "fr": [
-                                {"image":"assets/images/nav-france-demo0.png","txt":"Frankreich is voll nice und so"},
-                                {"image":"assets/images/nav-france-demo1.png","txt":"Burgund in Frankreich is voll nice und so"},
-                                {"image":"assets/images/nav-france-demo2.png","txt":"Languedoc in Frankreich is voll nice und so"}
+                                {"image":"assets/images/maps/map-france-default.png","txt":"Frankreich is voll nice und so"},
+                                {"image":"assets/images/maps/map-france-burgund.png","txt":"Burgund in Frankreich is voll nice und so"},
+                                {"image":"assets/images/maps/map-france-languedoc.png","txt":"Languedoc in Frankreich is voll nice und so"}
                             ],
                             "de": [
-                                {"image":"assets/images/nav-france-demo0.png","txt":"Deutschland is voll nice und so"},
-                                {"image":"assets/images/nav-france-demo1.png","txt":"Berlin in Deutschland is voll nice und so"},
-                                {"image":"assets/images/nav-france-demo2.png","txt":"Baden-Württemberg in Deutschland is voll nice und so"},
-                                {"image":"assets/images/nav-france-demo2.png","txt":"Schleswig-Holstein in Deutschland is voll nice und so"}
+                                {"image":"assets/images/maps/map-germany-default.png","txt":"Deutschland is voll nice und so"},
+                                {"image":"assets/images/maps/map-germany-badenwuetrtemberg.png","txt":"Baden-Württemberg in Deutschland is voll nice und so"},
+                                {"image":"assets/images/maps/map-germany-berlin.png","txt":"Berlin in Deutschland is voll nice und so"},
+                                {"image":"assets/images/maps/map-germany-schleswigholstein.png","txt":"Schleswig-Holstein in Deutschland is voll nice und so"}
+                            ],
+                            "it": [
+                                {"image":"assets/images/maps/map-italy-default.png","txt":"Italien is voll nice und so"},
+                                {"image":"assets/images/maps/map-italy-abruzzen.png","txt":"abruzzen in Italien is voll nice und so"},
+                                {"image":"assets/images/maps/map-italy-apulien.png","txt":"apulien in Italien is voll nice und so"},
+                                {"image":"assets/images/maps/map-italy-aeolischeinseln.png","txt":"aeolischeinseln in Italien is voll nice und so"},
+                                {"image":"assets/images/maps/map-italy-emiliaromagna.png","txt":"emiliaromagna in Italien is voll nice und so"},
+                                {"image":"assets/images/maps/map-italy-friauljulischvenetien.png","txt":"friauljulischvenetien in Italien is voll nice und so"},
+                                {"image":"assets/images/maps/map-italy-latium.png","txt":"latium in Italien is voll nice und so"},
+                                {"image":"assets/images/maps/map-italy-kalabrien.png","txt":"kalabrien in Italien is voll nice und so"},
+                                {"image":"assets/images/maps/map-italy-kampanien.png","txt":"kampanien in Italien is voll nice und so"},
+                                {"image":"assets/images/maps/map-italy-ligurien.png","txt":"ligurien in Italien is voll nice und so"},
+                                {"image":"assets/images/maps/map-italy-lombardei.png","txt":"lombardei in Italien is voll nice und so"},
+                                {"image":"assets/images/maps/map-italy-piemont.png","txt":"piemont in Italien is voll nice und so"},
+                                {"image":"assets/images/maps/map-italy-sardinien.png","txt":"sardinien in Italien is voll nice und so"},
+                                {"image":"assets/images/maps/map-italy-sizilien.png","txt":"sizilien in Italien is voll nice und so"},
+                                {"image":"assets/images/maps/map-italy-trentinosuedtirol.png","txt":"Trentino-Südtirol in Italien is voll nice und so"},
+                                {"image":"assets/images/maps/map-italy-toskana.png","txt":"Südtoskana in Italien is voll nice und so"},
+                                {"image":"assets/images/maps/map-italy-toskana.png","txt":"toskana in Italien is voll nice und so"},
+                                {"image":"assets/images/maps/map-italy-trentinosuedtirol.png","txt":"trentinosuedtirol in Italien is voll nice und so"},
+                                {"image":"assets/images/maps/map-italy-venetien.png","txt":"venetien in Italien is voll nice und so"}
                             ]
                         };
 var extendedmenuReisethemenItems = [

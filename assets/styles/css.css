@@ -5,7 +5,7 @@ body{
     overflow-x:hidden;
 }
 a{
-    color:#802629;
+    color:#7b1c1e;
 }
 a:hover{
     color:#C9C29C;
@@ -46,13 +46,13 @@ select{
   padding: 0.5em 2em 0.5em 1em;
 }
 select:-moz-focusring {
-  color: #802629;
+  color: #7b1c1e;
   text-shadow: 0 0 0 #000;
 }
 select {
   background-image:
-    linear-gradient(45deg, transparent 50%, #802629 50%),
-    linear-gradient(135deg, #802629 50%, transparent 50%);
+    linear-gradient(45deg, transparent 50%, #7b1c1e 50%),
+    linear-gradient(135deg, #7b1c1e 50%, transparent 50%);
   background-position:
     calc(100% - 20px) calc(1em + 2px),
     calc(100% - 15px) calc(1em + 2px);
@@ -99,10 +99,10 @@ body>header a{
     color:#000;
 }
 body>header a:hover{
-    color:#802629;
+    color:#7b1c1e;
 }
 .extendedmenu li>a>h6:hover, .extendedmenu .active, .navbar-default, .navbar li>a:hover, .navbar-default, .navbar li>a:active, .navbar-default, .navbar li>a:focus{
-    color:#802629!important;
+    color:#7b1c1e!important;
     text-decoration: underline!important;
 }
 .navbar-default, .navbar li>a:hover, .navbar-default, .navbar li>a:active, .navbar-default, .navbar li>a:focus{
@@ -173,7 +173,7 @@ body>main{
     padding:15px 0;
 }
 #maincontent a, #maincontent>section:first-child, #sidecontent h4, hr, .strippedborderbottom, .reiseangebot.reiseberichtboxes article{
-    border-bottom:1px dashed #802629;
+    border-bottom:1px dashed #7b1c1e;
 }
 .reiselandboxes>.row{
     margin-bottom:30px;
@@ -302,16 +302,16 @@ footer .nominatetravelbox img{
     color:#000000;
 }
 .red, .bulletlistsapio li>a.active>span{
-    background-color:#802629;
+    background-color:#7b1c1e;
 }
 .red-text, .list-sapiostyled li:before, .panel-title > a.red-text{
-    color:#802629;
+    color:#7b1c1e;
 }
 .white-text{
     color:#FFFFFF;
 }
 .btn-red{
-    background-color:#802629;
+    background-color:#7b1c1e;
     color:#FFFFFF;
     border:none;
 }
@@ -438,7 +438,7 @@ blockquote p:after{
 .inlinecaption figcaption{
     width:100%;
     display:block;
-    background-color:rgba(255,255,255,.85);
+    background-color:rgba(255,255,255,.7);
     position:absolute;
     bottom:0;
     left:0;
@@ -510,7 +510,7 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
     padding:15px 0;
 }
 .reiseberichtboxes.ueberunsboxes article{
-    border-bottom:1px dashed #802629;
+    border-bottom:1px dashed #7b1c1e;
     margin-bottom:30px;
 }
 .reiseberichtboxes.ueberunsboxes article .btn{
@@ -570,7 +570,7 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
     background-color: orange;
 }
 .statusbull.statusbull-red{
-    background-color: #802629;
+    background-color: #7b1c1e;
 }
 .statusbull.statusbull-green{
     background-color: green;
@@ -679,7 +679,7 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
     padding: 10px 30px;
 }
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
-    background-color: #802629;
+    background-color: #7b1c1e;
     color:#FFFFFF;
     border:none;
 }
@@ -697,6 +697,12 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
 .teamboxes>.row{
     margin:0 0 30px;
     padding:15px 0;
+}
+.markimagemap{
+    height: auto;
+    max-height: 250px;
+    max-width: 100%;
+    width: auto;
 }
 
 
@@ -765,7 +771,7 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
     width:100%;
 }
 #headerslider .item .carousel-caption{
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 255, 255, 0.7);
     position: absolute;
     text-shadow: none;
     color: rgb(0, 0, 0);
