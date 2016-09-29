@@ -3,15 +3,15 @@
 }
 body{
     overflow-x:hidden;
+    /*background-image: url("../images/sapio-flower-bg.jpg");
+    background-position: 0 420px;
+    background-repeat: no-repeat;*/
 }
 a{
     color:#7b1c1e;
 }
 a:hover{
     color:#C9C29C;
-}
-h1{
-    line-height: 3.4rem;
 }
 h1, h2, .footertitle{
     font-size: 2.2rem;
@@ -29,38 +29,40 @@ ol{
     padding-inline-start:15px;
 }
 select, input, textarea {
-  background-color: white;
-  border: none;
-  display: inline-block;
-  font: inherit;
-  line-height: 1.5em;
-  padding: 0.5em 1em 0.5em 1em;
-  margin: 0;      
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+    background-color: white;
+    border: none;
+    display: inline-block;
+    font: inherit;
+    line-height: 1.5em;
+    padding: 0.5em 1em 0.5em 1em;
+    margin: 0;      
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 select{
-  padding: 0.5em 2em 0.5em 1em;
+    padding: 0.5em 2em 0.5em 1em;
 }
 select:-moz-focusring {
-  color: #7b1c1e;
-  text-shadow: 0 0 0 #000;
+    color: #7b1c1e;
+    text-shadow: 0 0 0 #000;
 }
 select {
-  background-image:
-    linear-gradient(45deg, transparent 50%, #7b1c1e 50%),
-    linear-gradient(135deg, #7b1c1e 50%, transparent 50%);
-  background-position:
-    calc(100% - 20px) calc(1em + 2px),
-    calc(100% - 15px) calc(1em + 2px);
-  background-size:
-    5px 5px,
-    5px 5px;
-  background-repeat: no-repeat;
-  max-width: 100%;
+    background-image: url("../images/icons/arrow_down.png");
+    background-position: calc(100% - 10px) 13px;
+    /*background-image:
+        linear-gradient(45deg, transparent 50%, #7b1c1e 50%),
+        linear-gradient(135deg, #7b1c1e 50%, transparent 50%);
+    background-position:
+        calc(100% - 20px) calc(1em + 2px),
+        calc(100% - 15px) calc(1em + 2px);
+    background-size:
+        5px 5px,
+        5px 5px;*/
+    background-repeat: no-repeat;
+    max-width: 100%;
 }
 
 
@@ -84,9 +86,7 @@ body>header .navbar-phone{
     right:0;
 }
 body>header .navbar-phone .navbar-phone-icon{
-    font-size: 3rem;
     padding: 5px 10px 0 0;
-    line-height: 3rem;
 }
 body>header .navbar-phone .navbar-phone-number{
     font-size:120%;
@@ -157,28 +157,24 @@ body>header a:hover{
 /* MAIN */
 body>main{
     padding-bottom:70px;
-    background-image:url('../images/sapio-flower-bg.jpg');
-    background-repeat:no-repeat;
-    background-attachment: fixed;
-    background-position: top left;
 }
 #maincontent{
     padding:0 50px 0 0;
 }
 #maincontent a:hover, .highlight-box.red a:hover, #maincontent .panel-title>a{
     text-decoration: unset;
-    border-bottom:1px dashed #C9C29C;
+    border-bottom:2px dotted #C9C29C;
 }
 #maincontent>section{
     padding:15px 0;
 }
-#maincontent a, #maincontent>section:first-child, #sidecontent h4, hr, .strippedborderbottom, .reiseangebot.reiseberichtboxes article{
-    border-bottom:1px dashed #7b1c1e;
+#maincontent a, #sidecontent h4, hr, .strippedborderbottom, .reiseangebot.reiseberichtboxes article{
+    border-bottom:2px dotted #7b1c1e;
 }
 .reiselandboxes>.row{
     margin-bottom:30px;
     padding-bottom:30px;
-    border-bottom:1px dashed #C9C29C;
+    border-bottom:2px dotted #C9C29C;
 }
 .reiselandboxes>.row>*{
     position:relative;
@@ -327,8 +323,10 @@ a.readon{
     border: none!important;
 }
 a.readon::before, .list-sapiostyled li:before{
-    content: ">  ";
-    font-weight:bold;
+    background-image: url("../images/icons/arrow_right.png");
+    background-position: -2px 3px;
+    background-repeat: no-repeat;
+    content: "   ";
 }
 blockquote {
   border-left: none;
@@ -351,7 +349,7 @@ blockquote p:after{
     border:none;
 }
 .highlight-box>div{
-    border: 1px dashed #FFFFFF;
+    border: 2px dotted #FFFFFF;
     padding:15px;
 }
 .highlight-box .form-group{
@@ -498,7 +496,7 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
     display: none;
 }
 .reiseberichtboxes article, .incentiveboxes article{
-    border-bottom:1px dashed #C9C29C;
+    border-bottom:2px dotted #C9C29C;
     padding-bottom:15px;
 }
 .incentiveboxes article{
@@ -510,7 +508,7 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
     padding:15px 0;
 }
 .reiseberichtboxes.ueberunsboxes article{
-    border-bottom:1px dashed #7b1c1e;
+    border-bottom:2px dotted #7b1c1e;
     margin-bottom:30px;
 }
 .reiseberichtboxes.ueberunsboxes article .btn{
@@ -587,7 +585,7 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
 }
 .panel.panel-default{
     box-shadow: 0;
-    border-bottom:1px dashed #C9C29C;
+    border-bottom:2px dotted #C9C29C;
 }
 .panel-default > .panel-heading {
     background-color: transparent;
@@ -704,6 +702,21 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
     max-width: 100%;
     width: auto;
 }
+.flowerbg{
+    position: absolute;
+    z-index: -1;
+    left: -520px;
+    top: 550px;
+}
+.flowerbg.flowerbg-bottom{
+    top: -900px;
+    left:inherit;
+    right: -50px;
+}
+hr.inlinehr{
+    margin: 15px;
+    width: calc(100% - 60px);
+}
 
 
 
@@ -819,9 +832,13 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
     font-size:16px;
     line-height: 34px;
 }
-.fintravelbox .text-right>a .glyphicon{
-    background-color:#ffffff;
-    padding: 5px 7px;
+.fintravelbox .text-right>a:hover{
+    color:#000;
+    text-decoration: none;
+}
+.fintravelbox .text-right>a img{
+    height: 2.8rem;
+    margin-top: -4px;
 }
 
 
