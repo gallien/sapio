@@ -148,6 +148,7 @@ function getExtendedmenu(){
         markHeadingOfListHoverHelper($(this));
     }, function(){
         markHeadingOfListUnhoverHelper($(this));
+        //$("#"+$(this).parent().attr("data-parentboxid")+" img[usemap='#"+el.attr("name")+"']").attr("src", el.attr("data-src-default"));
     });
 
     $("#Reisethemen .markHeadingOfList a").hover(function(){
