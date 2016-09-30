@@ -1,34 +1,34 @@
 var extendedmenuReisezieleItems = {  "fr": [
-                                {"image":"assets/images/maps/map-france-default.png","txt":"Frankreich is voll nice und so"},
-                                {"image":"assets/images/maps/map-france-burgund.png","txt":"Burgund in Frankreich is voll nice und so"},
-                                {"image":"assets/images/maps/map-france-languedoc.png","txt":"Languedoc in Frankreich is voll nice und so"}
+                                {"txt":"Frankreich is voll nice und so"},
+                                {"txt":"Burgund in Frankreich is voll nice und so"},
+                                {"txt":"Languedoc in Frankreich is voll nice und so"}
                             ],
                             "de": [
-                                {"image":"assets/images/maps/map-germany-default.png", "txt":"Deutschland is voll nice und so"},
-                                {"image":"assets/images/maps/map-germany-badenwuetrtemberg.png","txt":"Baden-Württemberg in Deutschland is voll nice und so"},
-                                {"image":"assets/images/maps/map-germany-berlin.png","txt":"Berlin in Deutschland is voll nice und so"},
-                                {"image":"assets/images/maps/map-germany-schleswigholstein.png","txt":"Schleswig-Holstein in Deutschland is voll nice und so"}
+                                {"txt":"Deutschland is voll nice und so"},
+                                {"txt":"Baden-Württemberg in Deutschland is voll nice und so"},
+                                {"txt":"Berlin in Deutschland is voll nice und so"},
+                                {"txt":"Schleswig-Holstein in Deutschland is voll nice und so"}
                             ],
                             "it": [
-                                {"image":"assets/images/maps/map-italy-default.png","txt":"Italien is voll nice und so"},
-                                {"image":"assets/images/maps/map-italy-abruzzen.png","txt":"abruzzen in Italien is voll nice und so"},
-                                {"image":"assets/images/maps/map-italy-apulien.png","txt":"apulien in Italien is voll nice und so"},
-                                {"image":"assets/images/maps/map-italy-aeolischeinseln.png","txt":"aeolischeinseln in Italien is voll nice und so"},
-                                {"image":"assets/images/maps/map-italy-emiliaromagna.png","txt":"emiliaromagna in Italien is voll nice und so"},
-                                {"image":"assets/images/maps/map-italy-friauljulischvenetien.png","txt":"friauljulischvenetien in Italien is voll nice und so"},
-                                {"image":"assets/images/maps/map-italy-latium.png","txt":"latium in Italien is voll nice und so"},
-                                {"image":"assets/images/maps/map-italy-kalabrien.png","txt":"kalabrien in Italien is voll nice und so"},
-                                {"image":"assets/images/maps/map-italy-kampanien.png","txt":"kampanien in Italien is voll nice und so"},
-                                {"image":"assets/images/maps/map-italy-ligurien.png","txt":"ligurien in Italien is voll nice und so"},
-                                {"image":"assets/images/maps/map-italy-lombardei.png","txt":"lombardei in Italien is voll nice und so"},
-                                {"image":"assets/images/maps/map-italy-piemont.png","txt":"piemont in Italien is voll nice und so"},
-                                {"image":"assets/images/maps/map-italy-sardinien.png","txt":"sardinien in Italien is voll nice und so"},
-                                {"image":"assets/images/maps/map-italy-sizilien.png","txt":"sizilien in Italien is voll nice und so"},
-                                {"image":"assets/images/maps/map-italy-trentinosuedtirol.png","txt":"Trentino-Südtirol in Italien is voll nice und so"},
-                                {"image":"assets/images/maps/map-italy-toskana.png","txt":"Südtoskana in Italien is voll nice und so"},
-                                {"image":"assets/images/maps/map-italy-toskana.png","txt":"toskana in Italien is voll nice und so"},
-                                {"image":"assets/images/maps/map-italy-trentinosuedtirol.png","txt":"trentinosuedtirol in Italien is voll nice und so"},
-                                {"image":"assets/images/maps/map-italy-venetien.png","txt":"venetien in Italien is voll nice und so"}
+                                {"txt":"Italien is voll nice und so"},
+                                {"txt":"abruzzen in Italien is voll nice und so"},
+                                {"txt":"apulien in Italien is voll nice und so"},
+                                {"txt":"aeolischeinseln in Italien is voll nice und so"},
+                                {"txt":"emiliaromagna in Italien is voll nice und so"},
+                                {"txt":"friauljulischvenetien in Italien is voll nice und so"},
+                                {"txt":"latium in Italien is voll nice und so"},
+                                {"txt":"kalabrien in Italien is voll nice und so"},
+                                {"txt":"kampanien in Italien is voll nice und so"},
+                                {"txt":"ligurien in Italien is voll nice und so"},
+                                {"txt":"lombardei in Italien is voll nice und so"},
+                                {"txt":"piemont in Italien is voll nice und so"},
+                                {"txt":"sardinien in Italien is voll nice und so"},
+                                {"txt":"sizilien in Italien is voll nice und so"},
+                                {"txt":"Trentino-Südtirol in Italien is voll nice und so"},
+                                {"txt":"Südtoskana in Italien is voll nice und so"},
+                                {"txt":"toskana in Italien is voll nice und so"},
+                                {"txt":"trentinosuedtirol in Italien is voll nice und so"},
+                                {"txt":"venetien in Italien is voll nice und so"}
                             ]
                         };
 var extendedmenuReisethemenItems = [
@@ -44,6 +44,10 @@ var extendedmenuReisethemenItems = [
 $(document).ready(function(){
     $(".header-include").load("inc/header.inc.html", function(){
         getExtendedmenu();
+        $("#Reiseziele .getimgmaplistsele").hover(function(){
+            $("#Reiseziele img[usemap]").hide();
+            $("#Reiseziele img[usemap='#"+$(this).attr("data-map")+"']").show();
+        });
     });
     $(".fintravelbox").load("inc/fintravelbox.inc.html");
     $("#buchungsanfragemodal").load("inc/buchungsanfragemodal.inc.html", function(){
@@ -67,7 +71,6 @@ $(document).ready(function(){
     $("#headerslider").carousel({interval:6000});
     $("#reiseleiterslider").carousel({interval:4000});
     $("#reisedetailbilderslider").carousel({interval:8000});
-    
 });
 
 function updateSelectOutputBoxes(element){
@@ -116,9 +119,9 @@ function getImagemapDefault(el, parentbox){
     $("#"+parentbox+" img[usemap='#"+el.attr("name")+"']").attr("src", el.attr("data-src-default"));
     if(el.attr("data-area-default")){
         var area = el.find("area[alt='"+el.attr("data-area-default")+"']");
-        $("#"+parentbox+" .output").css({"top": area.attr("data-title-cord-y")+"%", "left": area.attr("data-title-cord-x")+"%"}).text(area.attr("alt")).show(260);
+        $("#"+parentbox+" .output").css({"top": area.attr("data-title-cord-y")+"%", "left": area.attr("data-title-cord-x")+"%"}).text(area.attr("alt")).show();
     }else{
-        $("#"+parentbox+" .output").text("").hide(260);
+        $("#"+parentbox+" .output").text("").hide();
     };
 };
 
@@ -139,6 +142,7 @@ function getExtendedmenu(){
                     el.removeClass("active");
                     $(target).slideUp();
                 });
+                $("img[usemap]").rwdImageMaps();
             };
             return false;
         });
@@ -148,31 +152,37 @@ function getExtendedmenu(){
         markHeadingOfListHoverHelper($(this));
     }, function(){
         markHeadingOfListUnhoverHelper($(this));
-        //$("#"+$(this).parent().attr("data-parentboxid")+" img[usemap='#"+el.attr("name")+"']").attr("src", el.attr("data-src-default"));
     });
 
     $("#Reisethemen .markHeadingOfList a").hover(function(){
         $("#Reisethemen .markTxt").html(extendedmenuReisethemenItems[$(this).attr("data-id")].txt);
     });
 };
+
 function markHeadingOfListHoverHelper(el){
     var id = el.attr("data-id");
     var parentbox = el.parent().attr("data-parentboxid");
     var tmp = id.split("-");
     if($("#"+parentbox+" .markHeadingOfList a[data-id='"+id+"']").length>0){
         $("#"+parentbox+" .markHeadingOfList a[data-id='"+id+"']").addClass("red-text");
-        $($("#"+parentbox+" .markHeadingOfList a[data-id='"+id+"']").attr("data-parent")).addClass("red-text");
+        $("#"+parentbox+" .getimgmaplistsele[data-map='map_"+tmp[0]+"'] h6>a").addClass("red-text");
         $("#"+parentbox+" .markTxt").html(extendedmenuReisezieleItems[tmp[0]][tmp[1]].txt);
     };
     var area = $("area[data-id='"+id+"']");
-    $("#"+parentbox+" img[usemap='#map_"+tmp[0]+"']").attr("src", area.attr("data-src-target"));
-    $("#"+parentbox+" .output").css({"top": area.attr("data-title-cord-y")+"%", "left": area.attr("data-title-cord-x")+"%"}).text(area.attr("alt")).show(260);
+    if(area.length>0){
+        $("#"+parentbox+" img[usemap='#map_"+tmp[0]+"']").attr("src", area.attr("data-src-target"));
+        $("#"+parentbox+" .output").css({"top": area.attr("data-title-cord-y")+"%", "left": area.attr("data-title-cord-x")+"%"}).text(area.attr("alt")).show();
+    }else{
+        $("#"+parentbox+" img[usemap='#map_"+tmp[0]+"']").attr("src", $("map[name='map_"+tmp[0]+"']").attr("data-src-default"));
+    };
 };
+
 function markHeadingOfListUnhoverHelper(el){
     var id = el.attr("data-id");
     var parentbox = el.parent().attr("data-parentboxid");
+    var tmp = id.split("-");
     $("#"+parentbox+" .markHeadingOfList a[data-id='"+id+"']").removeClass("red-text");
-    $($("#"+parentbox+" .markHeadingOfList a[data-id='"+id+"']").attr("data-parent")).removeClass("red-text");
+    $("#"+parentbox+" .getimgmaplistsele[data-map='map_"+tmp[0]+"'] h6>a").removeClass("red-text");
     getImagemapDefault(el.parent(), parentbox);
 };
 

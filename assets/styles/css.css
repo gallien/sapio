@@ -143,9 +143,6 @@ body>header a:hover{
     z-index:16;
     display:none;
 }
-.extendedmenu#Reiseziele{
-    /*display: inherit;*/
-}
 .extendedmenu#Ueber-uns{
     width: auto;
     left: 485px;
