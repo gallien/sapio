@@ -4,7 +4,7 @@ var extendedmenuReisezieleItems = {  "fr": [
                                 {"image":"assets/images/maps/map-france-languedoc.png","txt":"Languedoc in Frankreich is voll nice und so"}
                             ],
                             "de": [
-                                {"image":"assets/images/maps/map-germany-default.png","txt":"Deutschland is voll nice und so"},
+                                {"image":"assets/images/maps/map-germany-default.png", "txt":"Deutschland is voll nice und so"},
                                 {"image":"assets/images/maps/map-germany-badenwuetrtemberg.png","txt":"Baden-Württemberg in Deutschland is voll nice und so"},
                                 {"image":"assets/images/maps/map-germany-berlin.png","txt":"Berlin in Deutschland is voll nice und so"},
                                 {"image":"assets/images/maps/map-germany-schleswigholstein.png","txt":"Schleswig-Holstein in Deutschland is voll nice und so"}
@@ -56,7 +56,10 @@ $(document).ready(function(){
         });
         updateInputOutputBoxes($("#buchungsanfragemodal_mydata select, #buchungsanfragemodal_mydata input, #buchungsanfragemodal_mydata textarea"));
     });
-    $(".footer-include").load("inc/footer.inc.html");
+    $(".footer-include").load("inc/footer.inc.html", function(){
+        $("img[usemap]").rwdImageMaps();
+        getImagemapListener();
+    });
     $(".aside-contact-include").load("inc/aside-contact.inc.html", function(){
         $("#sidecontent>section").first().clone().appendTo("#aside-include");
     });
@@ -64,8 +67,7 @@ $(document).ready(function(){
     $("#headerslider").carousel({interval:6000});
     $("#reiseleiterslider").carousel({interval:4000});
     $("#reisedetailbilderslider").carousel({interval:8000});
-    $("img[usemap]").rwdImageMaps();
-    getImagemapListener();
+    
 });
 
 function updateSelectOutputBoxes(element){
@@ -99,23 +101,24 @@ function updateInputOutputBoxes(element){
 
 function getImagemapListener(){
     $("map>area").mouseenter(function(){
-        $(this).parent().parent().find("img[usemap='#"+$(this).parent().attr("name")+"']").attr("src", $(this).attr("data-src-target"));
-        $(this).parent().siblings(".output").css({"top":$(this).attr("data-title-cord-y")+"%", "left": $(this).attr("data-title-cord-x")+"%"}).text($(this).attr("alt")).show(260);
+        markHeadingOfListHoverHelper($(this));
     }).mouseleave(function(){
-        getImagemapDefault($(this));
+        markHeadingOfListUnhoverHelper($(this));
     });
-    $("map>area").each(function(){
-        getImagemapDefault($(this));
+    $("map").each(function(){
+        if($(this).attr("data-area-default")){
+            getImagemapDefault($(this), $(this).attr("data-parentboxid"));
+        };
     });
 };
 
-function getImagemapDefault(el){
-    el.parent().parent().find("img[usemap='#"+el.parent().attr("name")+"']").attr("src", el.parent().attr("data-src-default"));
-    if(el.parent().attr("data-area-default")){
-        var area = el.parent().find("area[alt='"+el.parent().attr("data-area-default")+"']");
-        el.parent().siblings(".output").css({"top": area.attr("data-title-cord-y")+"%", "left": area.attr("data-title-cord-x")+"%"}).text(area.attr("alt")).show(260);
+function getImagemapDefault(el, parentbox){
+    $("#"+parentbox+" img[usemap='#"+el.attr("name")+"']").attr("src", el.attr("data-src-default"));
+    if(el.attr("data-area-default")){
+        var area = el.find("area[alt='"+el.attr("data-area-default")+"']");
+        $("#"+parentbox+" .output").css({"top": area.attr("data-title-cord-y")+"%", "left": area.attr("data-title-cord-x")+"%"}).text(area.attr("alt")).show(260);
     }else{
-        el.parent().siblings(".output").text("").hide(260);
+        $("#"+parentbox+" .output").text("").hide(260);
     };
 };
 
@@ -142,20 +145,34 @@ function getExtendedmenu(){
     };
 
     $("#Reiseziele .markHeadingOfList a").hover(function(){
-        $($(this).attr("data-parent")).css('color','#802629');
-        if($(this).attr("data-id")!=undefined){
-            var tmp = $(this).attr("data-id").split("-");
-            $('#Reiseziele .markImage').attr("src",extendedmenuReisezieleItems[tmp[0]][tmp[1]].image);
-            $('#Reiseziele .markTxt').html(extendedmenuReisezieleItems[tmp[0]][tmp[1]].txt);
-        };
+        markHeadingOfListHoverHelper($(this));
     }, function(){
-        $($(this).attr("data-parent")).css('color','inherit');
+        markHeadingOfListUnhoverHelper($(this));
     });
 
     $("#Reisethemen .markHeadingOfList a").hover(function(){
-        $("#Reisethemen .markImage").attr("src",extendedmenuReisethemenItems[$(this).attr("data-id")].image);
         $("#Reisethemen .markTxt").html(extendedmenuReisethemenItems[$(this).attr("data-id")].txt);
     });
+};
+function markHeadingOfListHoverHelper(el){
+    var id = el.attr("data-id");
+    var parentbox = el.parent().attr("data-parentboxid");
+    var tmp = id.split("-");
+    if($("#"+parentbox+" .markHeadingOfList a[data-id='"+id+"']").length>0){
+        $("#"+parentbox+" .markHeadingOfList a[data-id='"+id+"']").addClass("red-text");
+        $($("#"+parentbox+" .markHeadingOfList a[data-id='"+id+"']").attr("data-parent")).addClass("red-text");
+        $("#"+parentbox+" .markTxt").html(extendedmenuReisezieleItems[tmp[0]][tmp[1]].txt);
+    };
+    var area = $("area[data-id='"+id+"']");
+    $("#"+parentbox+" img[usemap='#map_"+tmp[0]+"']").attr("src", area.attr("data-src-target"));
+    $("#"+parentbox+" .output").css({"top": area.attr("data-title-cord-y")+"%", "left": area.attr("data-title-cord-x")+"%"}).text(area.attr("alt")).show(260);
+};
+function markHeadingOfListUnhoverHelper(el){
+    var id = el.attr("data-id");
+    var parentbox = el.parent().attr("data-parentboxid");
+    $("#"+parentbox+" .markHeadingOfList a[data-id='"+id+"']").removeClass("red-text");
+    $($("#"+parentbox+" .markHeadingOfList a[data-id='"+id+"']").attr("data-parent")).removeClass("red-text");
+    getImagemapDefault(el.parent(), parentbox);
 };
 
 function checkSection(section_id,next_tab_num){
