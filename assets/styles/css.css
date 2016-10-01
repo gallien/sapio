@@ -34,7 +34,7 @@ select, input, textarea {
     display: inline-block;
     font: inherit;
     line-height: 1.5em;
-    padding: 0.5em 1em 0.5em 1em;
+    padding: 0.5em 0.2em;
     margin: 0;      
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -44,14 +44,8 @@ select, input, textarea {
 }
 select{
     padding: 0.5em 2em 0.5em 1em;
-}
-select:-moz-focusring {
-    color: #7b1c1e;
-    text-shadow: 0 0 0 #000;
-}
-select {
     background-image: url("../images/icons/arrow_down.png");
-    background-position: calc(100% - 10px) 13px;
+    background-position: calc(100% - 10px) 14px;
     /*background-image:
         linear-gradient(45deg, transparent 50%, #7b1c1e 50%),
         linear-gradient(135deg, #7b1c1e 50%, transparent 50%);
@@ -64,6 +58,20 @@ select {
     background-repeat: no-repeat;
     max-width: 100%;
 }
+select:-moz-focusring {
+    color: #7b1c1e;
+    text-shadow: 0 0 0 #000;
+}
+select>option{
+    padding-left: 5px;
+}
+optgroup{
+    padding: 5px 5px;
+}
+optgroup>option{
+    margin: 4px 0;
+}
+
 
 
 
@@ -138,7 +146,7 @@ body>header a:hover{
     width: 100%;
     height: auto;
     background-color: rgb(255, 255, 255);
-    padding:20px 20px 30px;
+    padding:20px;
     border-radius: 0px 0px 10px 10px;
     z-index:16;
     display:none;
@@ -168,13 +176,13 @@ body>main{
 #maincontent>section{
     padding:15px 0;
 }
-#maincontent a, #sidecontent h4, hr, .strippedborderbottom, .reiseangebot.reiseberichtboxes article{
+#maincontent a, #sidecontent h4, hr{
     border-bottom:2px dotted #7b1c1e;
 }
-.reiselandboxes>.row{
-    margin-bottom:30px;
-    padding-bottom:30px;
+.reiselandboxes hr{
     border-bottom:2px dotted #C9C29C;
+    margin-bottom: 30px;
+    margin-top: 50px;
 }
 .reiselandboxes>.row>*{
     position:relative;
@@ -201,14 +209,20 @@ body>main{
 .reiseangebot.reiseberichtboxes article{
     margin-bottom:15px;
 }
-.reiseangebotboxes>div{
+.reiseangebotboxes article{
     padding-bottom:0;
     overflow: hidden;
 }
-.reiseangebotboxes>div article h2{
-    margin: 0px 0px 7.5px;
+.reiseangebotboxes article h2{
+    margin-bottom: 5px;
     font-size: 1.8rem;
 }
+.reiseberichtboxes.reiseangebot article{
+    border-bottom: none;
+    padding-bottom:0;
+    margin-bottom:0;
+}
+
 
 
 
@@ -221,6 +235,9 @@ body>main{
 }
 #sidecontent>section{
     margin-bottom:30px;
+}
+#sidecontent>section.margin0{
+    margin:0;
 }
 img.pull-left{
     width:65px;
@@ -254,8 +271,8 @@ footer section{
 footer aside .glyphicon, footer .nominatetravelbox img{
     margin:1%;
 }
-footer a{
-    color:#FFFFFF;
+footer a, .red.highlight-box.padding15 a{
+    color:#FFFFFF!important;
     text-decoration: underline;
 }
 footer>section.red{
@@ -295,7 +312,7 @@ footer .nominatetravelbox img{
     background-color:#000000;
 }
 .black-text{
-    color:#000000;
+    color:#000000!important;
 }
 .red, .bulletlistsapio li>a.active>span{
     background-color:#7b1c1e;
@@ -313,10 +330,13 @@ footer .nominatetravelbox img{
 }
 .fg-hightlight{
     line-height:2.4rem;
-    font-size:2rem;
+    font-size:1.8rem;
 }
 .fg-bold{
     font-weight: bold;
+}
+.fg-normal{
+    font-weight: normal;
 }
 a.readon{
     text-decoration: none;
@@ -324,7 +344,7 @@ a.readon{
 }
 a.readon::before, .list-sapiostyled li:before{
     background-image: url("../images/icons/arrow_right.png");
-    background-position: -2px 3px;
+    background-position: -2px 2px;
     background-repeat: no-repeat;
     content: "   ";
 }
@@ -385,6 +405,9 @@ blockquote p:after{
 .padding0{
     padding:0;
 }
+.paddingbottom0{
+    padding-bottom:0!important;
+}
 .paddingtop0{
     padding-top:0!important;
 }
@@ -416,7 +439,6 @@ blockquote p:after{
 .lh24{
     line-height:2.4rem;
 }
-
 .hiddenlink{
     border:none!important;
     color:inherit;
@@ -440,8 +462,8 @@ blockquote p:after{
     position:absolute;
     bottom:0;
     left:0;
-    padding:10px 5px 5px;
-    line-height:1.6rem;
+    padding:10px 5px;
+    line-height:2rem;
     text-shadow:none;
     color:#000000;
 }
@@ -451,8 +473,8 @@ blockquote p:after{
     padding:5px 2px;
 }
 .inlinecaption figcaption.singleline{
-    padding:17px 5px 14px;
-    line-height:1.6rem;
+    line-height: 2rem;
+    padding: 20px 5px;
 }
 label.customcheck {
     -webkit-box-shadow: none !important;
@@ -520,6 +542,10 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
 .reiseberichtboxes article h2{
     line-height:1.8rem;
 }
+.reiseberichtboxes article h2>small, .teamboxes article h2>small{
+    font-variant: initial!important;
+    text-transform: initial!important;
+}
 .reiseberichtboxes article img.pull-left{
     width:30%;
     height:auto;
@@ -529,13 +555,13 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
     height:160px;
 }
 .reiseberichtboxes>.btn-red{
-    margin-top:15px
+    margin-top:30px
 }
 .terminuebersichtboxes .list-group-item:first-child, ul.nav-tabs.ochre{
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
 }
-.terminuebersichtboxes .list-group-item:last-child, .tab-content.ochre-light{
+.terminuebersichtboxes .list-group-item:last-child, .tab-content.ochre-light, .ochre-light.img-rounded.paddingbottom0{
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
 }
@@ -548,13 +574,15 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
     margin-bottom: 1px;
 }
 .terminuebersichtboxes .list-group-item time{
-    margin-top:15px;
     font-size:90%;
     display: block;
 }
-.terminuebersichtboxes .list-group-item h4, .terminuebersichtboxes .list-group-item .btn{
+.terminuebersichtboxes .list-group-item h4{
     margin-bottom: 0;
     margin-top:15px;
+}
+.terminuebersichtboxes .list-group-item .btn{
+    margin-top:20px;
 }
 .statusbull{
     height: 10px; 
@@ -565,13 +593,13 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
     line-height: 85%;
 }
 .statusbull.statusbull-orange{
-    background-color: orange;
+    background-color: #F37029;
 }
 .statusbull.statusbull-red{
     background-color: #7b1c1e;
 }
 .statusbull.statusbull-green{
-    background-color: green;
+    background-color: #AFCA4C;
 }
 .img-half{
     width:50%!important;
@@ -600,7 +628,11 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
 }
 #maincontent .panel-default a.fg-cap{
     border:0!important;
-    /*padding-bottom:0; */
+    font-size: 1.8rem;
+    color: #7b1c1e;
+}
+#maincontent .panel-default a.fg-cap[aria-expanded="true"]{
+    color: #000000;
 }
 .pressebox .panel-default > .panel-heading + .panel-collapse > .panel-body.padding0{
   border-top: none;
@@ -717,7 +749,21 @@ hr.inlinehr{
     margin: 15px;
     width: calc(100% - 60px);
 }
-
+hr.inlinehr.margintop0{
+    margin-top: 0;
+}
+.reiselandboxes h2{
+    margin-top: 0;
+}
+blockquote .small, blockquote footer, blockquote small {
+  color: #333333;
+  display: block;
+  font-size: 100%;
+  font-style: italic;
+}
+blockquote .small::before, blockquote footer::before, blockquote small::before {
+  content: "";
+}
 
 
 
@@ -736,17 +782,17 @@ hr.inlinehr{
 #buchungsanfragemodal .inputline p{
   padding-top: 7px;
 }
-#buchungsanfragemodal .inputline input, #buchungsanfragemodal .inputline select, #buchungsanfragemodal .inputline textarea{
+#buchungsanfragemodal .inputline input, #buchungsanfragemodal .inputline textarea{
   width: 100%;
   border-radius: 4px;
-  padding: 0.5em 2em 0.5em 1em;
+  padding: 0.5em 1rem;
 }
 #buchungsanfragemodal .close{
   font-size: 3rem;
   margin-right: 15px;
   margin-top: -15px;
 }
-#buchungsanfragemodal .tab-pane footer a{
+#buchungsanfragemodal .tab-pane footer a, footer.footer-include nav.informs a{
     text-decoration: none;
 }
 #buchungsanfragemodal .tab-pane footer .right{
@@ -793,6 +839,7 @@ hr.inlinehr{
     right: auto;
     top: auto;
     padding: 7px 20px;
+    text-align: left;
 }
 #headerslider .item .carousel-caption.carousel-caption-top-left{
     top: 8%;
@@ -825,7 +872,7 @@ hr.inlinehr{
 .fintravelbox{
     padding:10px 0;
 }
-.fintravelbox .btn-red{
+.fintravelbox .btn-red, .pull-right.btn-red{
     padding:7px 40px;
 }
 .fintravelbox .text-right>a{
