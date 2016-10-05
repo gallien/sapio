@@ -3,11 +3,12 @@
 }
 body{
     overflow-x:hidden;
+    font-size:1.5rem;
     /*background-image: url("../images/sapio-flower-bg.jpg");
     background-position: 0 420px;
     background-repeat: no-repeat;*/
 }
-a{
+a, a:focus, a:hover{
     color:#7b1c1e;
 }
 a:hover{
@@ -15,7 +16,7 @@ a:hover{
 }
 h1, h2, .footertitle{
     font-size: 2.2rem;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 h6{
     font-size: 1.8rem;
@@ -25,6 +26,13 @@ h1, h2, h6, .fg-cap, #sidecontent h4, .inlinecaption figcaption>strong{
     text-transform: capitalize uppercase;
     font-variant:small-caps !important;
 }
+.fg-cap small{
+    font-size: 80%;
+    font-variant: initial !important;
+}
+/*h2:first-letter{
+    font-size: 130%;
+}*/
 ol{
     padding-inline-start:15px;
 }
@@ -34,7 +42,7 @@ select, input, textarea {
     display: inline-block;
     font: inherit;
     line-height: 1.5em;
-    padding: 0.5em 0.2em;
+    padding: 5px 0.2em;
     margin: 0;      
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -43,7 +51,7 @@ select, input, textarea {
     -moz-appearance: none;
 }
 select{
-    padding: 0.5em 2em 0.5em 1em;
+    padding: 5px 2em 5px 1em;
     background-image: url("../images/icons/arrow_down.png");
     background-position: calc(100% - 10px) 14px;
     /*background-image:
@@ -57,6 +65,7 @@ select{
         5px 5px;*/
     background-repeat: no-repeat;
     max-width: 100%;
+    cursor: pointer;
 }
 select:-moz-focusring {
     color: #7b1c1e;
@@ -90,8 +99,8 @@ body>header .navbar-collapse .navbar-nav{
 }
 body>header .navbar-phone{
     position: absolute;
-    top:20px;
-    right:0;
+    top:10px;
+    right:15px;
 }
 body>header .navbar-phone .navbar-phone-icon{
     padding: 5px 10px 0 0;
@@ -101,13 +110,19 @@ body>header .navbar-phone .navbar-phone-number{
     text-align:justify;
 }
 body>header .navbar-phone .navbar-phone-opening{
-    font-size:80%;
+    font-size:85%;
+}
+body>header .navbar-phone .navbar-phone-opening span{
+    font-size:90%;
 }
 body>header a{
     color:#000;
 }
 body>header a:hover{
     color:#7b1c1e;
+}
+.headersliderbox{
+    margin-bottom:-2px
 }
 .extendedmenu li>a>h6:hover, .extendedmenu .active, .navbar-default, .navbar li>a:hover, .navbar-default, .navbar li>a:active, .navbar-default, .navbar li>a:focus{
     color:#7b1c1e!important;
@@ -118,10 +133,16 @@ body>header a:hover{
     border:none;
 }
 .navbar {
-  min-height: 80px;
+    min-height: 80px;
+    margin-top: 10px;
+    margin-bottom: 15px;
 }
 .navbar .navbar-collapse li>a{
-    font-size:2rem;
+    font-size: 2.2rem;
+    padding-right: 25px;
+}
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+  margin-right: 25px;
 }
 .extendedmenu ul{
     padding:0 0 0 10px;
@@ -228,10 +249,11 @@ body>main{
 
 /* SIDECOL */
 #sidecontent{
-    padding-top:35px;
+    padding-top:20px;
 }
 #sidecontent h4{
     line-height:3rem;
+    font-size: 2rem;
 }
 #sidecontent>section{
     margin-bottom:30px;
@@ -248,12 +270,16 @@ img.pull-left{
     width:50%;
     margin:20px 15px 0 0;
 }
+#sidecontent p, #sidecontent strong, footer.footer-include p, footer.footer-include address{
+    font-size: 90%;
+}
 .contactbox p{
     margin-top:40px;
-    margin-bottom: 0;
+    margin-bottom: 10px;
 }
 .contactbox .btn-red{
     margin-left:-45px;
+    margin-top: 20px;
 }
 .highlight-box.red{
     color:#FFFFFF;
@@ -335,16 +361,23 @@ footer .nominatetravelbox img{
 .fg-bold{
     font-weight: bold;
 }
+.fg-size75{
+    font-size:75%!important;
+}
+.fg-size90{
+    font-size:90%!important;
+}
 .fg-normal{
     font-weight: normal;
 }
 a.readon{
     text-decoration: none;
     border: none!important;
+    font-size: 14px;
 }
 a.readon::before, .list-sapiostyled li:before{
     background-image: url("../images/icons/arrow_right.png");
-    background-position: -2px 2px;
+    background-position: -2px 3px;
     background-repeat: no-repeat;
     content: "   ";
 }
@@ -448,6 +481,7 @@ blockquote p:after{
 }
 .form-control{
     background-image: inherit;
+    border: medium none;
 }
 .noshadow{
     text-shadow: none;
@@ -464,6 +498,7 @@ blockquote p:after{
     left:0;
     padding:10px 5px;
     line-height:2rem;
+    font-size:115%;
     text-shadow:none;
     color:#000000;
 }
@@ -764,6 +799,12 @@ blockquote .small, blockquote footer, blockquote small {
 blockquote .small::before, blockquote footer::before, blockquote small::before {
   content: "";
 }
+select.img-rounded, input.img-rounded, textarea.img-rounded{
+    border-radius: 4px;
+}
+.getimgmaplistsele a.red-text{
+    text-decoration: underline;
+}
 
 
 
@@ -826,7 +867,7 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
 #headerslider .item{
     background-size:cover;
     background-position: center center;
-    height:350px;
+    height:330px;
     width:100%;
 }
 #headerslider .item .carousel-caption{
@@ -858,13 +899,27 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
     left: 8%;
 }
 #headerslider .carousel-control {
-  width: 50px;
+    width: 50px;
+}
+.carousel-control {
+    opacity:.6;
+}
+.carousel-control:hover{
+    opacity:1;
+}
+.carousel-control img{
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    font-size: 30px;
+    color:#fff;
 }
 #headerslider .carousel-control.right {
-  right: -50px;
+    right: -40px;
 }
 #headerslider .carousel-control.left {
-  left: -50px;
+    left: -48px;
 }
 #headerslider .carousel-caption-bottom-right{
     text-align:left;
@@ -872,20 +927,19 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
 .fintravelbox{
     padding:10px 0;
 }
-.fintravelbox .btn-red, .pull-right.btn-red{
-    padding:7px 40px;
+.fintravelbox .btn-red, .fintravelbox .pull-right.btn-red{
+    padding:6px 40px;
 }
 .fintravelbox .text-right>a{
-    font-size:16px;
+    font-size:1.8rem;
     line-height: 34px;
 }
 .fintravelbox .text-right>a:hover{
     color:#000;
     text-decoration: none;
 }
-.fintravelbox .text-right>a img{
-    height: 2.8rem;
-    margin-top: -4px;
+.fintravelbox .btn-red, .fintravelbox select{
+    margin-top:3px;
 }
 
 
@@ -964,6 +1018,16 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
     }
     .fintravelbox .container, body > header .navbar-collapse .navbar-nav>*{
         text-align: center;
+    }
+    .fintravelbox label{
+        text-align: right;
+        margin-top: 7px;
+    }
+    .fintravelbox select, .fintravelbox .btn.btn-red{
+        float:left;
+    }
+    .fintravelbox .btn.btn-red{
+        margin-left: -15px;
     }
     p {
         text-align: justify;

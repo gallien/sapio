@@ -128,35 +128,48 @@ function getImagemapDefault(el, parentbox){
 function getExtendedmenu(){
     if($(window).width()>768){
         $("#mainnavlinks a").click(function(){
-            var el = $(this), target = $(this).attr("data-target");
+            var el = $(this);
             if(el.hasClass("active")){
                 el.removeClass("active");
-                $(target).slideUp();
+                $(el.attr("data-target")).slideUp();
             }else{
-                $(".extendedmenu").slideUp();
-                $("#mainnavlinks a").removeClass("active");
-                el.addClass("active");
-                $(target).slideDown();
+                openExtendetMenu(el);
                 $("main").click(function(){
-                    $(".extendedmenu").slideUp();
-                    el.removeClass("active");
-                    $(target).slideUp();
+                    closeExtendetMenu(el);
                 });
-                $("img[usemap]").rwdImageMaps();
             };
             return false;
         });
+        $("#mainnavlinks a").mouseenter(function(){
+            var el = $(this);
+            openExtendetMenu(el);
+            $("main").hover(function(){
+                closeExtendetMenu(el);
+            });
+        });
     };
-
     $("#Reiseziele .markHeadingOfList a").hover(function(){
         markHeadingOfListHoverHelper($(this));
     }, function(){
         markHeadingOfListUnhoverHelper($(this));
     });
-
     $("#Reisethemen .markHeadingOfList a").hover(function(){
         $("#Reisethemen .markTxt").html(extendedmenuReisethemenItems[$(this).attr("data-id")].txt);
     });
+};
+
+function openExtendetMenu(el){
+    $(".extendedmenu").slideUp();
+    $("#mainnavlinks a").removeClass("active");
+    el.addClass("active");
+    $(el.attr("data-target")).slideDown();
+    $("img[usemap]").rwdImageMaps();
+};
+
+function closeExtendetMenu(el){
+    $(".extendedmenu").slideUp();
+    el.removeClass("active");
+    $(el.attr("data-target")).slideUp();
 };
 
 function markHeadingOfListHoverHelper(el){
