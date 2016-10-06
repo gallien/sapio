@@ -127,6 +127,14 @@ function getImagemapDefault(el, parentbox){
 
 function getExtendedmenu(){
     if($(window).width()>768){
+        $("#mainnavlinks a").mouseenter(function(){
+            var el = $(this);
+            openExtendetMenu(el);
+            $("main").hover(function(){
+                closeExtendetMenu(el);
+            });
+        });
+    }else{
         $("#mainnavlinks a").click(function(){
             var el = $(this);
             if(el.hasClass("active")){
@@ -139,13 +147,6 @@ function getExtendedmenu(){
                 });
             };
             return false;
-        });
-        $("#mainnavlinks a").mouseenter(function(){
-            var el = $(this);
-            openExtendetMenu(el);
-            $("main").hover(function(){
-                closeExtendetMenu(el);
-            });
         });
     };
     $("#Reiseziele .markHeadingOfList a").hover(function(){
