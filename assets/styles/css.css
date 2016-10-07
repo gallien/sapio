@@ -36,6 +36,9 @@ h1, h2, h6, .fg-cap, #sidecontent h4, .inlinecaption figcaption>strong{
 ol{
     padding-inline-start:15px;
 }
+label{
+    font-size:14px;
+}
 select, input, textarea {
     background-color: white;
     border: none;
@@ -49,11 +52,12 @@ select, input, textarea {
     box-sizing: border-box;
     -webkit-appearance: none;
     -moz-appearance: none;
+    font-size:14px;
 }
 select{
-    padding: 5px 2em 5px 1em;
+    padding: 6px 2em 6px 1em;
     background-image: url("../images/icons/arrow_down.png");
-    background-position: calc(100% - 10px) 14px;
+    background-position: calc(100% - 10px) 13px;
     /*background-image:
         linear-gradient(45deg, transparent 50%, #7b1c1e 50%),
         linear-gradient(135deg, #7b1c1e 50%, transparent 50%);
@@ -113,7 +117,7 @@ body>header .navbar-phone .navbar-phone-opening{
     font-size:85%;
 }
 body>header .navbar-phone .navbar-phone-opening span{
-    font-size:90%;
+    font-size:92%;
 }
 body>header a{
     color:#000;
@@ -190,6 +194,13 @@ body>main{
 #maincontent{
     padding:0 50px 0 0;
 }
+#maincontent h1{
+    margin-top: 14px;
+}
+#maincontent strong.strongextraline{
+    display: block;
+    margin-bottom: 2px;
+}
 #maincontent a:hover, .highlight-box.red a:hover, #maincontent .panel-title>a{
     text-decoration: unset;
     border-bottom:2px dotted #C9C29C;
@@ -224,7 +235,7 @@ body>main{
 .reiselandboxes>.row>*>div{
     padding: 30px 15px 15px 30px;
 }
-.reiselandboxes>.row>*>div .btn{
+.reiselandboxes>.row>*>div .btn, #sidecontent .btn-red.pull-right{
     padding: 7px 25px;
 }
 .reiseangebot.reiseberichtboxes article{
@@ -256,7 +267,7 @@ body>main{
     font-size: 2rem;
 }
 #sidecontent>section{
-    margin-bottom:30px;
+    margin-bottom:27px;
 }
 #sidecontent>section.margin0{
     margin:0;
@@ -377,7 +388,7 @@ a.readon{
 }
 a.readon::before, .list-sapiostyled li:before{
     background-image: url("../images/icons/arrow_right.png");
-    background-position: -2px 3px;
+    background-position: -3px 3px;
     background-repeat: no-repeat;
     content: "   ";
 }
@@ -940,6 +951,9 @@ select.img-rounded, input.img-rounded, textarea.img-rounded{
 }
 .fintravelbox .btn-red, .fintravelbox select{
     margin-top:3px;
+}
+.fintravelbox label.control-label{
+    padding-top: 9px;
 }
 
 
