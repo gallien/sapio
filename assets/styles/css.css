@@ -1,9 +1,18 @@
+@font-face {
+	font-family: 'Conv_DanteMTStd-Regular';
+	src: url('../fonts/DanteMTStd-Regular.eot');
+	src: local('☺'), url('../fonts/DanteMTStd-Regular.woff') format('woff'), url('../fonts/DanteMTStd-Regular.ttf') format('truetype'), url('../fonts/DanteMTStd-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
 *{
-    font-family: 'Lora', Georgia, serif;
+    font-family: 'Conv_DanteMTStd-Regular', Georgia, serif;
 }
 body{
     overflow-x:hidden;
-    font-size:1.5rem;
+    font-size:1.8rem;
+    line-height: 1.25;
     /*background-image: url("../images/sapio-flower-bg.jpg");
     background-position: 0 420px;
     background-repeat: no-repeat;*/
@@ -19,7 +28,7 @@ h1, h2, .footertitle{
     margin-bottom: 10px;
 }
 h6{
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     line-height:4rem;
 }
 h1, h2, h6, .fg-cap, #sidecontent h4, .inlinecaption figcaption>strong{
@@ -110,14 +119,14 @@ body>header .navbar-phone .navbar-phone-icon{
     padding: 5px 10px 0 0;
 }
 body>header .navbar-phone .navbar-phone-number{
-    font-size:120%;
+    font-size:130%;
     text-align:justify;
+    vertical-align: middle;
 }
-body>header .navbar-phone .navbar-phone-opening{
-    font-size:85%;
-}
-body>header .navbar-phone .navbar-phone-opening span{
-    font-size:92%;
+body>header .navbar-phone .navbar-phone-number>span{
+    font-size:1.4rem;
+    margin-top: -0.5rem;
+    display:block;
 }
 body>header a{
     color:#000;
@@ -139,10 +148,10 @@ body>header a:hover{
 .navbar {
     min-height: 80px;
     margin-top: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 .navbar .navbar-collapse li>a{
-    font-size: 2.2rem;
+    font-size: 2.7rem;
     padding-right: 25px;
 }
 .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
@@ -161,7 +170,7 @@ body>header a:hover{
     color: #000;
 }
 .extendedmenu li .fg-cap{
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     line-height:3rem;
 }
 .extendedmenu{
@@ -247,7 +256,7 @@ body>main{
 }
 .reiseangebotboxes article h2{
     margin-bottom: 5px;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
 }
 .reiseberichtboxes.reiseangebot article{
     border-bottom: none;
@@ -264,7 +273,7 @@ body>main{
 }
 #sidecontent h4{
     line-height:3rem;
-    font-size: 2rem;
+    font-size: 2.4rem;
 }
 #sidecontent>section{
     margin-bottom:27px;
@@ -367,7 +376,7 @@ footer .nominatetravelbox img{
 }
 .fg-hightlight{
     line-height:2.4rem;
-    font-size:1.8rem;
+    font-size:2.2rem;
 }
 .fg-bold{
     font-weight: bold;
@@ -481,7 +490,7 @@ blockquote p:after{
   padding-left: 15px;
 }
 .lh24{
-    line-height:2.4rem;
+    line-height:2.8rem;
 }
 .hiddenlink{
     border:none!important;
@@ -508,7 +517,7 @@ blockquote p:after{
     bottom:0;
     left:0;
     padding:10px 5px;
-    line-height:2rem;
+    line-height:2.4rem;
     font-size:115%;
     text-shadow:none;
     color:#000000;
@@ -519,7 +528,7 @@ blockquote p:after{
     padding:5px 2px;
 }
 .inlinecaption figcaption.singleline{
-    line-height: 2rem;
+    line-height: 2.4rem;
     padding: 20px 5px;
 }
 label.customcheck {
@@ -586,7 +595,7 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
     margin-bottom:10px;
 }
 .reiseberichtboxes article h2{
-    line-height:1.8rem;
+    line-height:2.2rem;
 }
 .reiseberichtboxes article h2>small, .teamboxes article h2>small{
     font-variant: initial!important;
@@ -674,7 +683,7 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
 }
 #maincontent .panel-default a.fg-cap{
     border:0!important;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     color: #7b1c1e;
 }
 #maincontent .panel-default a.fg-cap[aria-expanded="true"]{
@@ -725,7 +734,7 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
     line-height:4rem;
 }
 .bulletlistsapio li>a{
-    font-size:2.2rem;
+    font-size:2.6rem;
 }
 .bulletlistsapio li>a.active{
     color:#000;
@@ -738,14 +747,14 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
     position: relative;
     width: 20px;
     color:#fff;
-    line-height:2.2rem;
+    line-height:2.6rem;
     margin-right: 5px;
 }
 .bulletlistsapio li>a>span>.glyphicon{
-    font-size: 1rem;
+    font-size: 1.4rem;
     font-weight: bold;
     left: 5px;
-    line-height: 1rem;
+    line-height: 1.4rem;
     top: -4px;
 }
 .nav-tabs > li > a, .nav-tabs > li > a:focus, .nav-tabs > li > a:hover {
@@ -768,7 +777,7 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
     right: 15px;
 }
 .tab-pane .row>h2 ~ a>span{
-    font-size:2rem;
+    font-size:2.4rem;
 }
 .teamboxes>.row{
     margin:0 0 30px;
@@ -942,7 +951,7 @@ select.img-rounded, input.img-rounded, textarea.img-rounded{
     padding:6px 40px;
 }
 .fintravelbox .text-right>a{
-    font-size:1.8rem;
+    font-size:2.2rem;
     line-height: 34px;
 }
 .fintravelbox .text-right>a:hover{
