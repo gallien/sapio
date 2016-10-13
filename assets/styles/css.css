@@ -24,8 +24,8 @@ a:hover{
     color:#C9C29C;
 }
 h1, h2, .footertitle{
-    font-size: 2.2rem;
-    margin-bottom: 10px;
+    font-size: 2.3rem;
+    margin-bottom: 13px;
 }
 h6{
     font-size: 2.2rem;
@@ -46,7 +46,7 @@ ol{
     padding-inline-start:15px;
 }
 label{
-    font-size:14px;
+    font-size:16px;
 }
 select, input, textarea {
     background-color: white;
@@ -61,21 +61,12 @@ select, input, textarea {
     box-sizing: border-box;
     -webkit-appearance: none;
     -moz-appearance: none;
-    font-size:14px;
+    font-size:16px;
 }
 select{
-    padding: 6px 2em 6px 1em;
+    padding: 6px 2em 6px 0.7em;
     background-image: url("../images/icons/arrow_down.png");
-    background-position: calc(100% - 10px) 13px;
-    /*background-image:
-        linear-gradient(45deg, transparent 50%, #7b1c1e 50%),
-        linear-gradient(135deg, #7b1c1e 50%, transparent 50%);
-    background-position:
-        calc(100% - 20px) calc(1em + 2px),
-        calc(100% - 15px) calc(1em + 2px);
-    background-size:
-        5px 5px,
-        5px 5px;*/
+    background-position: calc(100% - 10px) 15px;
     background-repeat: no-repeat;
     max-width: 100%;
     cursor: pointer;
@@ -93,7 +84,12 @@ optgroup{
 optgroup>option{
     margin: 4px 0;
 }
-
+.btn, .form-control{
+    font-size:16px;
+}
+#sidecontent .btn, #sidecontent .form-control{
+    font-size:18px;
+}
 
 
 
@@ -164,6 +160,7 @@ body>header a:hover{
 .extendedmenu ul>li{
     margin-bottom:5px;
     list-style: none;
+    font-size: 90%;
 }
 .extendedmenu h6{
     margin:0;
@@ -292,6 +289,13 @@ img.pull-left{
 }
 #sidecontent p, #sidecontent strong, footer.footer-include p, footer.footer-include address{
     font-size: 90%;
+    line-height: 1.1;
+}
+footer.footer-include address{
+    margin-bottom:2px;
+}
+footer.footer-include p.lh24{
+    line-height: 1.4;
 }
 .contactbox p{
     margin-top:40px;
@@ -299,7 +303,8 @@ img.pull-left{
 }
 .contactbox .btn-red{
     margin-left:-45px;
-    margin-top: 20px;
+    margin-top: 17px;
+    font-size: 16px !important;
 }
 .highlight-box.red{
     color:#FFFFFF;
@@ -375,8 +380,8 @@ footer .nominatetravelbox img{
     border:none;
 }
 .fg-hightlight{
-    line-height:2.4rem;
-    font-size:2.2rem;
+    line-height:2.8rem;
+    font-size:2.4rem;
 }
 .fg-bold{
     font-weight: bold;
@@ -393,7 +398,7 @@ footer .nominatetravelbox img{
 a.readon{
     text-decoration: none;
     border: none!important;
-    font-size: 14px;
+    font-size: 16px;
 }
 a.readon::before, .list-sapiostyled li:before{
     background-image: url("../images/icons/arrow_right.png");
@@ -740,7 +745,7 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
     color:#000;
 }
 .bulletlistsapio li>a>span{
-    background-color: #ccc;
+    background-color: #c9c29c;
     border-radius: 50%;
     display: inline-block;
     height: 20px;
@@ -751,11 +756,9 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
     margin-right: 5px;
 }
 .bulletlistsapio li>a>span>.glyphicon{
-    font-size: 1.4rem;
-    font-weight: bold;
+    font-size: 1rem;
     left: 5px;
-    line-height: 1.4rem;
-    top: -4px;
+    top: -6px;
 }
 .nav-tabs > li > a, .nav-tabs > li > a:focus, .nav-tabs > li > a:hover {
     background-color: none;
@@ -960,6 +963,9 @@ select.img-rounded, input.img-rounded, textarea.img-rounded{
 }
 .fintravelbox .btn-red, .fintravelbox select{
     margin-top:3px;
+}
+.fintravelbox .btn-red>.glyphicon {
+    margin:2px;
 }
 .fintravelbox label.control-label{
     padding-top: 9px;
