@@ -20,6 +20,13 @@ body{
 a, a:focus, a:hover{
     color:#7b1c1e;
 }
+a[href^="tel:"]{
+    color:#333;
+}
+a[href^="tel:"]:hover{
+    color:#333;
+    text-decoration: none;
+}
 a:hover{
     color:#C9C29C;
 }
@@ -28,7 +35,7 @@ h1, h2, .footertitle{
     margin-bottom: 13px;
 }
 h6{
-    font-size: 2.2rem;
+    font-size: 2rem;
     line-height:4rem;
 }
 h1, h2, h6, .fg-cap, #sidecontent h4, .inlinecaption figcaption>strong{
@@ -109,7 +116,7 @@ body>header .navbar-collapse .navbar-nav{
 body>header .navbar-phone{
     position: absolute;
     top:10px;
-    right:15px;
+    right:20px;
 }
 body>header .navbar-phone .navbar-phone-icon{
     padding: 5px 10px 0 0;
@@ -120,8 +127,9 @@ body>header .navbar-phone .navbar-phone-number{
     vertical-align: middle;
 }
 body>header .navbar-phone .navbar-phone-number>span{
-    font-size:1.4rem;
+    font-size:1.3rem;
     margin-top: -0.5rem;
+    letter-spacing: .5px;
     display:block;
 }
 body>header a{
@@ -147,7 +155,7 @@ body>header a:hover{
     margin-bottom: 12px;
 }
 .navbar .navbar-collapse li>a{
-    font-size: 2.7rem;
+    font-size: 2.4rem;
     padding-right: 25px;
 }
 .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
@@ -202,20 +210,24 @@ body>main{
 }
 #maincontent h1{
     margin-top: 14px;
+    letter-spacing: .5px;
 }
 #maincontent strong.strongextraline{
     display: block;
     margin-bottom: 2px;
 }
-#maincontent a:hover, .highlight-box.red a:hover, #maincontent .panel-title>a{
+.highlight-box.red a:hover, #maincontent .panel-title>a{
     text-decoration: unset;
     border-bottom:2px dotted #C9C29C;
 }
 #maincontent>section{
     padding:15px 0;
 }
-#maincontent a, #sidecontent h4, hr{
+#sidecontent h4, hr{
     border-bottom:2px dotted #7b1c1e;
+}
+#maincontent a{
+    text-decoration: underline;
 }
 .reiselandboxes hr{
     border-bottom:2px dotted #C9C29C;
@@ -301,6 +313,12 @@ footer.footer-include p.lh24{
     margin-top:40px;
     margin-bottom: 10px;
 }
+.contactbox a[href^="tel:"]{
+    display: block;
+    margin-top: -1px;
+    font-size: 90%;
+    line-height: 1.1;
+}
 .contactbox .btn-red{
     margin-left:-45px;
     margin-top: 17px;
@@ -322,7 +340,7 @@ footer section{
 footer aside .glyphicon, footer .nominatetravelbox img{
     margin:1%;
 }
-footer a, .red.highlight-box.padding15 a{
+footer a, .red.highlight-box.padding15 a, footer a[href^="tel:"]{
     color:#FFFFFF!important;
     text-decoration: underline;
 }
@@ -954,12 +972,19 @@ select.img-rounded, input.img-rounded, textarea.img-rounded{
     padding:6px 40px;
 }
 .fintravelbox .text-right>a{
-    font-size:2.2rem;
+    display: block;
+    font-size: 2.2rem;
     line-height: 34px;
+    margin-top: 5px;
 }
 .fintravelbox .text-right>a:hover{
     color:#000;
     text-decoration: none;
+}
+.fintravelbox .text-right>a>img{
+    height: 34px;
+    margin-top: -5px;
+    width: auto;
 }
 .fintravelbox .btn-red, .fintravelbox select{
     margin-top:3px;
@@ -968,7 +993,7 @@ select.img-rounded, input.img-rounded, textarea.img-rounded{
     margin:2px;
 }
 .fintravelbox label.control-label{
-    padding-top: 9px;
+    padding-top: 11px;
 }
 
 
