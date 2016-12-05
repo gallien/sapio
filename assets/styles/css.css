@@ -1,21 +1,44 @@
 @font-face {
-	font-family: 'Conv_DanteMTStd-Regular';
-	src: url('../fonts/DanteMTStd-Regular.eot');
-	src: local('☺'), url('../fonts/DanteMTStd-Regular.woff') format('woff'), url('../fonts/DanteMTStd-Regular.ttf') format('truetype'), url('../fonts/DanteMTStd-Regular.svg') format('svg');
+	font-family: 'DanteMTStd';
+	src: url('../fonts/dante-mt-regular.eot') format('eot'),
+		 url('../fonts/dante-mt-regular.woff') format('woff'),
+		 url('../fonts/dante-mt-regular.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
 
-*{
-    font-family: 'Conv_DanteMTStd-Regular', Georgia, serif;
+@font-face {
+	font-family: 'DanteMTStd';
+	src: url('../fonts/dante-mt-italic.eot') format('eot'),
+		 url('../fonts/dante-mt-italic.woff') format('woff'),
+		 url('../fonts/dante-mt-italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
 }
+
+@font-face {
+	font-family: 'DanteMTStd';
+	src: url('../fonts/dante-mt-bold.eot') format('eot'),
+		 url('../fonts/dante-mt-bold.woff') format('woff'),
+		 url('../fonts/dante-mt-bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'DanteMTStd';
+	src: url('../fonts/dante-mt-bold-italic.eot') format('eot'),
+		 url('../fonts/dante-mt-bold-italic.woff') format('woff'),
+		 url('../fonts/dante-mt-bold-italic.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+}
+
 body{
+    font-family: 'DanteMTStd', Georgia, serif;
     overflow-x:hidden;
     font-size:1.8rem;
     line-height: 1.25;
-    /*background-image: url("../images/sapio-flower-bg.jpg");
-    background-position: 0 420px;
-    background-repeat: no-repeat;*/
 }
 a, a:focus, a:hover{
     color:#7b1c1e;
@@ -39,16 +62,12 @@ h6{
     line-height:4rem;
 }
 h1, h2, h6, .fg-cap, #sidecontent h4, .inlinecaption figcaption>strong{
-    text-transform: capitalize uppercase;
     font-variant:small-caps !important;
 }
 .fg-cap small{
     font-size: 80%;
     font-variant: initial !important;
 }
-/*h2:first-letter{
-    font-size: 130%;
-}*/
 ol{
     padding-inline-start:15px;
 }
@@ -71,7 +90,7 @@ select, input, textarea {
     font-size:16px;
 }
 select{
-    padding: 6px 2em 6px 0.7em;
+    padding: 6px 2em 9px 0.7em;
     background-image: url("../images/icons/arrow_down.png");
     background-position: calc(100% - 10px) 15px;
     background-repeat: no-repeat;
@@ -112,6 +131,9 @@ body>header .navbar-toggle{
 }
 body>header .navbar-collapse .navbar-nav{
     margin-top: 40px;
+}
+body>header .navbar-collapse .navbar-subnav{
+    display: none;
 }
 body>header .navbar-phone{
     position: absolute;
@@ -225,9 +247,6 @@ body>main{
 }
 #sidecontent h4, hr{
     border-bottom:2px dotted #7b1c1e;
-}
-#maincontent a{
-    text-decoration: underline;
 }
 .reiselandboxes hr{
     border-bottom:2px dotted #C9C29C;
@@ -975,7 +994,7 @@ select.img-rounded, input.img-rounded, textarea.img-rounded{
     display: block;
     font-size: 2.2rem;
     line-height: 34px;
-    margin-top: 5px;
+    margin-top: 2px;
 }
 .fintravelbox .text-right>a:hover{
     color:#000;
@@ -1029,13 +1048,6 @@ select.img-rounded, input.img-rounded, textarea.img-rounded{
     #sidecontent .highlight-box>div{
         padding:5px;
     }
-    #sidecontent .contactbox strong {
-        clear: left;
-        display: block;
-        padding: 10px 0;
-        text-align: center;
-        width: 100%;
-    }
     #headerslider .item .carousel-caption.carousel-caption-top-right{
         right: 8%;
     }
@@ -1064,6 +1076,9 @@ select.img-rounded, input.img-rounded, textarea.img-rounded{
     }
     .p0axs>*{
         margin-bottom:0!important;
+    }
+    .container {
+        padding: 0;
     }
 }
 @media (max-width: 768px){
@@ -1105,6 +1120,9 @@ select.img-rounded, input.img-rounded, textarea.img-rounded{
     body > header .navbar-collapse .navbar-nav {
         margin-top: 60px;
     }
+	body>header .navbar-collapse .navbar-subnav > li > a {
+	    font-size: 90%;
+	}
     .reiselandboxes .row > * > figure{
         height: 200px;
     }

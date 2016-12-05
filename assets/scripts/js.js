@@ -1,41 +1,41 @@
 var extendedmenuReisezieleItems = {  "fr": [
-                                {"txt":"Frankreich is voll nice und so"},
-                                {"txt":"Burgund in Frankreich is voll nice und so"},
-                                {"txt":"Languedoc in Frankreich is voll nice und so"}
+                                {"txt":"Frankreich"},
+                                {"txt":"Burgund"},
+                                {"txt":"Languedoc"}
                             ],
                             "de": [
-                                {"txt":"Deutschland is voll nice und so"},
-                                {"txt":"Baden-Württemberg in Deutschland is voll nice und so"},
-                                {"txt":"Berlin in Deutschland is voll nice und so"},
-                                {"txt":"Schleswig-Holstein in Deutschland is voll nice und so"}
+                                {"txt":"Deutschland"},
+                                {"txt":"Baden-Württemberg"},
+                                {"txt":"Berlin"},
+                                {"txt":"Schleswig-Holstein"}
                             ],
                             "it": [
-                                {"txt":"Italien is voll nice und so"},
-                                {"txt":"abruzzen in Italien is voll nice und so"},
-                                {"txt":"apulien in Italien is voll nice und so"},
-                                {"txt":"aeolischeinseln in Italien is voll nice und so"},
-                                {"txt":"emiliaromagna in Italien is voll nice und so"},
-                                {"txt":"friauljulischvenetien in Italien is voll nice und so"},
-                                {"txt":"latium in Italien is voll nice und so"},
-                                {"txt":"kalabrien in Italien is voll nice und so"},
-                                {"txt":"kampanien in Italien is voll nice und so"},
-                                {"txt":"ligurien in Italien is voll nice und so"},
-                                {"txt":"lombardei in Italien is voll nice und so"},
-                                {"txt":"piemont in Italien is voll nice und so"},
-                                {"txt":"sardinien in Italien is voll nice und so"},
-                                {"txt":"sizilien in Italien is voll nice und so"},
-                                {"txt":"Trentino-Südtirol in Italien is voll nice und so"},
-                                {"txt":"Südtoskana in Italien is voll nice und so"},
-                                {"txt":"toskana in Italien is voll nice und so"},
-                                {"txt":"trentinosuedtirol in Italien is voll nice und so"},
-                                {"txt":"venetien in Italien is voll nice und so"}
+                                {"txt":"Italien"},
+                                {"txt":"Abruzzen"},
+                                {"txt":"Apulien"},
+                                {"txt":"Aeolische Inseln"},
+                                {"txt":"Emilia-Romagna"},
+                                {"txt":"Friaul Julisch Venetien"},
+                                {"txt":"Latium"},
+                                {"txt":"Kalabrien"},
+                                {"txt":"Kampanien"},
+                                {"txt":"Ligurien"},
+                                {"txt":"Lombardei"},
+                                {"txt":"Piemont"},
+                                {"txt":"Sardinien"},
+                                {"txt":"Sizilien"},
+                                {"txt":"Trentino-Südtirol"},
+                                {"txt":"Südtoskana"},
+                                {"txt":"Toskana"},
+                                {"txt":"Trentino-Südtirol"},
+                                {"txt":"Venetien"}
                             ]
                         };
 var extendedmenuReisethemenItems = [
-                                {"image":"https://dummyimage.com/285x188/cccccc/000000.png&text=dummy","txt":"Weinreisen sind toll"},
-                                {"image":"https://dummyimage.com/285x188/cccccc/000000.png&text=dummy","txt":"Kochreisen sind soll"},
-                                {"image":"https://dummyimage.com/285x188/cccccc/000000.png&text=dummy","txt":"Genusswandern ist auch toll"},
-                                {"image":"https://dummyimage.com/285x188/cccccc/000000.png&text=dummy","txt":"Trüffelreisen sind trüffeltastisch"},
+                                {"image":"https://dummyimage.com/285x188/cccccc/000000.png&text=dummy","txt":"Weinreisen"},
+                                {"image":"https://dummyimage.com/285x188/cccccc/000000.png&text=dummy","txt":"Kochreisen"},
+                                {"image":"https://dummyimage.com/285x188/cccccc/000000.png&text=dummy","txt":"Genusswandern"},
+                                {"image":"https://dummyimage.com/285x188/cccccc/000000.png&text=dummy","txt":"Trüffelreisen"},
                                 {"image":"https://dummyimage.com/285x188/cccccc/000000.png&text=dummy","txt":"Kulinarische Städtereisen"},
                                 {"image":"https://dummyimage.com/285x188/cccccc/000000.png&text=dummy","txt":"Kulinarik & Kunst"},
                                 {"image":"https://dummyimage.com/285x188/cccccc/000000.png&text=dummy","txt":"Vegetarische Reisen"}
@@ -44,10 +44,6 @@ var extendedmenuReisethemenItems = [
 $(document).ready(function(){
     $(".header-include").load("inc/header.inc.html", function(){
         getExtendedmenu();
-        $("#Reiseziele .getimgmaplistsele").hover(function(){
-            $("#Reiseziele img[usemap]").hide();
-            $("#Reiseziele img[usemap='#"+$(this).attr("data-map")+"']").show();
-        });
     });
     $(".fintravelbox").load("inc/fintravelbox.inc.html");
     $("#buchungsanfragemodal").load("inc/buchungsanfragemodal.inc.html", function(){
@@ -125,28 +121,31 @@ function getImagemapDefault(el, parentbox){
     };
 };
 
-function getExtendedmenu(){
-    if($(window).width()>768){
-        $("#mainnavlinks a").mouseenter(function(){
+function getExtendedmenu() {
+    if ($(window).width() > 767) {
+        $("#mainnavlinks a").mouseenter(function() {
             var el = $(this);
-            openExtendetMenu(el);
-            $("main").hover(function(){
-                closeExtendetMenu(el);
-            });
+            if ($('#mainnavlinks a.active').attr('data-target') != el.attr('data-target')) {
+	            openExtendetMenu(el);
+	            $("main").hover(function(){
+	                closeExtendetMenu(el);
+	            });
+	        }
         });
-    }else{
-        $("#mainnavlinks a").click(function(){
+        $("#mainnavlinks a").click(function(e) {
+        	e.preventDefault();
             var el = $(this);
-            if(el.hasClass("active")){
-                el.removeClass("active");
-                $(el.attr("data-target")).slideUp();
-            }else{
-                openExtendetMenu(el);
-                $("main").click(function(){
-                    closeExtendetMenu(el);
-                });
-            };
-            return false;
+            if ($('#mainnavlinks a.active').attr('data-target') != el.attr('data-target')) {
+	            openExtendetMenu(el);
+	            $("main").hover(function(){
+	                closeExtendetMenu(el);
+	            });
+	        }
+        });
+    } else {
+        $("#mainnavlinks .dropdown-toggle").click(function(e) {
+        	e.preventDefault();
+        	$(this).parent().find('ul').slideToggle();
         });
     };
     $("#Reiseziele .markHeadingOfList a").hover(function(){
@@ -156,6 +155,10 @@ function getExtendedmenu(){
     });
     $("#Reisethemen .markHeadingOfList a").hover(function(){
         $("#Reisethemen .markTxt").html(extendedmenuReisethemenItems[$(this).attr("data-id")].txt);
+    });
+    $("#Reiseziele .getimgmaplistsele").hover(function(){
+        $("#Reiseziele img[usemap]").hide();
+        $("#Reiseziele img[usemap='#"+$(this).attr("data-map")+"']").show();
     });
 };
 
