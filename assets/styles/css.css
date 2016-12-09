@@ -58,10 +58,10 @@ h1, h2, .footertitle{
     margin-bottom: 13px;
 }
 h6{
-    font-size: 2rem;
-    line-height:4rem;
+    font-size: 2.2rem;
+    line-height: 4rem;
 }
-h1, h2, h6, .fg-cap, #sidecontent h4, .inlinecaption figcaption>strong{
+h1, h2, h6, .fg-cap, #sidecontent h4, #sidecontent h5, .inlinecaption figcaption>strong{
     font-variant:small-caps !important;
 }
 .fg-cap small{
@@ -90,9 +90,9 @@ select, input, textarea {
     font-size:16px;
 }
 select{
-    padding: 6px 2em 9px 0.7em;
+    padding: 6px 2em 7px 0.7em;
     background-image: url("../images/icons/arrow_down.png");
-    background-position: calc(100% - 10px) 15px;
+    background-position: calc(100% - 10px) 14px;
     background-repeat: no-repeat;
     max-width: 100%;
     cursor: pointer;
@@ -112,11 +112,9 @@ optgroup>option{
 }
 .btn, .form-control{
     font-size:16px;
+    font-weight: normal;
+    line-height: 20px;
 }
-#sidecontent .btn, #sidecontent .form-control{
-    font-size:18px;
-}
-
 
 
 /* HEADER */
@@ -130,28 +128,29 @@ body>header .navbar-toggle{
     top: 25px;
 }
 body>header .navbar-collapse .navbar-nav{
-    margin-top: 40px;
+    margin-top: 43px;
 }
 body>header .navbar-collapse .navbar-subnav{
     display: none;
 }
 body>header .navbar-phone{
     position: absolute;
-    top:10px;
-    right:20px;
+    top: 7px;
+    left: 50%;
+    transform: translate(calc(-50% + 480px), 0);
 }
 body>header .navbar-phone .navbar-phone-icon{
     padding: 5px 10px 0 0;
 }
 body>header .navbar-phone .navbar-phone-number{
-    font-size:130%;
+    font-size:120%;
     text-align:justify;
     vertical-align: middle;
 }
 body>header .navbar-phone .navbar-phone-number>span{
     font-size:1.3rem;
-    margin-top: -0.5rem;
-    letter-spacing: .5px;
+    margin-top: -0.2rem;
+    letter-spacing: .3px;
     display:block;
 }
 body>header a{
@@ -159,9 +158,6 @@ body>header a{
 }
 body>header a:hover{
     color:#7b1c1e;
-}
-.headersliderbox{
-    margin-bottom:-2px
 }
 .extendedmenu li>a>h6:hover, .extendedmenu .active, .navbar-default, .navbar li>a:hover, .navbar-default, .navbar li>a:active, .navbar-default, .navbar li>a:focus{
     color:#7b1c1e!important;
@@ -172,25 +168,27 @@ body>header a:hover{
     border:none;
 }
 .navbar {
-    min-height: 80px;
+    min-height: 90px;
     margin-top: 10px;
     margin-bottom: 12px;
 }
 .navbar .navbar-collapse li>a{
-    font-size: 2.4rem;
+    font-size: 2.5rem;
     padding-right: 25px;
 }
 .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
   margin-right: 25px;
 }
-.extendedmenu ul{
-    padding:0 0 0 10px;
-    list-style: none;
+.extendedmenu ul {
+	padding: 0;
 }
 .extendedmenu ul>li{
-    margin-bottom:5px;
     list-style: none;
     font-size: 90%;
+    line-height: 1.3;
+}
+.extendedmenu ul>li>a{
+	display: block;
 }
 .extendedmenu h6{
     margin:0;
@@ -198,30 +196,38 @@ body>header a:hover{
 }
 .extendedmenu li .fg-cap{
     font-size: 2.2rem;
-    line-height:3rem;
 }
 .extendedmenu{
     position: absolute;
     top: 100px;
-    left: 30px;
-    width: 100%;
-    height: auto;
-    background-color: rgb(255, 255, 255);
-    padding:20px;
-    border-radius: 0px 0px 10px 10px;
+    left: 50%;
+    background-color: white;
+    padding:25px;
+    border-radius: 0px 0px 4px 4px;
     z-index:16;
     display:none;
-}
-.extendedmenu#Ueber-uns{
-    width: auto;
-    left: 485px;
-}
-.extendedmenu#Ueber-uns ul{
-    padding:0;
-    margin:0;
-}
 
-
+}
+#Reiseziele, #Reisethemen {
+	width: 1170px;
+    transform: translate(calc(-50% + 15px), 0);
+    height: 300px;
+}
+#Reisethemen {
+    height: 260px;
+}
+#Ueber-uns {
+    transform: translate(calc(-50% + 80px), 0);
+}
+#Reiseziele ul {
+	padding-left: 15px;
+}
+#Reisethemen img {
+	margin-right: 65px;
+}
+.markTxt {
+	font-size: 90%;
+}
 
 /* MAIN */
 body>main{
@@ -297,30 +303,25 @@ body>main{
 
 /* SIDECOL */
 #sidecontent{
-    padding-top:20px;
+	padding: 20px 0 0 0;
 }
 #sidecontent h4{
     line-height:3rem;
-    font-size: 2.4rem;
+    font-size: 2.5rem;
+}
+#sidecontent h5{
+    font-size: 2.3rem;
+    margin-top: 0;
 }
 #sidecontent>section{
-    margin-bottom:27px;
+    margin-bottom:25px;
 }
 #sidecontent>section.margin0{
     margin:0;
 }
-img.pull-left{
-    width:65px;
-    height:auto;
-    margin:0 15px 0 0;
-}
-.contactbox img.pull-left{
-    width:50%;
-    margin:20px 15px 0 0;
-}
 #sidecontent p, #sidecontent strong, footer.footer-include p, footer.footer-include address{
     font-size: 90%;
-    line-height: 1.1;
+    line-height: 1.15;
 }
 footer.footer-include address{
     margin-bottom:2px;
@@ -328,9 +329,14 @@ footer.footer-include address{
 footer.footer-include p.lh24{
     line-height: 1.4;
 }
-.contactbox p{
-    margin-top:40px;
-    margin-bottom: 10px;
+#sidecontent .img-rounded, .contactbox .img-rounded {
+	margin: 0 10px 5px 0;
+}
+.contactbox .img-rounded {
+	width: 50%;
+}
+.contactbox .contact {
+	padding-top: 25px;
 }
 .contactbox a[href^="tel:"]{
     display: block;
@@ -339,9 +345,10 @@ footer.footer-include p.lh24{
     line-height: 1.1;
 }
 .contactbox .btn-red{
-    margin-left:-45px;
-    margin-top: 17px;
-    font-size: 16px !important;
+    margin: 10px 20px 0 -100px;
+}
+.contactbox p {
+	margin-bottom: 15px;
 }
 .highlight-box.red{
     color:#FFFFFF;
@@ -379,9 +386,6 @@ footer .nominatetravelbox img{
     width:100%;
     height:auto;
 }
-.container{
-    position:relative;
-}
 .ochre{
     background-color:#C9C29C;
 }
@@ -415,6 +419,12 @@ footer .nominatetravelbox img{
     background-color:#7b1c1e;
     color:#FFFFFF;
     border:none;
+}
+.btn-red img {
+	vertical-align: top;
+}
+.optionGroup {
+    font-weight: bold;
 }
 .fg-hightlight{
     line-height:2.8rem;
@@ -456,7 +466,8 @@ blockquote p:after{
     content: "”";
 }
 .highlight-box{
-    padding:5px 8px;
+    padding: 6px;
+    border-radius: 4px;
 }
 .highlight-box h4{
     color:#000;
@@ -464,7 +475,7 @@ blockquote p:after{
     border:none;
 }
 .highlight-box>div{
-    border: 2px dotted #FFFFFF;
+    border: 2px dashed #FFFFFF;
     padding:15px;
 }
 .highlight-box .form-group{
@@ -832,13 +843,13 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
 .flowerbg{
     position: absolute;
     z-index: -1;
-    left: -520px;
-    top: 550px;
+    left: -270px;
+    top: 450px;
 }
 .flowerbg.flowerbg-bottom{
-    top: -900px;
+    top: 1150px;
     left:inherit;
-    right: -50px;
+    right: 300px;
 }
 hr.inlinehr{
     margin: 15px;
@@ -859,17 +870,12 @@ blockquote .small, blockquote footer, blockquote small {
 blockquote .small::before, blockquote footer::before, blockquote small::before {
   content: "";
 }
-select.img-rounded, input.img-rounded, textarea.img-rounded{
+.img-rounded {
     border-radius: 4px;
 }
 .getimgmaplistsele a.red-text{
     text-decoration: underline;
 }
-
-
-
-
-
 
 
 
@@ -908,12 +914,6 @@ select.img-rounded, input.img-rounded, textarea.img-rounded{
 #buchungsanfragemodal .form-horizontal .form-group::after, #buchungsanfragemodal .form-horizontal .form-group::before{
     display:inherit;
 }
-
-
-
-
-
-
 
 
 
@@ -1005,6 +1005,9 @@ select.img-rounded, input.img-rounded, textarea.img-rounded{
     margin-top: -5px;
     width: auto;
 }
+.fintravelbox select {
+	width: 100%;
+}
 .fintravelbox .btn-red, .fintravelbox select{
     margin-top:3px;
 }
@@ -1019,45 +1022,66 @@ select.img-rounded, input.img-rounded, textarea.img-rounded{
 
 
 /* RESPONSIVE */
-@media (min-width: 995px) and (max-width: 1170px){
+@media (max-width: 1199px){
+	.contactbox .contact {
+		padding-top: 15px;
+	}
+	.contactbox .btn-red {
+		margin-right: 0;
+	}
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+	body > header .navbar-phone{
+	    transform: translate(calc(-50% + 400px), 0);
+	}
     .fintravelbox .row>div.paddingleft30{
         text-align:right;
     }
+	#Reiseziele, #Reisethemen {
+		width: 970px;
+	}
+	#Ueber-uns {
+	    transform: translate(calc(-50% + 180px), 0);
+	}
+	#headerslider .item .carousel-caption.carousel-caption-top-right{
+	    right: 29.5%;
+	}
+	#headerslider .item .carousel-caption.carousel-caption-bottom-right{
+	    right: 29.5%;
+	}
 }
-@media (max-width: 995px){
+@media (max-width: 991px) {
     .fintravelbox .row>div.paddingleft30{
         text-align:center;
-        margin-top: 10px;
     }
-    .container {
-        width: 100%;
-    }
+	#Reiseziele, #Reisethemen {
+		width: 750px;
+	}
+	#Ueber-uns {
+	    transform: translate(calc(-50% + 253px), 0);
+	}
     #headerslider .carousel-control.right{
         right:0;
     }
     #headerslider .carousel-control.left{
         left:0;
     }
-    body > header .navbar-phone {
-        right: 20px;
-    }
-    #sidecontent .btn-red, #sidecontent .contactbox .btn-red {
-        margin-left: 0;
-        width: 100%;
-    }
+	body > header .navbar-phone{
+	    transform: translate(calc(-50% + 270px), 0);
+	}
     #sidecontent .highlight-box>div{
         padding:5px;
     }
     #headerslider .item .carousel-caption.carousel-caption-top-right{
-        right: 8%;
+        right: 6%;
     }
     #headerslider .item .carousel-caption.carousel-caption-bottom-right{
-        right: 8%;
+        right: 6%;
     }
     .headersliderbox{
         padding:0;
     }
-    .col-sm-4 {
+    .col-sm-4, .col-sm-12 {
         margin-bottom: 10px;
     }
     .paddingsmallercols{
@@ -1081,7 +1105,7 @@ select.img-rounded, input.img-rounded, textarea.img-rounded{
         padding: 0;
     }
 }
-@media (max-width: 768px){
+@media (max-width: 767px){
     #headerslider .item {
         height: 200px;
     }
@@ -1090,13 +1114,18 @@ select.img-rounded, input.img-rounded, textarea.img-rounded{
     }
     .fintravelbox label{
         text-align: right;
-        margin-top: 7px;
     }
     .fintravelbox select, .fintravelbox .btn.btn-red{
         float:left;
     }
+	.fintravelbox select {
+		width: 96%;
+		margin-bottom: 10px;
+	}
     .fintravelbox .btn.btn-red{
-        margin-left: -15px;
+        width: 96%;
+        padding-left: 25%;
+        text-align: left;
     }
     p {
         text-align: justify;
@@ -1110,18 +1139,20 @@ select.img-rounded, input.img-rounded, textarea.img-rounded{
     .highlight-box > div {
         padding: 15px;
     }
+    .contact p.pull-right {
+    	float: none!important;
+    }
+    .contact .btn-red {
+    	margin-left: 0;
+    }
     body > main {
         padding-bottom: 15px;
-    }
-    .contactbox .btn-red {
-        margin-left: 0;
-        margin-top: 15px;
     }
     body > header .navbar-collapse .navbar-nav {
         margin-top: 60px;
     }
 	body>header .navbar-collapse .navbar-subnav > li > a {
-	    font-size: 90%;
+	    font-size: 100%;
 	}
     .reiselandboxes .row > * > figure{
         height: 200px;
