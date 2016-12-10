@@ -54,7 +54,7 @@ a:hover{
     color:#C9C29C;
 }
 h1, h2, .footertitle{
-    font-size: 2.3rem;
+    font-size: 2.4rem;
     margin-bottom: 13px;
 }
 h6{
@@ -90,7 +90,7 @@ select, input, textarea {
     font-size:16px;
 }
 select{
-    padding: 6px 2em 7px 0.7em;
+    padding: 6px 2em 6px 0.7em;
     background-image: url("../images/icons/arrow_down.png");
     background-position: calc(100% - 10px) 14px;
     background-repeat: no-repeat;
@@ -254,6 +254,20 @@ body>main{
 #sidecontent h4, hr{
     border-bottom:2px dotted #7b1c1e;
 }
+.reiselandboxes h2{
+    margin: 0;
+    line-height: 0.9;
+}
+.reiselandboxes small{
+	font-size: 90%;
+}
+.reiselandboxes article {
+	margin-top: 5px;
+}
+.reiselandboxes ul {
+	font-size: 90%;
+	line-height: 1.3;
+}
 .reiselandboxes hr{
     border-bottom:2px dotted #C9C29C;
     margin-bottom: 30px;
@@ -276,10 +290,18 @@ body>main{
     background-position:center center;
 }
 .reiselandboxes>.row>*>div{
-    padding: 30px 15px 15px 30px;
+    padding: 25px 17px 15px 30px;
 }
 .reiselandboxes>.row>*>div .btn, #sidecontent .btn-red.pull-right{
     padding: 7px 25px;
+}
+.reiselandboxes>.row>*>div .btn {
+	margin-top: -35px;
+}
+.reiselandboxes button {
+	padding: 12px;
+	text-transform: uppercase;
+	width: 100%;
 }
 .reiseangebot.reiseberichtboxes article{
     margin-bottom:15px;
@@ -588,9 +610,11 @@ label.customcheck {
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
     text-align: left!important;
+    font-size: 17px;    
 }
 label.customcheck span{
     white-space: normal;
+    font-weight: bold;
 }
 label.customcheck input[type="checkbox"] ~ div.checkbg{
     background-color: rgba(0,0,0,.4);
@@ -858,9 +882,6 @@ hr.inlinehr{
 hr.inlinehr.margintop0{
     margin-top: 0;
 }
-.reiselandboxes h2{
-    margin-top: 0;
-}
 blockquote .small, blockquote footer, blockquote small {
   color: #333333;
   display: block;
@@ -871,7 +892,7 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
   content: "";
 }
 .img-rounded {
-    border-radius: 4px;
+    border-radius: 6px;
 }
 .getimgmaplistsele a.red-text{
     text-decoration: underline;
@@ -984,7 +1005,7 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
 #headerslider .carousel-caption-bottom-right{
     text-align:left;
 }
-.fintravelbox{
+.fintravelbox {
     padding:10px 0;
 }
 .fintravelbox .btn-red, .fintravelbox .pull-right.btn-red{
@@ -1007,6 +1028,7 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
 }
 .fintravelbox select {
 	width: 100%;
+	border-radius: 4px;
 }
 .fintravelbox .btn-red, .fintravelbox select{
     margin-top:3px;
@@ -1084,6 +1106,12 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
     .col-sm-4, .col-sm-12 {
         margin-bottom: 10px;
     }
+    .reiselandboxes .row > * > figure{
+        height: 200px;
+    }
+    .reiselandboxes .row > * > * {
+        display: inherit;
+    }
     .paddingsmallercols{
         padding-bottom: 0!important;
     }
@@ -1154,10 +1182,4 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
 	body>header .navbar-collapse .navbar-subnav > li > a {
 	    font-size: 100%;
 	}
-    .reiselandboxes .row > * > figure{
-        height: 200px;
-    }
-    .reiselandboxes .row > * > * {
-        display: inherit;
-    }
 }
