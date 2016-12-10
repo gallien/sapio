@@ -79,7 +79,7 @@ select, input, textarea {
     border: none;
     display: inline-block;
     font: inherit;
-    line-height: 1.5em;
+    line-height: 1.4;
     padding: 5px 0.2em;
     margin: 0;      
     -webkit-box-sizing: border-box;
@@ -296,7 +296,7 @@ body>main{
     padding: 7px 25px;
 }
 .reiselandboxes>.row>*>div .btn {
-	margin-top: -35px;
+	margin-top: -20px;
 }
 .reiselandboxes button {
 	padding: 12px;
@@ -980,7 +980,7 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
     left: 8%;
 }
 #headerslider .carousel-control {
-    width: 50px;
+    width: 20px;
 }
 .carousel-control {
     opacity:.6;
@@ -997,10 +997,10 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
     color:#fff;
 }
 #headerslider .carousel-control.right {
-    right: -40px;
+    right: -20px;
 }
 #headerslider .carousel-control.left {
-    left: -48px;
+    left: -28px;
 }
 #headerslider .carousel-caption-bottom-right{
     text-align:left;
@@ -1103,7 +1103,7 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
     .headersliderbox{
         padding:0;
     }
-    .col-sm-4, .col-sm-12 {
+    .col-md-4, .col-sm-4, .col-sm-12 {
         margin-bottom: 10px;
     }
     .reiselandboxes .row > * > figure{
@@ -1137,6 +1137,9 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
     #headerslider .item {
         height: 200px;
     }
+    .fintravelbox {
+    	padding-bottom: 0;
+    }
     .fintravelbox .container, body > header .navbar-collapse .navbar-nav>*{
         text-align: center;
     }
@@ -1148,7 +1151,7 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
     }
 	.fintravelbox select {
 		width: 96%;
-		margin-bottom: 10px;
+		margin-bottom: 5px;
 	}
     .fintravelbox .btn.btn-red{
         width: 96%;
