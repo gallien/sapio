@@ -111,6 +111,7 @@ optgroup>option{
     font-size:16px;
     font-weight: normal;
     line-height: 20px;
+    font-weight: bolder;
 }
 
 
@@ -426,7 +427,7 @@ footer .nominatetravelbox img{
 .black-text{
     color:#000000!important;
 }
-.red, .bulletlistsapio li>a.active>span{
+.red, .bulletlistsapio li>a.active>span, label.customcheck input[type="checkbox"] ~ div.checkbg {
     background-color:#7b1c1e;
 }
 .red-text, .list-sapiostyled li:before, .panel-title > a.red-text{
@@ -557,6 +558,9 @@ blockquote img {
 .paddingleft30{
     padding-left:30px;
 }
+.paddingright30{
+    padding-right:30px;
+}
 .padding15, #maincontent>section.padding15{
     padding:15px;
 }
@@ -618,11 +622,13 @@ label.customcheck {
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
     text-align: left!important;
-    font-size: 17px;    
+    padding: 0;
+    padding-bottom: 10px;
 }
 label.customcheck span{
     white-space: normal;
-    font-weight: bold;
+    font-size: 85%;
+    font-weight: normal;
 }
 label.customcheck input[type="checkbox"] ~ div.checkbg{
     background-color: rgba(0,0,0,.4);
@@ -874,7 +880,7 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
     right: 15px;
 }
 .tab-pane .row>h2 ~ a>span{
-    font-size:2.4rem;
+    margin-right: 5px;
 }
 .markimagemap{
     height: auto;
@@ -898,9 +904,6 @@ hr.inlinehr{
     border: 0;
     border-bottom: 2px dotted #7b1c1e;
 }
-hr.inlinehr.margintop0{
-    margin-top: 0;
-}
 blockquote .small, blockquote footer, blockquote small {
   color: #333333;
   display: block;
@@ -923,13 +926,28 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
 
 
 /* BOOKING-MODAL */
+body.modal-open {
+    overflow: hidden;
+}
+.modal-lg {
+	width: 1100px;
+}
+.modal-lg h2, .modal-lg .nav {
+	font-weight: bold;
+}
+#buchungsanfragemodal .tab-content {
+	font-size: 16px;
+}
 #buchungsanfragemodal .text-left {
   text-align: left!important;
 }
 #buchungsanfragemodal .inputline {
   margin-bottom:15px;
 }
-#buchungsanfragemodal .inputline p{
+#buchungsanfragemodal .inputline-half {
+  margin-bottom:5px;
+}
+#buchungsanfragemodal .inputline p, #buchungsanfragemodal .inputline-half p  {
   padding-top: 7px;
 }
 #buchungsanfragemodal .inputline input, #buchungsanfragemodal .inputline textarea{
@@ -1047,7 +1065,7 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
     margin-top: -5px;
     width: auto;
 }
-.fintravelbox select {
+.fintravelbox select, .modal-lg select {
 	width: 100%;
 	border-radius: 4px;
 }
@@ -1080,7 +1098,7 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
     .fintravelbox .row>div.paddingleft30{
         text-align:right;
     }
-	#Reiseziele, #Reisethemen {
+	#Reiseziele, #Reisethemen, .modal-lg {
 		width: 970px;
 	}
 	#Ueber-uns {
@@ -1097,9 +1115,9 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
     .fintravelbox .row>div.paddingleft30{
         text-align:center;
     }
-	#Reiseziele, #Reisethemen {
-		width: 750px;
-	}
+    #Reiseziele, #Reisethemen, .modal-lg {
+    	width: 750px;
+    }
 	#Ueber-uns {
 	    transform: translate(calc(-50% + 253px), 0);
 	}
@@ -1173,6 +1191,13 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
     #headerslider .item {
         height: 200px;
     }
+    .modal-lg {
+    	width: 96%;
+    }
+	.tab-pane .row>h2 ~ a{
+		margin-left: 15px;
+		position: initial;
+	}
     .fintravelbox {
     	padding-bottom: 0;
     }

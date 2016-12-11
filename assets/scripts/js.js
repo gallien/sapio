@@ -67,6 +67,9 @@ $(document).ready(function(){
     $("#headerslider").carousel({interval:6000});
     $("#reiseleiterslider").carousel({interval:4000});
 //    $("#reisedetailbilderslider").carousel({interval:8000});
+	$('#buchungsanfragemodal').on('hidden.bs.modal', function() {
+	    $('#anfrage').validator('destroy');
+	});
 });
 
 function updateSelectOutputBoxes(element){
@@ -204,7 +207,7 @@ function markHeadingOfListUnhoverHelper(el){
 };
 
 function checkSection(section_id,next_tab_num){
-    $("#"+section_id).validator("validate");
+//    $("#"+section_id).validator("validate");
     var num_of_err = $("#"+section_id+" .has-error").not("#"+section_id+" .iactv .has-error").length;
     if(num_of_err==0){
         $(".nav-tabs a:eq("+next_tab_num+")").tab("show").parent().removeClass("disabled");
