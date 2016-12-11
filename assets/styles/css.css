@@ -251,7 +251,7 @@ body>main{
     margin: 0;
     line-height: 0.9;
 }
-.reiselandboxes small, .incentiveboxes small, .reiseberichtboxes small {
+.reiselandboxes small, .incentiveboxes small, .reiseberichtboxes small, .reiseangebotboxes small, .reiseangebotboxes .small {
 	font-size: 90%;
 }
 .reiselandboxes article, .incentiveboxes article, .reiseberichtboxes article img {
@@ -265,6 +265,10 @@ body>main{
     border-bottom:2px dotted #C9C29C;
     margin-bottom: 30px;
     margin-top: 50px;
+}
+.reiseangebotboxes hr {
+    border-bottom:2px dotted #C9C29C;
+    margin: 5px 0 10px 0;
 }
 .reiselandboxes>.row>*, .incentiveboxes>.row>*, .teamboxes>.row>* {
     position:relative;
@@ -305,7 +309,7 @@ body>main{
 }
 .reiseangebotboxes article h2{
     margin-bottom: 5px;
-    font-size: 2.2rem;
+    font-size: 2.4rem;
 }
 .reiseberichtboxes.reiseangebot article{
     border-bottom: none;
@@ -465,6 +469,11 @@ a.readon{
     text-decoration: none;
     border: none!important;
 }
+#sidecontent a.readon{
+    text-decoration: none;
+    border: none!important;
+    font-size: 90%;
+}
 a.readon::before, .list-sapiostyled li:before{
     background-image: url("../images/icons/arrow_right.png");
     background-position: -3px 3px;
@@ -507,6 +516,9 @@ blockquote img {
 }
 .margintop0{
     margin-top:0;
+}
+.margintop40{
+    margin-top:40px;
 }
 .margintop30{
     margin-top:30px;
@@ -702,9 +714,8 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
     margin-bottom: 1px;
 }
 .terminuebersichtboxes .list-group-item time{
-    font-size:90%;
+    font-size:95%;
     display: block;
-    margin-top: 15px;
 }
 .terminuebersichtboxes .list-group-item h4{
     margin-bottom: 0;
@@ -732,6 +743,9 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
 }
 .statusbull.statusbull-green{
     background-color: #AFCA4C;
+}
+.statusbull.statusbull-yellow{
+    background-color: #C9C29C;
 }
 .img-half{
     width:50%!important;
@@ -814,8 +828,11 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
 .bulletlistsapio{
     line-height:4rem;
 }
-.bulletlistsapio li>a{
-    font-size:2.6rem;
+.bulletlistsapio li>a {
+    font-size:2.4rem;
+}
+.bulletlistsapio li>a:hover, .bulletlistsapio li>a:focus {
+    text-decoration: none;
 }
 .bulletlistsapio li>a.active{
     color:#000;
@@ -828,13 +845,14 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
     position: relative;
     width: 20px;
     color:#fff;
-    line-height:2.6rem;
+    line-height: 2.6rem;
     margin-right: 5px;
+    top: 3px;
 }
 .bulletlistsapio li>a>span>.glyphicon{
     font-size: 1rem;
     left: 5px;
-    top: -6px;
+    top: -4px;
 }
 .nav-tabs > li > a, .nav-tabs > li > a:focus, .nav-tabs > li > a:hover {
     background-color: none;
@@ -876,8 +894,9 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
     right: 300px;
 }
 hr.inlinehr{
-    margin: 15px;
-    width: calc(100% - 60px);
+    margin: 10px 15px 15px 15px;
+    border: 0;
+    border-bottom: 2px dotted #7b1c1e;
 }
 hr.inlinehr.margintop0{
     margin-top: 0;
@@ -1020,7 +1039,7 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
     line-height: 34px;
     margin-top: 2px;
 }
-.fintravelbox .text-right>a:hover{
+.fintravelbox .text-right>a:hover, .fintravelbox .text-right>a:focus {
     text-decoration: none;
 }
 .fintravelbox .text-right>a>img{
@@ -1093,6 +1112,9 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
 	body > header .navbar-phone{
 	    transform: translate(calc(-50% + 270px), 0);
 	}
+    p {
+        text-align: justify;
+    }
     #sidecontent .highlight-box>div{
         padding:5px;
     }
@@ -1105,8 +1127,14 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
     .headersliderbox{
         padding:0;
     }
-    .col-md-4, .col-sm-4, .col-sm-12 {
+    .col-md-4, .col-sm-4, .col-sm-12, .terminuebersichtboxes .col-md-2 {
         margin-bottom: 10px;
+    }
+    .terminuebersichtboxes .col-md-4 {
+    	margin-bottom: 0;
+    }
+    .terminuebersichtboxes .col-md-2 {
+    	text-align: justify;
     }
     .reiselandboxes .row > * > figure{
         height: 200px;
@@ -1114,7 +1142,7 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
     .reiselandboxes .row > * > * {
         display: inherit;
     }
-	.incentiveboxes article figure, .teamboxes article figure {
+	.incentiveboxes article figure, .teamboxes article figure, .reiseangebotboxes figure {
 		margin-bottom: 15px;
 	}
 	blockquote p {
@@ -1165,9 +1193,6 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
         width: 96%;
         padding-left: 25%;
         text-align: left;
-    }
-    p {
-        text-align: justify;
     }
     #maincontent {
         padding: 0;
