@@ -627,8 +627,7 @@ label.customcheck {
 }
 label.customcheck span{
     white-space: normal;
-    font-size: 85%;
-    font-weight: normal;
+    font-weight: bold;
 }
 label.customcheck input[type="checkbox"] ~ div.checkbg{
     background-color: rgba(0,0,0,.4);
@@ -815,9 +814,9 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
     margin-bottom:15px;
 }
 .multiplepicslider .carousel-control {
-  opacity: 1;
   width: 5%;
   z-index: 5;
+  border-radius: 6px;
 }
 .multiplepicslider .row>*{
   padding:0 5px;
