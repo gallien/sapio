@@ -87,7 +87,7 @@ select, input, textarea {
     font-size:16px;
 }
 select{
-    padding: 6px 2em 6px 0.7em;
+    padding: 6px 2em 5px 0.7em;
     background-image: url("../images/icons/arrow_down.png");
     background-position: calc(100% - 10px) 14px;
     background-repeat: no-repeat;
@@ -925,8 +925,8 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
 
 
 /* BOOKING-MODAL */
-body.modal-open {
-    overflow: hidden;
+.modal.and.carousel {
+  position: fixed;
 }
 .modal-lg {
 	width: 1100px;

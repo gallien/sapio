@@ -68,7 +68,10 @@ $(document).ready(function(){
     $("#reiseleiterslider").carousel({interval:4000});
 //    $("#reisedetailbilderslider").carousel({interval:8000});
 	$('#buchungsanfragemodal').on('hidden.bs.modal', function() {
-	    $('#anfrage').validator('destroy');
+        $("#buchungsanfragemodal .errorbox").hide();
+        $("#buchungsanfragemodal .has-error").each(function(){
+        	$(this).removeClass("has-error");
+        });
 	});
 });
 
@@ -206,8 +209,9 @@ function markHeadingOfListUnhoverHelper(el){
     getImagemapDefault(el.parent(), parentbox);
 };
 
-function checkSection(section_id,next_tab_num){
-//    $("#"+section_id).validator("validate");
+function checkSection(e,section_id,next_tab_num){
+	e.preventDefault();
+    $("#"+section_id).validator("validate");
     var num_of_err = $("#"+section_id+" .has-error").not("#"+section_id+" .iactv .has-error").length;
     if(num_of_err==0){
         $(".nav-tabs a:eq("+next_tab_num+")").tab("show").parent().removeClass("disabled");
@@ -215,17 +219,29 @@ function checkSection(section_id,next_tab_num){
     }else{
         $(".nav-tabs a:eq("+next_tab_num+")").parent().addClass("disabled");
         $("#"+section_id+" .errorbox").show();
-        var tmp = "";
+        var fields = [];
         $("#"+section_id+" .has-error").not("#"+section_id+" .iactv .has-error").each(function(){
-            if($(this).find("label")){
-                tmp += '"'+$(this).find("label").text().replace("*","").replace(":","")+'", ';
+            if($(this).find("label").length){
+                fields.push($(this).find("label").text().replace("*","").replace(":",""));
             };
         });
-        $("#"+section_id+" .errorbox span").html(tmp.slice(0,tmp.length-2));
+        var message = "";
+        for (var i = 0; i < fields.length; i++) {
+        	if (i > 0) {
+        		if (i == fields.length - 1) {
+        			message += " und ";
+        		} else {
+        			message += ", ";
+        		}
+        	}
+        	message += fields[i];
+        }
+        $("#"+section_id+" .errorbox span").html(message);
     };
     $(".nav-tabs>li:not(.disabled)").click(function(e){
         e.preventDefault();
         //checkSection($(this).find("a").attr("aria-controls"),next_tab_num);
         $(this).find("a").tab("show");
     });
+    $('#buchungsanfragemodal').animate({ scrollTop: 0 }, 'slow');
 };
