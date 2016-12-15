@@ -98,6 +98,9 @@ select:-moz-focusring {
     color: #7b1c1e;
     text-shadow: 0 0 0 #000;
 }
+select::-ms-expand {
+    display: none;
+}
 select>option{
     padding-left: 5px;
 }
@@ -135,7 +138,7 @@ body>header .navbar-phone{
     position: absolute;
     top: 7px;
     left: 50%;
-    transform: translate(calc(-50% + 480px), 0);
+    transform: translateX(480px) translateX(-50%);
 }
 body>header .navbar-phone .navbar-phone-icon{
     padding: 5px 10px 0 0;
@@ -208,14 +211,14 @@ body>header a:hover{
 }
 #Reiseziele, #Reisethemen {
 	width: 1170px;
-    transform: translate(calc(-50% + 15px), 0);
+    transform: translateX(15px) translateX(-50%);
     height: 300px;
 }
 #Reisethemen {
     height: 260px;
 }
 #Ueber-uns {
-    transform: translate(calc(-50% + 80px), 0);
+    transform: translateX(80px) translateX(-50%);
 }
 #Reiseziele ul {
 	padding-left: 15px;
@@ -1092,7 +1095,7 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
 }
 @media (min-width: 992px) and (max-width: 1199px) {
 	body > header .navbar-phone{
-	    transform: translate(calc(-50% + 400px), 0);
+    	transform: translateX(400px) translateX(-50%);
 	}
     .fintravelbox .row>div.paddingleft30{
         text-align:right;
@@ -1101,7 +1104,7 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
 		width: 970px;
 	}
 	#Ueber-uns {
-	    transform: translate(calc(-50% + 180px), 0);
+	    transform: translateX(180px) translateX(-50%);
 	}
 	#headerslider .item .carousel-caption.carousel-caption-top-right{
 	    right: 29.5%;
@@ -1118,7 +1121,7 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
     	width: 750px;
     }
 	#Ueber-uns {
-	    transform: translate(calc(-50% + 253px), 0);
+	    transform: translateX(253px) translateX(-50%);
 	}
     #headerslider .carousel-control.right{
         right:0;
@@ -1127,7 +1130,7 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
         left:0;
     }
 	body > header .navbar-phone{
-	    transform: translate(calc(-50% + 270px), 0);
+	    transform: translateX(270px) translateX(-50%);
 	}
     p {
         text-align: justify;
