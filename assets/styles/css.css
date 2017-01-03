@@ -40,7 +40,7 @@ body{
     font-size:1.8rem;
     line-height: 1.25;
 }
-a, a:focus, a:hover{
+a, a:focus, a:hover, .btn, .btn:focus, .btn:hover{
     color:#7b1c1e;
 }
 a[href^="tel:"]{
@@ -86,7 +86,7 @@ select, input, textarea {
     -moz-appearance: none;
     font-size:16px;
 }
-select{
+select {
     padding: 6px 2em 5px 0.7em;
     background-image: url("../images/icons/arrow_down.png");
     background-position: calc(100% - 10px) 14px;
@@ -101,8 +101,10 @@ select:-moz-focusring {
 select::-ms-expand {
     display: none;
 }
-select>option{
+select > option {
     padding-left: 5px;
+    font: inherit;
+    color: inherit;
 }
 optgroup{
     padding: 5px 5px;
@@ -138,6 +140,7 @@ body>header .navbar-phone{
     position: absolute;
     top: 7px;
     left: 50%;
+    -webkit-transform: translateX(480px) translateX(-50%);
     transform: translateX(480px) translateX(-50%);
 }
 body>header .navbar-phone .navbar-phone-icon{
@@ -211,6 +214,7 @@ body>header a:hover{
 }
 #Reiseziele, #Reisethemen {
 	width: 1170px;
+    -webkit-transform: translateX(15px) translateX(-50%);
     transform: translateX(15px) translateX(-50%);
     height: 300px;
 }
@@ -218,6 +222,7 @@ body>header a:hover{
     height: 260px;
 }
 #Ueber-uns {
+    -webkit-transform: translateX(80px) translateX(-50%);
     transform: translateX(80px) translateX(-50%);
 }
 #Reiseziele ul {
@@ -338,6 +343,7 @@ body>main{
 }
 #sidecontent>section{
     margin-bottom:25px;
+    position: relative;
 }
 #sidecontent>section.margin0{
     margin:0;
@@ -380,6 +386,27 @@ footer.footer-include p.lh24{
 .highlight-box.red ul.btn-group-vertical>li>strong{
     padding-left:15px;
 }
+.slow-food-citation {
+    position: absolute;
+    top: 5px;
+    padding: 15px;
+    font-size: 18px !important;
+    color: white;
+}
+.slow-food-author {
+    position: absolute;
+    top: 144px;
+    left: 125px;
+    color: white;
+    font-size: 20px !important;
+}
+.slow-food-title {
+    position: absolute;
+    top: 165px;
+    left: 126px;
+    color: white;
+    font-size: 14px !important;
+}
 
 
 
@@ -391,7 +418,7 @@ footer aside .glyphicon, footer .nominatetravelbox img{
     margin:1%;
 }
 footer a, .red.highlight-box.padding15 a, footer a[href^="tel:"]{
-    color:#FFFFFF!important;
+    color:#FFFFFF;
     text-decoration: underline;
 }
 footer>section.red{
@@ -401,9 +428,22 @@ footer>section.red{
 footer .nominatetravelbox img{
     width:17%;
 }
+footer .programmuebersicht{
+	position: absolute;
+    top: 10px;
+    color: #333;
+    padding: 15px;
+    padding-right: 120px;
+    font-variant: small-caps;
+    font-size: 20px !important;
+    font-weight: bold;
+    line-height: 1 !important;
+}
 
-
-
+footer .programmuebersicht a {
+	color: #7b1c1e;
+	text-decoration: none;
+}
 
 /* HELPER + FIXER */
 .img-full{
@@ -516,7 +556,7 @@ blockquote img {
     margin-top: 5px;
 }
 .margin0{
-    margin:0;
+    margin:0 !important;
 }
 .margintop0{
     margin-top:0;
@@ -723,17 +763,18 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
 }
 .terminuebersichtboxes .list-group-item time{
     font-size:95%;
-    display: block;
+    display: inline-block;
 }
 .terminuebersichtboxes .list-group-item h4{
     margin-bottom: 0;
     margin-top:15px;
 }
 .terminuebersichtboxes .list-group-item .btn{
-    margin-top:20px;
+    margin-top:10px;
 }
 .terminuebersichtboxes .list-group-item small {
     font-size:90%;
+    display: inline-block;
 }
 .statusbull{
     height: 10px; 
@@ -778,6 +819,7 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
     border-top-color: none;
 }
 #maincontent .panel-default a.fg-cap.collapsed .pull-right{
+    -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
 }
 #maincontent .panel-default a.fg-cap {
@@ -1092,9 +1134,22 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
 	.contactbox .btn-red {
 		margin-right: 0;
 	}
+	.slow-food-citation {
+	    font-size: 16px !important;
+	}
+	.slow-food-author {
+	    top: 115px;
+	    left: 102px;
+	    font-size: 18px !important;
+	}
+	.slow-food-title {
+	    top: 135px;
+	    left: 103px;
+	}
 }
 @media (min-width: 992px) and (max-width: 1199px) {
 	body > header .navbar-phone{
+    	-webkit-transform: translateX(400px) translateX(-50%);
     	transform: translateX(400px) translateX(-50%);
 	}
     .fintravelbox .row>div.paddingleft30{
@@ -1104,6 +1159,7 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
 		width: 970px;
 	}
 	#Ueber-uns {
+	    -webkit-transform: translateX(180px) translateX(-50%);
 	    transform: translateX(180px) translateX(-50%);
 	}
 	#headerslider .item .carousel-caption.carousel-caption-top-right{
@@ -1111,6 +1167,11 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
 	}
 	#headerslider .item .carousel-caption.carousel-caption-bottom-right{
 	    right: 29.5%;
+	}
+	footer .programmuebersicht{
+		font-size: 16px !important;
+		padding: 10px;
+		padding-right: 100px;
 	}
 }
 @media (max-width: 991px) {
@@ -1121,6 +1182,7 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
     	width: 750px;
     }
 	#Ueber-uns {
+	    -webkit-transform: translateX(253px) translateX(-50%);
 	    transform: translateX(253px) translateX(-50%);
 	}
     #headerslider .carousel-control.right{
@@ -1130,6 +1192,7 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
         left:0;
     }
 	body > header .navbar-phone{
+	    -webkit-transform: translateX(270px) translateX(-50%);
 	    transform: translateX(270px) translateX(-50%);
 	}
     p {
@@ -1177,6 +1240,13 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
     .footertitle{
         text-align:center;
     }
+	footer .programmuebersicht {
+		top: 20px;
+		font-size: 24px !important;
+		padding: 15px;
+		padding-right: 170px;
+		text-align: left;
+	}
 }
 @media (min-width: 768px){
     .p0axs{
