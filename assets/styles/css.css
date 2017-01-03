@@ -417,7 +417,7 @@ footer section{
 footer aside .glyphicon, footer .nominatetravelbox img{
     margin:1%;
 }
-footer a, .red.highlight-box.padding15 a, footer a[href^="tel:"]{
+footer a, footer a:hover, footer a:focus, .red.highlight-box.padding15 a, footer a[href^="tel:"] {
     color:#FFFFFF;
     text-decoration: underline;
 }
@@ -668,10 +668,6 @@ label.customcheck {
     padding: 0;
     padding-bottom: 10px;
 }
-label.customcheck span{
-    white-space: normal;
-    font-weight: bold;
-}
 label.customcheck input[type="checkbox"] ~ div.checkbg{
     background-color: rgba(0,0,0,.4);
     border-radius: 50%;
@@ -693,6 +689,10 @@ label.customcheck input[type="checkbox"]:checked ~ div.checkbg>i.glyphicon.glyph
 label.customcheck input[type="checkbox"]:disabled ~ span{
     color: rgba(0,0,0,.4);
     cursor: not-allowed;
+}
+.btn.customcheck {
+	color: white;
+	font-size: 18px;
 }
 .imagemapbox{
     width:100%;
