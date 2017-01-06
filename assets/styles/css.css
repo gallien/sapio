@@ -684,7 +684,7 @@ label.customcheck input[type="checkbox"]:checked ~ div.checkbg>i.glyphicon.glyph
     display: inline;
     font-size: 10px;
     top:0;
-    left: 4px;
+    left: 5px;
 }
 label.customcheck input[type="checkbox"]:disabled ~ span{
     color: rgba(0,0,0,.4);
@@ -926,6 +926,11 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
 .tab-pane .row>h2 ~ a>span{
     margin-right: 5px;
 }
+.tab-pane .customcheck span {
+	color: #333;
+	font-size: 95%;
+	white-space: normal;
+}
 .markimagemap{
     height: auto;
     max-height: 250px;
@@ -966,6 +971,19 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
 .arrow-down {
 	font-size: 60%;
 	transition: all 0.3s ease-out;
+}
+.award {
+	position: absolute;
+	bottom: 10px;
+	right: 25px;
+}
+.award-text {
+	font-size: 90%;
+    position: absolute;
+    bottom: 26px;
+    right: 49px;
+    width: 50px;
+    text-align: center;
 }
 
 
