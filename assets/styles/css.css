@@ -219,7 +219,7 @@ body>header a:hover{
     height: 300px;
 }
 #Reisethemen {
-    height: 260px;
+    height: 280px;
 }
 #Ueber-uns {
     -webkit-transform: translateX(80px) translateX(-50%);
@@ -229,7 +229,7 @@ body>header a:hover{
 	padding-left: 15px;
 }
 #Reisethemen img {
-	margin-right: 65px;
+	margin-right: 35px;
 }
 .markTxt {
 	font-size: 90%;
@@ -659,7 +659,7 @@ blockquote img {
 }
 .inlinecaption figcaption.singleline{
     line-height: 2.4rem;
-    padding: 20px 5px;
+    padding: 20px 0;
 }
 label.customcheck {
     -webkit-box-shadow: none !important;

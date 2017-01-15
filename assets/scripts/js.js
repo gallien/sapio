@@ -15,7 +15,7 @@ var extendedmenuReisezieleItems = {  "fr": [
                                 {"txt":"Apulien"},
                                 {"txt":"Aeolische Inseln"},
                                 {"txt":"Emilia-Romagna"},
-                                {"txt":"Friaul Julisch Venetien"},
+                                {"txt":"Friaul"},
                                 {"txt":"Latium"},
                                 {"txt":"Kalabrien"},
                                 {"txt":"Kampanien"},
@@ -24,10 +24,10 @@ var extendedmenuReisezieleItems = {  "fr": [
                                 {"txt":"Piemont"},
                                 {"txt":"Sardinien"},
                                 {"txt":"Sizilien"},
-                                {"txt":"Trentino-Südtirol"},
+                                {"txt":"Südtirol"},
                                 {"txt":"Südtoskana"},
                                 {"txt":"Toskana"},
-                                {"txt":"Trentino-Südtirol"},
+                                {"txt":"Südtirol"},
                                 {"txt":"Venetien"}
                             ]
                         };
@@ -36,6 +36,7 @@ var extendedmenuReisethemenItems = [
                                 {"image":"https://dummyimage.com/285x188/cccccc/000000.png&text=dummy","txt":"Kochreisen"},
                                 {"image":"https://dummyimage.com/285x188/cccccc/000000.png&text=dummy","txt":"Genusswandern"},
                                 {"image":"https://dummyimage.com/285x188/cccccc/000000.png&text=dummy","txt":"Trüffelreisen"},
+                                {"image":"https://dummyimage.com/285x188/cccccc/000000.png&text=dummy","txt":"Hausmacher-Metzgerei"},
                                 {"image":"https://dummyimage.com/285x188/cccccc/000000.png&text=dummy","txt":"Kulinarische Städtereisen"},
                                 {"image":"https://dummyimage.com/285x188/cccccc/000000.png&text=dummy","txt":"Kulinarik & Kunst"},
                                 {"image":"https://dummyimage.com/285x188/cccccc/000000.png&text=dummy","txt":"Vegetarische Reisen"}
