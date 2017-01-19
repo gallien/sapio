@@ -199,7 +199,7 @@ body>header a:hover{
     color: #000;
 }
 .extendedmenu li .fg-cap{
-    font-size: 2.2rem;
+    font-size: 2.1rem;
 }
 .extendedmenu{
     position: absolute;
@@ -222,8 +222,8 @@ body>header a:hover{
     height: 280px;
 }
 #Ueber-uns {
-    -webkit-transform: translateX(80px) translateX(-50%);
-    transform: translateX(80px) translateX(-50%);
+    -webkit-transform: translateX(110px) translateX(-50%);
+    transform: translateX(110px) translateX(-50%);
 }
 #Reiseziele ul {
 	padding-left: 15px;
@@ -1177,8 +1177,8 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
 		width: 970px;
 	}
 	#Ueber-uns {
-	    -webkit-transform: translateX(180px) translateX(-50%);
-	    transform: translateX(180px) translateX(-50%);
+	    -webkit-transform: translateX(210px) translateX(-50%);
+	    transform: translateX(210px) translateX(-50%);
 	}
 	#headerslider .item .carousel-caption.carousel-caption-top-right{
 	    right: 29.5%;
