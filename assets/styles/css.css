@@ -229,7 +229,7 @@ body>header a:hover{
 	padding-left: 15px;
 }
 #Reisethemen img {
-	margin-right: 35px;
+	margin-right: 30px;
 }
 .markTxt {
 	font-size: 90%;
@@ -570,6 +570,9 @@ blockquote img {
 .margintop15{
     margin-top:15px;
 }
+.margintop10{
+    margin-top:10px;
+}
 .margin15{
     margin:15px;
 }
@@ -768,9 +771,6 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
 .terminuebersichtboxes .list-group-item h4{
     margin-bottom: 0;
     margin-top:15px;
-}
-.terminuebersichtboxes .list-group-item .btn{
-    margin-top:10px;
 }
 .terminuebersichtboxes .list-group-item small {
     font-size:90%;
@@ -978,12 +978,12 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
 	right: 25px;
 }
 .award-text {
-	font-size: 90%;
     position: absolute;
-    bottom: 26px;
-    right: 49px;
-    width: 50px;
+    bottom: 23px;
+    right: 39px;
+    width: 70px;
     text-align: center;
+    font-variant: small-caps;
 }
 
 
