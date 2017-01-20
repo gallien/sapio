@@ -33,13 +33,13 @@ var extendedmenuReisezieleItems = {  "fr": [
                         };
 var extendedmenuReisethemenItems = [
                                 {"image":"https://dummyimage.com/285x188/cccccc/000000.png&text=dummy","txt":"Weinreisen"},
-                                {"image":"https://dummyimage.com/285x188/cccccc/000000.png&text=dummy","txt":"Kochreisen"},
-                                {"image":"https://dummyimage.com/285x188/cccccc/000000.png&text=dummy","txt":"Genusswandern"},
+                                {"image":"assets/images/kochreisen.jpg","txt":"Kochreisen"},
+                                {"image":"assets/images/genusswandern.jpg","txt":"Genusswandern"},
                                 {"image":"https://dummyimage.com/285x188/cccccc/000000.png&text=dummy","txt":"Trüffelreisen"},
-                                {"image":"https://dummyimage.com/285x188/cccccc/000000.png&text=dummy","txt":"Hausmacher-Metzgerei"},
-                                {"image":"https://dummyimage.com/285x188/cccccc/000000.png&text=dummy","txt":"Kulinarische Städtereisen"},
+                                {"image":"assets/images/staedtereisen.jpg","txt":"Kulinarische Städtereisen"},
                                 {"image":"https://dummyimage.com/285x188/cccccc/000000.png&text=dummy","txt":"Kulinarik & Kunst"},
-                                {"image":"https://dummyimage.com/285x188/cccccc/000000.png&text=dummy","txt":"Vegetarische Reisen"}
+                                {"image":"assets/images/vegetarisch.jpg","txt":"Vegetarische Reisen"},
+                                {"image":"assets/images/hausmacher.jpg","txt":"Hausmacher-Metzgerei"}
                             ];
 
 $(document).ready(function(){
@@ -162,6 +162,7 @@ function getExtendedmenu() {
     });
     $("#Reisethemen .markHeadingOfList a").hover(function(){
         $("#Reisethemen .markTxt").html(extendedmenuReisethemenItems[$(this).attr("data-id")].txt);
+        $("#Reisethemen img").attr('src', extendedmenuReisethemenItems[$(this).attr("data-id")].image);
     });
     $("#Reiseziele .getimgmaplistsele").hover(function(){
         $("#Reiseziele img[usemap]").hide();

@@ -579,6 +579,9 @@ blockquote img {
 .marginright15{
     margin-right:15px;
 }
+.marginbottom10{
+    margin-bottom:10px;
+}
 .marginbottom15{
     margin-bottom:15px;
 }
@@ -743,7 +746,6 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
 }
 .reiseberichtboxes.reiseangebot article img.pull-left{
     width:auto;
-    height:160px;
 }
 .reiseberichtboxes>.btn-red{
     margin-top:30px
@@ -993,6 +995,10 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
 }
 .modal-lg {
 	width: 1100px;
+}
+.modal-lg .img-rounded{
+	margin-left: auto;
+	margin-right: auto;
 }
 .modal-lg h2, .modal-lg .nav {
 	font-weight: bold;
