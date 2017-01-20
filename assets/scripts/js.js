@@ -32,12 +32,12 @@ var extendedmenuReisezieleItems = {  "fr": [
                             ]
                         };
 var extendedmenuReisethemenItems = [
-                                {"image":"https://dummyimage.com/285x188/cccccc/000000.png&text=dummy","txt":"Weinreisen"},
+                                {"image":"assets/images/weinreisen.jpg","txt":"Weinreisen"},
                                 {"image":"assets/images/kochreisen.jpg","txt":"Kochreisen"},
                                 {"image":"assets/images/genusswandern.jpg","txt":"Genusswandern"},
-                                {"image":"https://dummyimage.com/285x188/cccccc/000000.png&text=dummy","txt":"Trüffelreisen"},
+                                {"image":"assets/images/trueffelreisen.jpg","txt":"Trüffelreisen"},
                                 {"image":"assets/images/staedtereisen.jpg","txt":"Kulinarische Städtereisen"},
-                                {"image":"https://dummyimage.com/285x188/cccccc/000000.png&text=dummy","txt":"Kulinarik & Kunst"},
+                                {"image":"assets/images/kulinarikkunst.jpg","txt":"Kulinarik & Kunst"},
                                 {"image":"assets/images/vegetarisch.jpg","txt":"Vegetarische Reisen"},
                                 {"image":"assets/images/hausmacher.jpg","txt":"Hausmacher-Metzgerei"}
                             ];
