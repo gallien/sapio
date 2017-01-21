@@ -46,16 +46,18 @@ $(document).ready(function(){
         getExtendedmenu();
     });
     $(".fintravelbox").load("inc/fintravelbox.inc.html");
-    $("#buchungsanfragemodal").load($("#buchungsanfragemodal").attr('data-src'), function(){
-        $("#buchungsanfragemodal_mytravel select").change(function(){
-            updateSelectOutputBoxes($(this));
-        });
-        updateSelectOutputBoxes($("#buchungsanfragemodal_mytravel select"));
-        $("#buchungsanfragemodal_mydata select, #buchungsanfragemodal_mydata input, #buchungsanfragemodal_mydata textarea").blur(function(){
-            updateInputOutputBoxes($(this));
-        });
-        updateInputOutputBoxes($("#buchungsanfragemodal_mydata select, #buchungsanfragemodal_mydata input, #buchungsanfragemodal_mydata textarea"));
-    });
+    if ($("#buchungsanfragemodal").length) {
+	    $("#buchungsanfragemodal").load($("#buchungsanfragemodal").attr('data-src'), function(){
+	        $("#buchungsanfragemodal_mytravel select").change(function(){
+	            updateSelectOutputBoxes($(this));
+	        });
+	        updateSelectOutputBoxes($("#buchungsanfragemodal_mytravel select"));
+	        $("#buchungsanfragemodal_mydata select, #buchungsanfragemodal_mydata input, #buchungsanfragemodal_mydata textarea").blur(function(){
+	            updateInputOutputBoxes($(this));
+	        });
+	        updateInputOutputBoxes($("#buchungsanfragemodal_mydata select, #buchungsanfragemodal_mydata input, #buchungsanfragemodal_mydata textarea"));
+	    });
+	}
     $(".footer-include").load("inc/footer.inc.html", function(){
         $("img[usemap]").rwdImageMaps();
         getImagemapListener();

@@ -1003,6 +1003,9 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
 .modal-lg h2, .modal-lg .nav {
 	font-weight: bold;
 }
+.modal-lg select {
+	margin-bottom: 10px;
+}
 #buchungsanfragemodal .tab-content {
 	font-size: 16px;
 }
@@ -1071,6 +1074,7 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
     top: auto;
     padding: 7px 20px;
     text-align: left;
+    font-size: 95%;
 }
 #headerslider .item .carousel-caption.carousel-caption-top-left{
     top: 8%;
@@ -1137,7 +1141,6 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
 .fintravelbox select, .modal-lg select {
 	width: 100%;
 	border-radius: 4px;
-	margin-bottom: 10px;
 }
 .fintravelbox .btn-red, .fintravelbox select{
     margin-top:3px;
@@ -1188,6 +1191,9 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
 	    -webkit-transform: translateX(210px) translateX(-50%);
 	    transform: translateX(210px) translateX(-50%);
 	}
+	#headerslider .item {
+		background-position-x: -130px;
+	}
 	#headerslider .item .carousel-caption.carousel-caption-top-right{
 	    right: 29.5%;
 	}
@@ -1210,6 +1216,9 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
 	#Ueber-uns {
 	    -webkit-transform: translateX(253px) translateX(-50%);
 	    transform: translateX(253px) translateX(-50%);
+	}
+	#headerslider .item {
+		background-position-x: -355px;
 	}
     #headerslider .carousel-control.right{
         right:0;
@@ -1288,6 +1297,7 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
 @media (max-width: 767px){
     #headerslider .item {
         height: 200px;
+        background-position-x: 0;
     }
     .modal-lg {
     	width: 96%;
