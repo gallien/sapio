@@ -6,8 +6,7 @@ var extendedmenuReisezieleItems = {  "fr": [
                             "de": [
                                 {"txt":"Deutschland"},
                                 {"txt":"Baden-Württemberg"},
-                                {"txt":"Berlin"},
-                                {"txt":"Schleswig-Holstein"}
+                                {"txt":"Berlin"}
                             ],
                             "it": [
                                 {"txt":"Italien"},
@@ -32,7 +31,7 @@ var extendedmenuReisezieleItems = {  "fr": [
                             ]
                         };
 var extendedmenuReisethemenItems = [
-                                {"image":"assets/images/weinreisen.jpg","txt":"Weinreisen"},
+                                {"image":"assets/images/weinreisen.jpg","txt":"Auf unseren Weinreisen besuchen wir die schönsten Weinbaugegenden in Italien und Frankreich. Wir besuchen Winzer, die auf höchstem Niveau arbeiten, die uns gerne ihre Türen öffnen und Freude haben, ihre Arbeit zu erklären. Immer folgt auf den Besuch eine ausgiebige Weinprobe. Neben dem Thema Wein schauen wir bei den Reisen auch, was in der Region kulinarisch interessant ist."},
                                 {"image":"assets/images/kochreisen.jpg","txt":"Kochreisen"},
                                 {"image":"assets/images/genusswandern.jpg","txt":"Genusswandern"},
                                 {"image":"assets/images/trueffelreisen.jpg","txt":"Trüffelreisen"},
@@ -47,7 +46,7 @@ $(document).ready(function(){
         getExtendedmenu();
     });
     $(".fintravelbox").load("inc/fintravelbox.inc.html");
-    $("#buchungsanfragemodal").load("inc/buchungsanfragemodal.inc.html", function(){
+    $("#buchungsanfragemodal").load($("#buchungsanfragemodal").attr('data-src'), function(){
         $("#buchungsanfragemodal_mytravel select").change(function(){
             updateSelectOutputBoxes($(this));
         });
@@ -81,7 +80,7 @@ function updateSelectOutputBoxes(element){
         el = $(el);
         if(el.val()!="" && el.val()!=undefined){
             var tmp = el.find("option:selected").text();
-            if(el.attr("id").search("add_option")>0){ tmp = tmp+"x "+el.parent().parent().find("p").html(); };
+            if(el.attr("id").search("add_option")>0){ tmp += el.parent().parent().find("p").html(); };
             tmp = tmp.split(" - ")[0];
             $("."+el.attr("id")+"-output").html(tmp);
             if(el.find("option:selected").attr('data-price')){
