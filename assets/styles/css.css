@@ -348,7 +348,7 @@ body>main{
 #sidecontent>section.margin0{
     margin:0;
 }
-#sidecontent p, #sidecontent strong, footer.footer-include p, footer.footer-include address{
+footer.footer-include p, footer.footer-include address{
     font-size: 90%;
     line-height: 1.15;
 }
@@ -779,24 +779,25 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
     display: inline-block;
 }
 .statusbull{
-    height: 10px; 
+    height: 16px; 
     border-radius: 50%; 
     margin-right: 7px; 
     display: inline-block; 
-    width: 10px; 
+    width: 16px; 
     line-height: 85%;
+	border: 3px solid #fff;
 }
 .statusbull.statusbull-orange{
-    background-color: #F37029;
+    background-color: #f37029;
 }
 .statusbull.statusbull-red{
     background-color: #7b1c1e;
 }
 .statusbull.statusbull-green{
-    background-color: #AFCA4C;
+    background-color: #97bf0e;
 }
 .statusbull.statusbull-yellow{
-    background-color: #C9C29C;
+    background-color: #ffb400;
 }
 .img-half{
     width:50%!important;
@@ -1144,6 +1145,7 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
 }
 .fintravelbox .btn-red, .fintravelbox select{
     margin-top:3px;
+	margin-left:-15px;
 }
 .fintravelbox .btn-red>.glyphicon {
     margin:2px;
@@ -1151,8 +1153,14 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
 .fintravelbox label.control-label{
     padding-top: 11px;
 }
+.fintravelbox .form-horizontal .control-label {text-align: left !important;}
+.fintravelbox .form-horizontal .col-md-1 {width: auto !important;} 
+.fintravelbox .paddingleft15.btnfind {padding-right: 0;}
+.fintravelbox .btn-red, .fintravelbox select {  width: 100%;}
+.fintravelbox .btn-red > .glyphicon { margin: 2px;  left: 20%;}
 
-
+section.datesview {background-color: #E8E5DF;padding: 13px 20px 10px 30px;width: 100%;display: block;border-radius: 5px;}
+	section.datesview img {margin-right:10px; margin-top:-5px}
 
 
 /* RESPONSIVE */
