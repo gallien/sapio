@@ -33,9 +33,6 @@
                 <div id="maincontent" class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
                     <section class="row">
                         <h1 class="col-xs-12">Neu: Emilia mit Metzgereikurs</h1>
-                        <p class="col-xs-12">
-                            Eine noch wenig entdeckte Region, reich an Kunstschätzen, großer Metzgertradition und Küche. Wir sind zu Gast im Landschloss von Massimo Spigaroli, einem begnadeten Metzger und Koch. Die Reise steht im Zeichen der gemeinsamen Verarbeitung eines Schweins aus Massimos Herde. Wir erleben die ganze Kultur, die Mythen und die traditionellen Festessen um die Schlachtung.
-                        </p>
                     </section>
                     <section class="visible-xs">
                         <a href="#" class="btn ochre text-center img-full marginbottom15">PDF-Download der Reise</a>
@@ -96,6 +93,7 @@
                             </article>
                         </div>
                     </section>
+                	<section id="map" style="height: 700px"></section>
                 </div>
                 <aside id="sidecontent" class="hidden-xs col-sm-4 col-md-3 col-lg-3 hidden-print">
                     <section class="margintop40">
@@ -208,10 +206,35 @@
 	  </div><!-- /.modal-dialog -->
 	</div><!-- /.modal -->
 	
+	<script type="text/javascript">
+	var map;
+	var geocoder;
+	
+	function initMap()
+	{
+		geocoder = new google.maps.Geocoder();
+		geocoder.geocode({
+			'address': 'Strada Palazzo due Torri, 3, 43010 Polesine Parmense PR, Italien'
+		}, function(results, status) {
+			if (status == google.maps.GeocoderStatus.OK) {
+				map = new google.maps.Map(document.getElementById('map'), {
+					center: results[0].geometry.location,
+					zoom: 10
+				});
+				var marker = new google.maps.Marker({
+            		map: map,
+            		position: results[0].geometry.location
+        		});
+        	}
+		});
+	}
+	</script>
+
     <script src="vendor/jquery/dist/jquery.min.js"></script>
     <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="vendor/jQuery-rwdImageMaps/jquery.rwdImageMaps.min.js"></script>
     <script src="vendor/bootstrap-validator/dist/validator.js"></script>
     <script src="assets/scripts/js.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCE1qENJ-ymA6eCupJliMXfazhU-ahoZt4&callback=initMap" async defer></script>
 </body>
 </html>

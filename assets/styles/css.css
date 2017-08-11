@@ -375,16 +375,18 @@ footer.footer-include p.lh24{
 }
 .contactbox .btn-red{
     margin: 10px 20px 0 -100px;
+    float: right;
 }
 .contactbox p {
 	margin-bottom: 15px;
 }
 .highlight-box.red{
     color:#FFFFFF;
-    font-size: 90%;
 }
 .highlight-box.red ul.btn-group-vertical>li>strong{
-    padding-left:15px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    display: block;
 }
 .slow-food-citation {
     position: absolute;
@@ -1159,8 +1161,21 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
 .fintravelbox .btn-red, .fintravelbox select {  width: 100%;}
 .fintravelbox .btn-red > .glyphicon { margin: 2px;  left: 20%;}
 
-section.datesview {background-color: #E8E5DF;padding: 13px 20px 10px 30px;width: 100%;display: block;border-radius: 5px;}
-	section.datesview img {margin-right:10px; margin-top:-5px}
+section.datesview {
+	background-color: #E8E5DF;
+	padding: 13px 20px 10px 30px;
+	width: 100%;
+	display: block;
+	border-radius: 6px;
+	font-size: 25px;
+}
+section.datesview img {
+	margin-right:10px;
+	margin-top:-5px
+}
+section.datesview a:hover {
+	text-decoration: none;
+}
 
 
 /* RESPONSIVE */
@@ -1169,7 +1184,9 @@ section.datesview {background-color: #E8E5DF;padding: 13px 20px 10px 30px;width:
 		padding-top: 15px;
 	}
 	.contactbox .btn-red {
-		margin-right: 0;
+		margin: 10px 0 0 0;
+		width: 100%;
+		float: none;
 	}
 	.slow-food-citation {
 	    font-size: 16px !important;
