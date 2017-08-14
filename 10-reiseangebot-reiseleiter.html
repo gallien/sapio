@@ -134,5 +134,13 @@
     <script src="vendor/jQuery-rwdImageMaps/jquery.rwdImageMaps.min.js"></script>
     <script src="vendor/bootstrap-validator/dist/validator.js"></script>
     <script src="assets/scripts/js.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			window.setTimeout(function() {
+				$('html, body').animate({scrollTop: $("#maincontent").offset().top}, 300);
+			}, 100);
+		});
+	</script>
 </body>
 </html>

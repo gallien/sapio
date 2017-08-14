@@ -1123,9 +1123,12 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
 }
 .fintravelbox {
     padding:10px 0;
+    margin-left: -50px;
 }
 .fintravelbox .btn-red, .fintravelbox .pull-right.btn-red{
     padding:6px 40px;
+    width: 95%;
+    margin-left: 15px;
 }
 .fintravelbox .text-right>a{
     display: block;
@@ -1146,20 +1149,17 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
 	border-radius: 4px;
 }
 .fintravelbox .btn-red, .fintravelbox select{
-    margin-top:3px;
-	margin-left:-15px;
+    margin-top: 3px;
 }
 .fintravelbox .btn-red>.glyphicon {
-    margin:2px;
+    margin: 2px;
 }
-.fintravelbox label.control-label{
+.fintravelbox label.control-label {
+	padding-left: 0;
+	padding-right: 0;
     padding-top: 11px;
+    text-align: right;
 }
-.fintravelbox .form-horizontal .control-label {text-align: left !important;}
-.fintravelbox .form-horizontal .col-md-1 {width: auto !important;} 
-.fintravelbox .paddingleft15.btnfind {padding-right: 0;}
-.fintravelbox .btn-red, .fintravelbox select {  width: 100%;}
-.fintravelbox .btn-red > .glyphicon { margin: 2px;  left: 20%;}
 
 section.datesview {
 	background-color: #E8E5DF;
@@ -1167,7 +1167,7 @@ section.datesview {
 	width: 100%;
 	display: block;
 	border-radius: 6px;
-	font-size: 25px;
+	font-size: 24px;
 }
 section.datesview img {
 	margin-right:10px;
@@ -1203,8 +1203,8 @@ section.datesview a:hover {
 }
 @media (min-width: 992px) and (max-width: 1199px) {
 	body > header .navbar-phone{
-    	-webkit-transform: translateX(400px) translateX(-50%);
-    	transform: translateX(400px) translateX(-50%);
+    	-webkit-transform: translateX(400px) translateX(-65%);
+    	transform: translateX(400px) translateX(-65%);
 	}
     .fintravelbox .row>div.paddingleft30{
         text-align:right;
@@ -1334,11 +1334,11 @@ section.datesview a:hover {
     .fintravelbox {
     	padding-bottom: 0;
     }
+    .fintravelbox .col-md-2 {
+    	margin-bottom: 0;
+    }
     .fintravelbox .container, body > header .navbar-collapse .navbar-nav>*{
         text-align: center;
-    }
-    .fintravelbox label{
-        text-align: right;
     }
     .fintravelbox select, .fintravelbox .btn.btn-red{
         float:left;
@@ -1348,7 +1348,7 @@ section.datesview a:hover {
 		margin-bottom: 5px;
 	}
     .fintravelbox .btn.btn-red{
-        width: 96%;
+        width: 86.5%;
         padding-left: 25%;
         text-align: left;
     }
@@ -1375,5 +1375,8 @@ section.datesview a:hover {
     }
 	body>header .navbar-collapse .navbar-subnav > li > a {
 	    font-size: 100%;
+	}
+	section.datesview {
+		margin-top: -15px;	
 	}
 }
