@@ -54,6 +54,10 @@ h1, h2, .footertitle{
     font-size: 2.4rem;
     margin-bottom: 13px;
 }
+h3 {
+	font-size: 20px;
+	margin-bottom: -15px;
+}
 h6{
     font-size: 2.2rem;
     line-height: 4rem;
@@ -188,7 +192,7 @@ body>header a:hover{
 }
 .extendedmenu ul>li{
     list-style: none;
-    font-size: 90%;
+    font-size: 89%;
     line-height: 1.3;
 }
 .extendedmenu ul>li>a{
@@ -232,7 +236,7 @@ body>header a:hover{
 	margin-right: 30px;
 }
 .markTxt {
-	font-size: 90%;
+	font-size: 89%;
 }
 
 /* MAIN */
@@ -259,16 +263,18 @@ body>main{
 .reiselandboxes h2, .incentiveboxes h2 {
     margin: 0;
     line-height: 0.9;
+	display: inline-block;
 }
 .reiselandboxes small, .incentiveboxes small, .reiseberichtboxes small, .reiseangebotboxes small, .reiseangebotboxes .small {
-	font-size: 90%;
+	font-size: 89%;
 }
 .reiselandboxes article, .incentiveboxes article, .reiseberichtboxes article img {
 	margin-top: 5px;
 }
 .reiselandboxes ul {
-	font-size: 90%;
+	font-size: 89%;
 	line-height: 1.3;
+	margin-bottom: 0;
 }
 .reiselandboxes hr, .incentiveboxes hr {
     border-bottom:2px dotted #C9C29C;
@@ -296,13 +302,13 @@ body>main{
     background-position:center center;
 }
 .reiselandboxes>.row>*>div{
-    padding: 25px 17px 15px 30px;
+    padding: 15px 17px 15px 30px;
 }
 .reiselandboxes>.row>*>div .btn, #sidecontent .btn-red.pull-right{
     padding: 7px 25px;
 }
 .reiselandboxes>.row>*>div .btn {
-	margin-top: -20px;
+	margin-top: -35px;
 }
 .reiselandboxes button, .incentiveboxes button, .reiseberichtboxes button {
 	padding: 12px;
@@ -349,7 +355,7 @@ body>main{
     margin:0;
 }
 footer.footer-include p, footer.footer-include address{
-    font-size: 90%;
+    font-size: 89%;
     line-height: 1.15;
 }
 footer.footer-include address{
@@ -370,7 +376,7 @@ footer.footer-include p.lh24{
 .contactbox a[href^="tel:"]{
     display: block;
     margin-top: -1px;
-    font-size: 90%;
+    font-size: 89%;
     line-height: 1.1;
 }
 .contactbox .btn-red{
@@ -506,7 +512,7 @@ footer .programmuebersicht a {
     font-size:75%!important;
 }
 .fg-size90{
-    font-size:90%!important;
+    font-size:90%fig!important;
 }
 .fg-normal{
     font-weight: normal;
@@ -518,13 +524,17 @@ a.readon{
 #sidecontent a.readon{
     text-decoration: none;
     border: none!important;
-    font-size: 90%;
+    font-size: 89%;
 }
 a.readon::before, .list-sapiostyled li:before{
     background-image: url("../images/icons/arrow_right.png");
     background-position: -3px 3px;
     background-repeat: no-repeat;
     content: "   ";
+}
+.list-unstyled img {
+	display: inline-block;
+	margin: 3px 5px 7px 0;
 }
 blockquote {
   border-left: none;
@@ -574,6 +584,9 @@ blockquote img {
 }
 .margintop10{
     margin-top:10px;
+}
+.marginright10{
+    margin-right:10px;
 }
 .margin15{
     margin:15px;
@@ -656,12 +669,11 @@ blockquote img {
     left:0;
     padding:10px 5px;
     line-height:2.4rem;
-    font-size:115%;
     text-shadow:none;
     color:#000000;
 }
 .inlinecaption figcaption.cigarband{
-    font-size:90%;
+    font-size:89%;
     bottom:15px;
     padding:5px 2px;
 }
@@ -719,7 +731,7 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
 }
 #maincontent .ueberunsboxes {
 	padding-top: 0;
-	font-size: 90%;
+	font-size: 89%;
 }
 .reiseberichtboxes.ueberunsboxes article {
     border-bottom:2px dotted #7b1c1e;
@@ -740,7 +752,7 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
     line-height:2.2rem;
 }
 .teamboxes article p {
-	font-size: 90%;
+	font-size: 89%;
 }
 .reiseberichtboxes article img.pull-left{
     width:30%;
@@ -777,7 +789,7 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
     margin-top:15px;
 }
 .terminuebersichtboxes .list-group-item small {
-    font-size:90%;
+    font-size: 89%;
     display: inline-block;
 }
 .statusbull{
@@ -977,15 +989,17 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
 	font-size: 60%;
 	transition: all 0.3s ease-out;
 }
-.award {
+.reiselandboxes>.row>.award {
 	position: absolute;
-	bottom: 10px;
-	right: 25px;
+	bottom: 70px;
+	left: 3px;
+	width: auto;
+	display: block;
 }
-.award-text {
+.reiselandboxes>.row>.award-text {
     position: absolute;
-    bottom: 23px;
-    right: 39px;
+    bottom: 84px;
+    left: 20px;
     width: 70px;
     text-align: center;
     font-variant: small-caps;
