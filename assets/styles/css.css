@@ -260,7 +260,7 @@ body>main{
 #sidecontent h4, hr{
     border-bottom:2px dotted #7b1c1e;
 }
-.reiselandboxes h2, .incentiveboxes h2 {
+.reiselandboxes h2, .incentiveboxes h2, .reiseangebotboxes h2 {
     margin: 0;
     line-height: 0.9;
 	display: inline-block;
@@ -321,10 +321,6 @@ body>main{
 .reiseangebotboxes article{
     padding-bottom:0;
     overflow: hidden;
-}
-.reiseangebotboxes article h2{
-    margin-bottom: 5px;
-    font-size: 2.4rem;
 }
 .reiseberichtboxes.reiseangebot article{
     border-bottom: none;
@@ -517,6 +513,9 @@ footer .programmuebersicht a {
 .fg-normal{
     font-weight: normal;
 }
+.fg-larger{
+	font-size:120%;
+}
 a.readon{
     text-decoration: none;
     border: none!important;
@@ -578,6 +577,9 @@ blockquote img {
 }
 .margintop30{
     margin-top:30px;
+}
+.margintop35{
+    margin-top:35px;
 }
 .margintop15{
     margin-top:15px;
