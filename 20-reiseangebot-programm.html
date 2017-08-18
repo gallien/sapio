@@ -130,7 +130,7 @@
                 <aside id="sidecontent" class="hidden-xs col-sm-4 col-md-3 col-lg-3 hidden-print">
                     <section class="margintop40">
                         <a href="#" class="btn ochre text-center img-full marginbottom15">PDF-Download der Reise</a>
-                        <a href="#" class="btn ochre text-center img-full marginbottom15">Informationen anfordern</a>
+                        <a href="#" class="btn ochre text-center img-full marginbottom15" data-toggle="modal" data-target="#infoanfragemodal" data-backdrop="static" data-keyboard="false">Informationen anfordern</a>
                         <button type="button" class="btn btn-red text-center img-full marginbottom15" data-toggle="modal" data-target="#buchungsanfragemodal" data-backdrop="static" data-keyboard="false">Jetzt buchen</button>
                     </section>
                     <section>
@@ -201,7 +201,9 @@
 
     <footer class="container-fluid footer-include"></footer>
 
-    <div class="modal fade" id="buchungsanfragemodal" data-src="inc/buchungsanfragemodal2.inc.html" tabindex="-1" role="dialog"></div>
+    <div class="modal fade sapio-form" id="buchungsanfragemodal" data-src="inc/buchungsanfragemodal2.inc.html" tabindex="-1" role="dialog"></div>
+	<div class="modal fade sapio-form" id="infoanfragemodal" data-src="inc/infoanfragemodal2.inc.html" tabindex="-2" role="dialog"></div>
+	<div class="modal fade sapio-form" id="kontaktanfragemodal" data-src="inc/kontaktmodal.inc.html" tabindex="-3" role="dialog"></div>
 
     <script src="vendor/jquery/dist/jquery.min.js"></script>
     <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -212,7 +214,7 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			window.setTimeout(function() {
-				$('html, body').animate({scrollTop: $("#maincontent").offset().top}, 300);
+				$('html, body').animate({scrollTop: $("#maincontent").offset().top}, 'slow', 'linear');
 			}, 100);
 		});
 	</script>

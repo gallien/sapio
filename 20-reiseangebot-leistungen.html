@@ -111,7 +111,7 @@
                             <article class="row">
                                 <div class="col-xs-12">
                                     <h2 class="paddingleft15 margintop0">Der Reisepreis beträgt</h2>
-                                    <ul class="paddingleft30">
+                                    <ul class="list-sapiostyled list-unstyled paddingleft15 margintop10">
 										<li>1.798 € im DZ mit Kamin</li>
 										<li>2.098 € im großen DZ mit Kamin und Badewanne</li>
 										<li>2.298 € in einer Suite</li>
@@ -122,7 +122,7 @@
                             <article class="row">
                                 <div class="col-xs-12">
                                     <h2 class="paddingleft15 margintop0">Zimmer zur Einzelnutzung</h2>
-                                    <ul class="paddingleft30">
+                                    <ul class="list-sapiostyled list-unstyled paddingleft15 margintop10">
 										<li>2.098 € in einem DZ mit Kamin</li>
                                     </ul>
                                 </div>
@@ -131,7 +131,7 @@
                             <article class="row">
                                 <div class="col-xs-12">
                                     <h2 class="margintop0 paddingleft15">Der Reisepreis beinhaltet</h2>
-                                    <ul>
+                                    <ul class="list-sapiostyled list-unstyled paddingleft15 margintop10">
 										<li>6 Übernachtungen in der Antica Corte Pallavicina inklusive reichhaltigem hausgemachtem süßem und herzhaftem Frühstück mit Produkten aus der eigenen Landwirtschaft</li>
 										<li>6 mehrgängige Essen, 5 davon bei Massimo Spigaroli, inklusive Weinbegleitung, Wasser und caffè</li>
 										<li>5 hochwertige Imbisse, u.a. mit den Culatelli der Antica Corte Pallavicina inklusive Weinbegleitung, Wasser und caffè</li>
@@ -146,7 +146,7 @@
                             <article class="row">
                                 <div class="col-xs-12">
                                     <h2 class="margintop0 paddingleft15">Nicht enthalten</h2>
-                                    <ul>
+                                    <ul class="list-sapiostyled list-unstyled paddingleft15 margintop10">
 										<li>An- und Abreise, Flughafentransfer</li>
 										<li>Zusätzliche Getränke</li>
 										<li>Trinkgelder</li>
@@ -171,7 +171,7 @@
                 <aside id="sidecontent" class="hidden-xs col-sm-4 col-md-3 col-lg-3 hidden-print">
                     <section class="margintop40">
                         <a href="#" class="btn ochre text-center img-full marginbottom15">PDF-Download der Reise</a>
-                        <a href="#" class="btn ochre text-center img-full marginbottom15">Informationen anfordern</a>
+                        <a href="#" class="btn ochre text-center img-full marginbottom15" data-toggle="modal" data-target="#infoanfragemodal" data-backdrop="static" data-keyboard="false">Informationen anfordern</a>
                         <button type="button" class="btn btn-red text-center img-full marginbottom15" data-toggle="modal" data-target="#buchungsanfragemodal" data-backdrop="static" data-keyboard="false">Jetzt buchen</button>
                     </section>
                     <section>
@@ -242,7 +242,9 @@
 
     <footer class="container-fluid footer-include"></footer>
 
-    <div class="modal fade" id="buchungsanfragemodal" data-src="inc/buchungsanfragemodal.inc.html" tabindex="-1" role="dialog"></div>
+    <div class="modal fade sapio-form" id="buchungsanfragemodal" data-src="inc/buchungsanfragemodal.inc.html" tabindex="-1" role="dialog"></div>
+	<div class="modal fade sapio-form" id="infoanfragemodal" data-src="inc/infoanfragemodal2.inc.html" tabindex="-2" role="dialog"></div>
+	<div class="modal fade sapio-form" id="kontaktanfragemodal" data-src="inc/kontaktmodal.inc.html" tabindex="-3" role="dialog"></div>
 
 	<div class="modal fade and carousel slide" id="lightbox">
 	  <div class="modal-dialog modal-lg">
@@ -312,7 +314,7 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			window.setTimeout(function() {
-				$('html, body').animate({scrollTop: $("#maincontent").offset().top}, 300);
+				$('html, body').animate({scrollTop: $("#maincontent").offset().top}, 'slow', 'linear');
 			}, 100);
 		});
 	</script>

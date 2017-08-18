@@ -58,12 +58,16 @@ $(document).ready(function(){
 	        updateInputOutputBoxes($("#buchungsanfragemodal_mydata select, #buchungsanfragemodal_mydata input, #buchungsanfragemodal_mydata textarea"));
 	    });
 	}
+    if ($("#infoanfragemodal").length) {
+	    $("#infoanfragemodal").load($("#infoanfragemodal").attr('data-src'));
+	}
     $(".footer-include").load("inc/footer.inc.html", function(){
         $("img[usemap]").rwdImageMaps();
         getImagemapListener();
     });
     $(".aside-contact-include").load("inc/aside-contact.inc.html", function(){
         $("#sidecontent>section").first().clone().appendTo("#aside-include");
+        $("#kontaktanfragemodal").load($("#kontaktanfragemodal").attr("data-src"));
     });
     $(".aside-newsletter-include").load("inc/aside-newsletter.inc.html");
     $("#headerslider").carousel({interval:6000});
@@ -246,5 +250,19 @@ function checkSection(e,section_id,next_tab_num){
         //checkSection($(this).find("a").attr("aria-controls"),next_tab_num);
         $(this).find("a").tab("show");
     });
-    $('#buchungsanfragemodal').animate({ scrollTop: 0 }, 'slow');
+    $('#buchungsanfragemodal').animate({ scrollTop: 0 }, 'slow', 'linear');
 };
+
+function sendContact(id) {
+    $("#" + id).validator("validate");
+    var num_of_err = $("#" + id +" .has-error").length;
+    if (num_of_err == 0) {
+        $("#" + id+" .errorbox").hide();
+        $("#" + id + "_form").hide();
+        $("#" + id + "_success").show();
+    } else{
+        $("#" + id+" .errorbox").show();
+    }	
+
+    $("#" + id).animate({ scrollTop: 0 }, 'slow', 'linear');
+}

@@ -1,0 +1,75 @@
+<div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header noborder paddingtop30">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="red-text fg-bold noshadow">&times;</span></button>
+            <h2 class="paddingleft15">Informationen zur Reise in die Emilia anfordern</h2>
+        </div>
+        <div class="modal-body padding30 paddingtop0">
+            <div>
+	            <form id="kontakt" class="form-horizontal">
+	                <div class="tab-content ochre-light clearfix">
+    	                <div role="tabpanel" id="infoanfragemodal_form" class="tab-pane active row">
+			    	        <div class="col-md-1 hidden-xs hidden-sm">&nbsp;</div>
+	                        <div class="col-xs-12 col-md-10 paddingright30 paddingleft30">
+	                            <div class="row inputline margintop30">
+	                                <div class="col-xs-12 btn-red padding5 img-rounded marginbottom15 errorbox" style="display:none;">
+	                                    <p>Bitte geben Sie eine E-Mail-Adresse an, damit wir Ihnen eine Antwort schreiben können.</p>
+	                                </div>
+	                                <span class="form-group">
+	                                    <label for="infoanfragemodal_name" class="col-xs-12 col-sm-3 control-label text-left">Anfrage von:</label>
+	                                    <div class="col-xs-12 col-sm-9">
+	                                        <input type="text" id="infoanfragemodal_name" placeholder="Ihr Name">
+	                                    </div>
+	                                </span>
+	                            </div>
+	                            <div class="row inputline">
+	                                <span class="form-group">
+	                                    <label for="infoanfragemodal_email" class="col-xs-12 col-sm-3 control-label text-left">E-Mail-Adresse:</label>
+	                                    <div class="col-xs-12 col-sm-9">
+	                                        <input type="email" id="infoanfragemodal_email" required placeholder="beispiel@email.de">
+	                                    </div>
+	                                </span>
+	                            </div>
+	                            <div class="row inputline">
+	                                <span class="form-group">
+	                                    <label for="infoanfragemodal_message" class="col-xs-12 col-sm-3 control-label text-left">Ihre Nachricht:</label>
+	                                    <div class="col-xs-12 col-sm-9">
+	                                        <textarea id="infoanfragemodal_message" rows="7">Liebes SAPIO-Team,
+
+bitte sendet mir weitere Informationen zur Reise in die Emilia mit Metzgereikurs zu. Insbesondere interessiere ich mich für: ...
+
+Herzliche Grüße,
+<Ihr Name></textarea>
+	                                    </div>
+	                                </span>
+	                            </div>
+                            </div>
+		    	            <div class="col-md-1 hidden-xs hidden-sm">&nbsp;</div>
+			                <footer>
+			                    <div class="col-xs-6 col-sm-3 margintop15 marginbottom15 left">
+			                        <a href="#" class="btn btn-ochre black-text img-full" data-dismiss="modal">zurück</a>
+			                    </div>
+			                    <div class="col-xs-6 col-sm-3 col-sm-offset-6 margintop15 marginbottom15 right">
+			                        <a href="#" class="btn btn-red img-full" onClick="sendContact('infoanfragemodal');return false">Senden</a>
+			                    </div>
+			                </footer>
+			            </div>
+    	                <div role="tabpanel" id="infoanfragemodal_success" class="tab-pane row">
+		    	            <div class="col-md-1 hidden-xs hidden-sm">&nbsp;</div>
+	                        <div class="col-xs-12 col-md-10 paddingright30 paddingleft30 margintop30 marginbottom15">
+	                        	<h3>Vielen Dank für Ihre Nachricht! Wir bearbeiten sie so schnell wie möglich.</h3>
+	                        </div>
+		    	            <div class="col-md-1 hidden-xs hidden-sm">&nbsp;</div>
+			                <footer>
+			                    <div class="col-xs-6 col-sm-3 col-sm-offset-9 margintop15 marginbottom15 right">
+			                        <a href="#" class="btn btn-red img-full" data-dismiss="modal" onClick="window.setTimeout(function(){$('#infoanfragemodal_success').hide(); $('#infoanfragemodal_form').show();}, 1000); return false">Schließen</a>
+			                    </div>
+			                </footer>
+			            </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>

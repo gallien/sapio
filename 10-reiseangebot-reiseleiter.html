@@ -127,7 +127,9 @@
 
     <footer class="container-fluid footer-include"></footer>
 
-    <div class="modal fade" id="buchungsanfragemodal" data-src="inc/buchungsanfragemodal.inc.html" tabindex="-1" role="dialog"></div>
+    <div class="modal fade sapio-form" id="buchungsanfragemodal" data-src="inc/buchungsanfragemodal.inc.html" tabindex="-1" role="dialog"></div>
+	<div class="modal fade sapio-form" id="infoanfragemodal" data-src="inc/infoanfragemodal.inc.html" tabindex="-2" role="dialog"></div>
+	<div class="modal fade sapio-form" id="kontaktanfragemodal" data-src="inc/kontaktmodal.inc.html" tabindex="-3" role="dialog"></div>
 
     <script src="vendor/jquery/dist/jquery.min.js"></script>
     <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -138,7 +140,7 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			window.setTimeout(function() {
-				$('html, body').animate({scrollTop: $("#maincontent").offset().top}, 300);
+				$('html, body').animate({scrollTop: $("#maincontent").offset().top}, 'slow', 'linear');
 			}, 100);
 		});
 	</script>

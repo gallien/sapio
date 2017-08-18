@@ -1025,45 +1025,45 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
 .modal-lg select {
 	margin-bottom: 10px;
 }
-#buchungsanfragemodal .tab-content {
+.sapio-form .tab-content {
 	font-size: 16px;
 }
-#buchungsanfragemodal .text-left {
+.sapio-form .text-left {
   text-align: left!important;
 }
-#buchungsanfragemodal .inputline {
+.sapio-form .inputline {
   margin-bottom:15px;
 }
-#buchungsanfragemodal .inputline-half {
+.sapio-form .inputline-half {
   margin-bottom:5px;
 }
-#buchungsanfragemodal .inputline p, #buchungsanfragemodal .inputline-half p  {
+.sapio-form .inputline p, .sapio-form .inputline-half p  {
   padding-top: 7px;
 }
-#buchungsanfragemodal .inputline input, #buchungsanfragemodal .inputline textarea{
+.sapio-form .inputline input, .sapio-form .inputline textarea{
   width: 100%;
   border-radius: 4px;
   padding: 0.5em 1rem;
   margin-bottom: 10px;
 }
-#buchungsanfragemodal .close{
+.sapio-form .close{
   font-size: 3rem;
   margin-right: 15px;
   margin-top: -15px;
 }
-#buchungsanfragemodal .tab-pane footer a, footer.footer-include nav.informs a{
+.sapio-form .tab-pane footer a, footer.footer-include nav.informs a{
     text-decoration: none;
 }
-#buchungsanfragemodal .tab-pane footer .right{
+.sapio-form .tab-pane footer .right{
     padding-right: 45px;
 }
-#buchungsanfragemodal .tab-pane footer .left{
+.sapio-form .tab-pane footer .left{
     padding-left: 45px;
 }
-#buchungsanfragemodal .form-horizontal .form-group {
+.sapio-form .form-horizontal .form-group {
     margin:initial;
 }
-#buchungsanfragemodal .form-horizontal .form-group::after, #buchungsanfragemodal .form-horizontal .form-group::before{
+.sapio-form .form-horizontal .form-group::after, .sapio-form .form-horizontal .form-group::before{
     display:inherit;
 }
 
