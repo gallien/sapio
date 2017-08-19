@@ -93,6 +93,7 @@ select, input, textarea {
 select {
     padding: 6px 2em 5px 0.7em;
     background-image: url("../images/icons/arrow_down.png");
+    background-position: -webkit-calc(100% - 10px) 14px;
     background-position: calc(100% - 10px) 14px;
     background-repeat: no-repeat;
     max-width: 100%;
