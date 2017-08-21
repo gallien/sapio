@@ -262,7 +262,7 @@ body>main{
     border-bottom:2px dotted #7b1c1e;
 }
 .reiselandboxes h2, .incentiveboxes h2, .reiseangebotboxes h2 {
-    margin: 0;
+    margin: 5px 0 0 0;
     line-height: 0.9;
 	display: inline-block;
 }
@@ -320,16 +320,30 @@ body>main{
     margin-bottom:15px;
 }
 .reiseangebotboxes article{
-    padding-bottom:0;
-    overflow: hidden;
+    padding-bottom: 7px;
 }
 .reiseberichtboxes.reiseangebot article{
     border-bottom: none;
     padding-bottom:0;
     margin-bottom:0;
 }
-
-
+.reiseangebotboxes .carousel-inner {
+	padding-left: 15px;
+	padding-right: 10px;
+}
+.reiseangebotboxes .carousel figure {
+	padding: 5px 5px 5px 0;
+}
+.reiseangebotboxes .carousel-control {
+	width: 10%;
+	margin: 5px 0;
+}
+.reiseangebotboxes .carousel-control.right img {
+	left: 45%;
+}
+.reiseangebotboxes .carousel-control.left img {
+	right: 45%;
+}
 
 
 /* SIDECOL */
@@ -878,20 +892,6 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
     display:block;
     margin-bottom:15px;
 }
-.multiplepicslider .carousel-control {
-  width: 5%;
-  z-index: 5;
-  border-radius: 6px;
-}
-.multiplepicslider .row>*{
-  padding:0 5px;
-}
-.multiplepicslider .row>*:first-child{
-  padding-left:0;
-}
-.multiplepicslider .row>*:last-child{
-  padding-right:0;
-}
 .noborder{
     border: none!important;
 }
@@ -982,9 +982,6 @@ blockquote .small, blockquote footer, blockquote small {
 blockquote .small::before, blockquote footer::before, blockquote small::before {
   content: "";
 }
-.img-rounded {
-    border-radius: 6px;
-}
 .getimgmaplistsele a.red-text{
     text-decoration: underline;
 }
@@ -1010,9 +1007,6 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
 
 
 /* BOOKING-MODAL */
-.modal.and.carousel {
-  position: fixed;
-}
 .modal-lg {
 	width: 1100px;
 }
@@ -1071,10 +1065,10 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
 
 
 /* MAINSLIDER */
-.carousel-control, .carousel-control.right, .carousel-control.left{
+#headerslider .carousel-control, #headerslider .carousel-control.right, #headerslider .carousel-control.left{
   background: none;
 }
-.carousel-control:hover{
+#headerslider .carousel-control:hover{
   background: none;
 }
 #headerslider .item{
@@ -1116,7 +1110,7 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
     width: 20px;
 }
 .carousel-control {
-    opacity:.6;
+    opacity:.8;
 }
 .carousel-control:hover{
     opacity:1;
@@ -1124,7 +1118,8 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
 .carousel-control img{
     display: inline-block;
     position: absolute;
-    top: 50%;
+    top: -webkit-calc(50% - 8px);
+    top: calc(50% - 6px);
     z-index: 5;
     font-size: 30px;
     color:#fff;
@@ -1302,7 +1297,7 @@ section.datesview a:hover {
     .reiselandboxes .row > * > * {
         display: inherit;
     }
-	.incentiveboxes article figure, .teamboxes article figure, .reiseangebotboxes figure {
+	.incentiveboxes article figure, .teamboxes article figure {
 		margin-bottom: 15px;
 	}
 	blockquote p {
@@ -1397,3 +1392,4 @@ section.datesview a:hover {
 		margin-top: -15px;	
 	}
 }
+

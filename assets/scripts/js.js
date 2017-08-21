@@ -79,6 +79,10 @@ $(document).ready(function(){
         	$(this).removeClass("has-error");
         });
 	});
+    lightbox.option({
+      'wrapAround': true,
+      'albumLabel': "Bild %1 von %2"
+    });
 });
 
 function updateSelectOutputBoxes(element){
