@@ -629,6 +629,9 @@ blockquote img {
 .paddingtop0{
     padding-top:0!important;
 }
+.paddingright0{
+    padding-right:0!important;
+}
 .paddingsmallercols{
     padding-left: 10px!important;
     padding-right: 10px!important;
@@ -706,12 +709,12 @@ label.customcheck {
     padding-bottom: 10px;
 }
 label.customcheck input[type="checkbox"] ~ div.checkbg{
-    background-color: rgba(0,0,0,.4);
     border-radius: 50%;
     width: 20px;
     height: 20px;
     display: inline-block;
     position: relative;
+    margin-right: 5px;
 }
 label.customcheck input[type="checkbox"] ~ div.checkbg>i.glyphicon.glyphicon-ok, label.customcheck input[type="checkbox"]{
     display: none;
@@ -728,8 +731,9 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
     cursor: not-allowed;
 }
 .btn.customcheck {
-	color: white;
-	font-size: 18px;
+	color: #333;
+	font-size: 14px;
+	white-space: normal;
 }
 .imagemapbox{
     width:100%;
@@ -857,7 +861,6 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
     transform: rotate(-90deg);
 }
 #maincontent .panel-default a.fg-cap {
-    border:0!important;
     font-size: 2.3rem;
     color: #7b1c1e;
 }
@@ -891,6 +894,30 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
 .pressebox .panel-body>article time{
     display:block;
     margin-bottom:15px;
+}
+.sapio-form .panel-heading {
+	background-color: #C9C29C;
+	border-radius: 6px;
+}
+.sapio-form .arrow-down {
+	top: 5px;
+}
+.sapio-form .panel.panel-default{
+    border-bottom: none;
+}
+.sapio-form a.fg-cap {
+	width: 100%;
+	display: inline-block;
+	text-decoration: none;
+}
+.sapio-form .inputline select.date-day {
+	width: 26%;
+}
+.sapio-form .inputline select.date-month {
+	width: 40%;
+}
+.sapio-form .inputline select.date-year {
+	width: 30%;
 }
 .noborder{
     border: none!important;
@@ -1027,7 +1054,7 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
   text-align: left!important;
 }
 .sapio-form .inputline {
-  margin-bottom:15px;
+	margin: 0px -30px 15px -30px;
 }
 .sapio-form .inputline-half {
   margin-bottom:5px;
@@ -1035,7 +1062,7 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
 .sapio-form .inputline p, .sapio-form .inputline-half p  {
   padding-top: 7px;
 }
-.sapio-form .inputline input, .sapio-form .inputline textarea{
+.sapio-form .inputline input, .sapio-form .inputline textarea, .sapio-form .inputline select {
   width: 100%;
   border-radius: 4px;
   padding: 0.5em 1rem;
@@ -1213,6 +1240,12 @@ section.datesview a:hover {
 	    left: 103px;
 	}
 }
+@media (min-width: 992px){
+	.form-horizontal .control-label.multiline {
+		padding: 0;
+		padding-top: 35px;
+	}
+}
 @media (min-width: 992px) and (max-width: 1199px) {
 	body > header .navbar-phone{
     	-webkit-transform: translateX(400px) translateX(-65%);
@@ -1318,6 +1351,27 @@ section.datesview a:hover {
 		padding: 15px;
 		padding-right: 170px;
 		text-align: left;
+	}
+	.form-horizontal .control-label {
+		padding-top: 0;
+		margin-bottom: 5px;
+		margin-top: 15px;
+		text-align: left;
+	}
+	.form-horizontal .inputline {
+		margin-bottom: 0;	
+	}
+	.form-horizontal .btn {
+		margin-top: 15px;
+	}
+	.sapio-form .inputline select.date-day {
+		width: 100%;
+	}
+	.sapio-form .inputline select.date-month {
+		width: 100%;
+	}
+	.sapio-form .inputline select.date-year {
+		width: 100%;
 	}
 }
 @media (min-width: 768px){
