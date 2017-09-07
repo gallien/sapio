@@ -1198,6 +1198,7 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
 	padding-right: 0;
     padding-top: 11px;
     text-align: right;
+    margin-top: 0;
 }
 
 section.datesview {
