@@ -93,8 +93,8 @@ select, input, textarea {
 select {
     padding: 6px 2em 5px 0.7em;
     background-image: url("../images/icons/arrow_down.png");
-    background-position: -webkit-calc(100% - 10px) 14px;
-    background-position: calc(100% - 10px) 14px;
+    background-position: -webkit-calc(100% - 10px) 50%;
+    background-position: calc(100% - 10px) 50%;
     background-repeat: no-repeat;
     max-width: 100%;
     cursor: pointer;
@@ -789,7 +789,7 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
 }
-.terminuebersichtboxes .list-group-item:last-child, .tab-content.ochre-light, .ochre-light.img-rounded.paddingbottom0{
+.terminuebersichtboxes .list-group-item:last-child {
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
 }
@@ -909,6 +909,12 @@ label.customcheck input[type="checkbox"]:disabled ~ span{
 	width: 100%;
 	display: inline-block;
 	text-decoration: none;
+}
+.sapio-form .inputline select.shortdate-day {
+	width: 42%;
+}
+.sapio-form .inputline select.shortdate-month {
+	width: 54%;
 }
 .sapio-form .inputline select.date-day {
 	width: 26%;
@@ -1445,6 +1451,9 @@ section.datesview a:hover {
 	}
 	section.datesview {
 		margin-top: -15px;	
+	}
+	.sapio-form > .col-xs-12 {
+		padding: 0;
 	}
 }
 
