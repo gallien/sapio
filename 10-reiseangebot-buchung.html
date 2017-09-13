@@ -49,7 +49,7 @@
                     <section class="row margin0 paddingtop0 reiseangebotboxes">
                         <article class="col-xs-12 ochre-light img-rounded padding15 margin0">
                         	<h2>Buchungsanfrage</h2>
-                        	<p id="msg" class="margintop15" style="display: none">Vielen Dank für Ihre Reiseanmeldung bei SAPIO! Wir freuen uns über Ihr Interesse und prüfen die Verfügbarkeit der Plätze. In Kürze senden wir Ihnen Buchungsbestätigung und Rechnung sowie Informationen für eine Reiserücktrittsversicherung zu.</p>
+                        	<p id="msg" class="margintop15" style="display: none">Vielen Dank für Ihre Reiseanmeldung bei SAPIO! Wir freuen uns über Ihr Interesse und prüfen die Verfügbarkeit der Plätze. <br>In Kürze senden wir Ihnen Buchungsbestätigung und Rechnung sowie Informationen für eine Reiserücktrittsversicherung zu.</p>
                 			<form id="anfrage" class="form-horizontal sapio-form margintop15">
 		                        <div class="col-xs-12 panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 		                            <div class="panel panel-default">
@@ -498,6 +498,20 @@
 							                            </div>
 					                                </div>
 					                                <div class="form-group inputline">
+					                                    <label for="travel_country" class="col-xs-12 col-md-3 control-label text-left">Land*:</label>
+					                                    <div class="col-xs-12 col-md-9">
+					                                        <select id="travel_country" required>
+					                                            <option value="" selected>Bitte wählen</option>
+					                                            <option value="Deutschland">Deutschland</option>
+					                                            <option value="Österreich">Österreich</option>
+					                                            <option value="Schweiz">Schweiz</option>
+					                                            <option value="">----------</option>
+					                                            <option value="Dänemark">Dänemark</option>
+					                                            <option value="Niederlande">Niederlande</option>
+					                                        </select>
+							                            </div>
+					                                </div>
+					                                <div class="form-group inputline">
 					                                    <label for="travel_email" class="col-xs-12 col-md-3 control-label text-left">E-Mail-Adresse*:</label>
 					                                    <div class="col-xs-12 col-md-9">
 							                                <input type="text" id="traveler_email" required>
@@ -541,6 +555,62 @@
 		                                    <div class="panel-body">
 						                        <div class="col-lg-1 hidden-xs hidden-sm hidden-md">&nbsp;</div>
 						                        <div class="col-xs-12 col-lg-10">
+					                                <div class="form-group inputline-half">
+					                                    <label for="travel_date" class="col-xs-12 col-md-3 control-label text-left">Reisetermin:</label>
+					                                    <div class="col-xs-12 col-md-3">
+					                                        <p>03.06. - 10.06.17</p>
+					                                    </div>
+					                                    <label for="travel_num_of_person" class="col-xs-12 col-md-3 control-label">Gäste:</label>
+					                                    <div class="col-xs-12 col-md-3">
+					                                    	<p>2</p>
+					                                    </div>
+					                                </div>
+					                                <div class="form-group inputline-half">
+					                                    <label for="travel_date" class="col-xs-12 col-md-3 control-label text-left">Anreise:</label>
+					                                    <div class="col-xs-12 col-md-3">
+					                                        <p>01.06.2017</p>
+					                                    </div>
+					                                    <label for="travel_num_of_person" class="col-xs-12 col-md-3 control-label">Abreise:</label>
+					                                    <div class="col-xs-12 col-md-3">
+					                                    	<p>14.06.2017</p>
+					                                    </div>
+					                                </div>
+					                                <div class="form-group inputline">
+					                                    <label for="travel_date" class="col-xs-12 col-md-3 control-label text-left"></label>
+					                                    <div class="col-xs-12 col-md-8">
+					                                        <p>Angebot für gesamte An- und Abreise erwünscht</p>
+					                                    </div>
+					                                </div>
+					                                <div class="form-group inputline-half">
+					                                    <label for="travel_roomkind_1" class="col-xs-12 col-md-3 control-label text-left">Zimmer:</label>
+					                                    <div class="col-xs-12 col-md-5">
+					                                        <p>Doppelzimmer</p>
+					                                    </div>
+					                                    <div class="col-xs-12 col-md-4 text-right">
+					                                        <p>1.398 € pro Person</p>
+					                                    </div>
+					                                </div>
+					                                <div class="form-group inputline">
+					                                    <label for="travel_add_option_1" class="col-xs-12 col-md-3 control-label text-left">Zuatzoptionen:</label>
+					                                    <div class="col-xs-12 col-md-5">
+					                                        <p>Ausflug nach Capri</p>
+					                                    </div>
+					                                    <div class="col-xs-12 col-md-4 text-right">
+					                                        <p>2 Personen á 95€</p>
+					                                    </div>
+					                                </div>
+					                                <div class="form-group inputline-half">
+					                                    <label for="travel_roomkind_1" class="col-xs-12 col-md-3 control-label text-left">Gesamtpreis:</label>
+					                                    <div class="col-xs-12 col-md-5">
+					                                        <p>(ohne An- und Abreise)</p>
+					                                    </div>
+					                                    <div class="col-xs-12 col-md-4 text-right">
+					                                        <p class="lead">2.986 €</p>
+					                                    </div>
+					                                </div>
+					                                <div class="form-group inputline inputline-half">
+					                                	<hr>
+					                                </div>
 					                                <div class="form-group inputline inputline-half">
 						                                <label for="travel_ad_from" class="col-xs-12 col-md-6 fg-normal control-label text-left">Wie haben Sie von SAPIO erfahren?</label>
 						                                <div class="col-xs-12 col-md-6">

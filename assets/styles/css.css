@@ -523,7 +523,7 @@ footer .programmuebersicht a {
     font-size:75%!important;
 }
 .fg-size90{
-    font-size:90%fig!important;
+    font-size:90%!important;
 }
 .fg-normal{
     font-weight: normal;
@@ -1059,7 +1059,7 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
 .sapio-form .text-left {
   text-align: left!important;
 }
-.sapio-form .inputline {
+.sapio-form .inputline,  .sapio-form .inputline-half {
 	margin: 0px -30px 15px -30px;
 }
 .sapio-form .inputline-half {
@@ -1067,6 +1067,7 @@ blockquote .small::before, blockquote footer::before, blockquote small::before {
 }
 .sapio-form .inputline p, .sapio-form .inputline-half p  {
   padding-top: 7px;
+  margin-bottom: 0;
 }
 .sapio-form .inputline input, .sapio-form .inputline textarea, .sapio-form .inputline select {
   width: 100%;
@@ -1454,6 +1455,9 @@ section.datesview a:hover {
 	}
 	.sapio-form > .col-xs-12 {
 		padding: 0;
+	}
+	.lead {
+		font-size: 21px;
 	}
 }
 
